@@ -8,13 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		D8ADA7F5213282D7003050F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA7F4213282D7003050F5 /* AppDelegate.m */; };
-		D8ADA7F8213282D7003050F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA7F7213282D7003050F5 /* ViewController.m */; };
 		D8ADA7FB213282D7003050F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7F9213282D7003050F5 /* Main.storyboard */; };
 		D8ADA7FD213282D8003050F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7FC213282D8003050F5 /* Assets.xcassets */; };
 		D8ADA800213282D8003050F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7FE213282D8003050F5 /* LaunchScreen.storyboard */; };
 		D8ADA803213282D8003050F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA802213282D8003050F5 /* main.m */; };
 		D8ADA80D213282D8003050F5 /* ZZMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA80C213282D8003050F5 /* ZZMusicTests.m */; };
 		D8ADA818213282D8003050F5 /* ZZMusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA817213282D8003050F5 /* ZZMusicUITests.m */; };
+		D8ADA83A2132D0E4003050F5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8392132D0E4003050F5 /* BaseViewController.m */; };
+		D8ADA83D2132D12E003050F5 /* LeftDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA83C2132D12E003050F5 /* LeftDrawerViewController.m */; };
+		D8ADA8402132D140003050F5 /* MidDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA83F2132D140003050F5 /* MidDrawerViewController.m */; };
+		D8ADA8432132D14F003050F5 /* RightDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8422132D14F003050F5 /* RightDrawerViewController.m */; };
+		D8ADA8462132D16F003050F5 /* LeftDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8452132D16F003050F5 /* LeftDrawerView.m */; };
+		D8ADA8492132D17D003050F5 /* MidDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8482132D17D003050F5 /* MidDrawerView.m */; };
+		D8ADA84C2132D190003050F5 /* RightDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA84B2132D190003050F5 /* RightDrawerView.m */; };
+		D8ADA84F2132D24E003050F5 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA84E2132D24E003050F5 /* BaseModel.m */; };
+		D8ADA8522132D271003050F5 /* LeftDrawerBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8512132D271003050F5 /* LeftDrawerBaseModel.m */; };
+		D8ADA8552132D285003050F5 /* MidDrawerBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8542132D285003050F5 /* MidDrawerBaseModel.m */; };
+		D8ADA8582132D298003050F5 /* RightDrawerBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8572132D298003050F5 /* RightDrawerBaseModel.m */; };
+		D8ADA85F2132D372003050F5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA85E2132D372003050F5 /* RootViewController.m */; };
+		D8ADA8622132D38A003050F5 /* RootView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8612132D38A003050F5 /* RootView.m */; };
+		D8ADA8652132D3A3003050F5 /* RootBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8642132D3A3003050F5 /* RootBaseModel.m */; };
+		D8ADA86F2132D646003050F5 /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA86E2132D646003050F5 /* UIViewController+Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +52,6 @@
 		D8ADA7F0213282D7003050F5 /* ZZMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8ADA7F3213282D7003050F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8ADA7F4213282D7003050F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D8ADA7F6213282D7003050F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D8ADA7F7213282D7003050F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D8ADA7FA213282D7003050F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8ADA7FC213282D8003050F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8ADA7FF213282D8003050F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +63,43 @@
 		D8ADA813213282D8003050F5 /* ZZMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8ADA817213282D8003050F5 /* ZZMusicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZMusicUITests.m; sourceTree = "<group>"; };
 		D8ADA819213282D8003050F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8ADA8322132AEC4003050F5 /* ZZMusicPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZMusicPrefixHeader.pch; sourceTree = "<group>"; };
+		D8ADA8342132B279003050F5 /* SizeMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SizeMacro.h; sourceTree = "<group>"; };
+		D8ADA8352132B5C1003050F5 /* PathMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathMacro.h; sourceTree = "<group>"; };
+		D8ADA8362132B6F9003050F5 /* UtilsMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsMacro.h; sourceTree = "<group>"; };
+		D8ADA8372132BA25003050F5 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		D8ADA8382132D0E4003050F5 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D8ADA8392132D0E4003050F5 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D8ADA83B2132D12E003050F5 /* LeftDrawerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftDrawerViewController.h; sourceTree = "<group>"; };
+		D8ADA83C2132D12E003050F5 /* LeftDrawerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftDrawerViewController.m; sourceTree = "<group>"; };
+		D8ADA83E2132D140003050F5 /* MidDrawerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerViewController.h; sourceTree = "<group>"; };
+		D8ADA83F2132D140003050F5 /* MidDrawerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerViewController.m; sourceTree = "<group>"; };
+		D8ADA8412132D14F003050F5 /* RightDrawerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightDrawerViewController.h; sourceTree = "<group>"; };
+		D8ADA8422132D14F003050F5 /* RightDrawerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightDrawerViewController.m; sourceTree = "<group>"; };
+		D8ADA8442132D16F003050F5 /* LeftDrawerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftDrawerView.h; sourceTree = "<group>"; };
+		D8ADA8452132D16F003050F5 /* LeftDrawerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftDrawerView.m; sourceTree = "<group>"; };
+		D8ADA8472132D17D003050F5 /* MidDrawerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerView.h; sourceTree = "<group>"; };
+		D8ADA8482132D17D003050F5 /* MidDrawerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerView.m; sourceTree = "<group>"; };
+		D8ADA84A2132D190003050F5 /* RightDrawerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightDrawerView.h; sourceTree = "<group>"; };
+		D8ADA84B2132D190003050F5 /* RightDrawerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightDrawerView.m; sourceTree = "<group>"; };
+		D8ADA84D2132D24E003050F5 /* BaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		D8ADA84E2132D24E003050F5 /* BaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		D8ADA8502132D271003050F5 /* LeftDrawerBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftDrawerBaseModel.h; sourceTree = "<group>"; };
+		D8ADA8512132D271003050F5 /* LeftDrawerBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftDrawerBaseModel.m; sourceTree = "<group>"; };
+		D8ADA8532132D285003050F5 /* MidDrawerBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerBaseModel.h; sourceTree = "<group>"; };
+		D8ADA8542132D285003050F5 /* MidDrawerBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerBaseModel.m; sourceTree = "<group>"; };
+		D8ADA8562132D298003050F5 /* RightDrawerBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightDrawerBaseModel.h; sourceTree = "<group>"; };
+		D8ADA8572132D298003050F5 /* RightDrawerBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightDrawerBaseModel.m; sourceTree = "<group>"; };
+		D8ADA85D2132D372003050F5 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		D8ADA85E2132D372003050F5 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		D8ADA8602132D38A003050F5 /* RootView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootView.h; sourceTree = "<group>"; };
+		D8ADA8612132D38A003050F5 /* RootView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootView.m; sourceTree = "<group>"; };
+		D8ADA8632132D3A3003050F5 /* RootBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootBaseModel.h; sourceTree = "<group>"; };
+		D8ADA8642132D3A3003050F5 /* RootBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootBaseModel.m; sourceTree = "<group>"; };
+		D8ADA86D2132D646003050F5 /* UIViewController+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Category.h"; sourceTree = "<group>"; };
+		D8ADA86E2132D646003050F5 /* UIViewController+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Category.m"; sourceTree = "<group>"; };
+		D8ADA8712132DF76003050F5 /* CategoryMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryMacro.h; sourceTree = "<group>"; };
+		D8ADA8722132F47B003050F5 /* NotificationMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationMacro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +150,14 @@
 		D8ADA7F2213282D7003050F5 /* ZZMusic */ = {
 			isa = PBXGroup;
 			children = (
+				D8ADA8322132AEC4003050F5 /* ZZMusicPrefixHeader.pch */,
+				D8ADA8312132ADF9003050F5 /* Public（公共） */,
+				D8ADA8592132D337003050F5 /* RootView */,
+				D8ADA8252132ADBB003050F5 /* LeftDrawer（左抽屉） */,
+				D8ADA82D2132ADBB003050F5 /* MidDrawer（中间抽屉） */,
+				D8ADA8292132ADBB003050F5 /* RightDrawer（右抽屉） */,
 				D8ADA7F3213282D7003050F5 /* AppDelegate.h */,
 				D8ADA7F4213282D7003050F5 /* AppDelegate.m */,
-				D8ADA7F6213282D7003050F5 /* ViewController.h */,
-				D8ADA7F7213282D7003050F5 /* ViewController.m */,
 				D8ADA7F9213282D7003050F5 /* Main.storyboard */,
 				D8ADA7FC213282D8003050F5 /* Assets.xcassets */,
 				D8ADA7FE213282D8003050F5 /* LaunchScreen.storyboard */,
@@ -130,6 +183,189 @@
 				D8ADA819213282D8003050F5 /* Info.plist */,
 			);
 			path = ZZMusicUITests;
+			sourceTree = "<group>";
+		};
+		D8ADA8252132ADBB003050F5 /* LeftDrawer（左抽屉） */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA8262132ADBB003050F5 /* Controller */,
+				D8ADA8272132ADBB003050F5 /* Model */,
+				D8ADA8282132ADBB003050F5 /* View */,
+			);
+			path = "LeftDrawer（左抽屉）";
+			sourceTree = "<group>";
+		};
+		D8ADA8262132ADBB003050F5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA83B2132D12E003050F5 /* LeftDrawerViewController.h */,
+				D8ADA83C2132D12E003050F5 /* LeftDrawerViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D8ADA8272132ADBB003050F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA8502132D271003050F5 /* LeftDrawerBaseModel.h */,
+				D8ADA8512132D271003050F5 /* LeftDrawerBaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8ADA8282132ADBB003050F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA8442132D16F003050F5 /* LeftDrawerView.h */,
+				D8ADA8452132D16F003050F5 /* LeftDrawerView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8ADA8292132ADBB003050F5 /* RightDrawer（右抽屉） */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA82A2132ADBB003050F5 /* Controller */,
+				D8ADA82B2132ADBB003050F5 /* Model */,
+				D8ADA82C2132ADBB003050F5 /* View */,
+			);
+			path = "RightDrawer（右抽屉）";
+			sourceTree = "<group>";
+		};
+		D8ADA82A2132ADBB003050F5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA8412132D14F003050F5 /* RightDrawerViewController.h */,
+				D8ADA8422132D14F003050F5 /* RightDrawerViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D8ADA82B2132ADBB003050F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA8562132D298003050F5 /* RightDrawerBaseModel.h */,
+				D8ADA8572132D298003050F5 /* RightDrawerBaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8ADA82C2132ADBB003050F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA84A2132D190003050F5 /* RightDrawerView.h */,
+				D8ADA84B2132D190003050F5 /* RightDrawerView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8ADA82D2132ADBB003050F5 /* MidDrawer（中间抽屉） */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA82E2132ADBB003050F5 /* Controller */,
+				D8ADA82F2132ADBB003050F5 /* Model */,
+				D8ADA8302132ADBB003050F5 /* View */,
+			);
+			path = "MidDrawer（中间抽屉）";
+			sourceTree = "<group>";
+		};
+		D8ADA82E2132ADBB003050F5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA83E2132D140003050F5 /* MidDrawerViewController.h */,
+				D8ADA83F2132D140003050F5 /* MidDrawerViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D8ADA82F2132ADBB003050F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA8532132D285003050F5 /* MidDrawerBaseModel.h */,
+				D8ADA8542132D285003050F5 /* MidDrawerBaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8ADA8302132ADBB003050F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA8472132D17D003050F5 /* MidDrawerView.h */,
+				D8ADA8482132D17D003050F5 /* MidDrawerView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8ADA8312132ADF9003050F5 /* Public（公共） */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA8662132D5D1003050F5 /* Category */,
+				D8ADA8332132B239003050F5 /* 宏定义 */,
+				D8ADA8382132D0E4003050F5 /* BaseViewController.h */,
+				D8ADA8392132D0E4003050F5 /* BaseViewController.m */,
+				D8ADA84D2132D24E003050F5 /* BaseModel.h */,
+				D8ADA84E2132D24E003050F5 /* BaseModel.m */,
+			);
+			path = "Public（公共）";
+			sourceTree = "<group>";
+		};
+		D8ADA8332132B239003050F5 /* 宏定义 */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA8342132B279003050F5 /* SizeMacro.h */,
+				D8ADA8352132B5C1003050F5 /* PathMacro.h */,
+				D8ADA8362132B6F9003050F5 /* UtilsMacro.h */,
+				D8ADA8372132BA25003050F5 /* Macro.h */,
+				D8ADA8712132DF76003050F5 /* CategoryMacro.h */,
+				D8ADA8722132F47B003050F5 /* NotificationMacro.h */,
+			);
+			path = "宏定义";
+			sourceTree = "<group>";
+		};
+		D8ADA8592132D337003050F5 /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA85C2132D363003050F5 /* Controller */,
+				D8ADA85A2132D362003050F5 /* Model */,
+				D8ADA85B2132D362003050F5 /* View */,
+			);
+			path = RootView;
+			sourceTree = "<group>";
+		};
+		D8ADA85A2132D362003050F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA8632132D3A3003050F5 /* RootBaseModel.h */,
+				D8ADA8642132D3A3003050F5 /* RootBaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8ADA85B2132D362003050F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA8602132D38A003050F5 /* RootView.h */,
+				D8ADA8612132D38A003050F5 /* RootView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8ADA85C2132D363003050F5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA85D2132D372003050F5 /* RootViewController.h */,
+				D8ADA85E2132D372003050F5 /* RootViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D8ADA8662132D5D1003050F5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADA86D2132D646003050F5 /* UIViewController+Category.h */,
+				D8ADA86E2132D646003050F5 /* UIViewController+Category.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +498,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8ADA7F8213282D7003050F5 /* ViewController.m in Sources */,
+				D8ADA8522132D271003050F5 /* LeftDrawerBaseModel.m in Sources */,
+				D8ADA8552132D285003050F5 /* MidDrawerBaseModel.m in Sources */,
+				D8ADA84C2132D190003050F5 /* RightDrawerView.m in Sources */,
+				D8ADA83A2132D0E4003050F5 /* BaseViewController.m in Sources */,
+				D8ADA8622132D38A003050F5 /* RootView.m in Sources */,
+				D8ADA84F2132D24E003050F5 /* BaseModel.m in Sources */,
+				D8ADA86F2132D646003050F5 /* UIViewController+Category.m in Sources */,
+				D8ADA8582132D298003050F5 /* RightDrawerBaseModel.m in Sources */,
 				D8ADA803213282D8003050F5 /* main.m in Sources */,
 				D8ADA7F5213282D7003050F5 /* AppDelegate.m in Sources */,
+				D8ADA85F2132D372003050F5 /* RootViewController.m in Sources */,
+				D8ADA8652132D3A3003050F5 /* RootBaseModel.m in Sources */,
+				D8ADA8402132D140003050F5 /* MidDrawerViewController.m in Sources */,
+				D8ADA8432132D14F003050F5 /* RightDrawerViewController.m in Sources */,
+				D8ADA8462132D16F003050F5 /* LeftDrawerView.m in Sources */,
+				D8ADA8492132D17D003050F5 /* MidDrawerView.m in Sources */,
+				D8ADA83D2132D12E003050F5 /* LeftDrawerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +685,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HHBWV8ZU9T;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZZMusic/ZZMusicPrefixHeader.pch";
 				INFOPLIST_FILE = ZZMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +705,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HHBWV8ZU9T;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZZMusic/ZZMusicPrefixHeader.pch";
 				INFOPLIST_FILE = ZZMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

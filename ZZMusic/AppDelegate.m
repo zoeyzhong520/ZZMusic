@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "RootViewController.h"
+#import "LeftDrawerViewController.h"
+#import "MidDrawerViewController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, assign) CGFloat fontSize;
 
 @end
 
@@ -17,6 +22,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //自适应不同屏幕尺寸的字体大小
+    [self fontSizeScale];
+    
+    [self setRootViewController];
+    
     return YES;
 }
 
@@ -47,5 +58,35 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - fontSizeScale
+- (void)fontSizeScale {
+    if (iPhone7P) {
+        self.fontSize = 1.1;
+    } else if (iPhone7 || iPhoneX) {
+        self.fontSize = 1.0;
+    } else if (iPhoneSE) {
+        self.fontSize = 0.9;
+    } else if (iPhone4s) {
+        self.fontSize = 0.7;
+    } else {
+        self.fontSize = 1.5;
+    }
+}
+
+- (CGFloat)fontSizeScale:(CGFloat)scale {
+    return scale * self.fontSize;
+}
+
+#pragma mark - init RootViewController
+- (void)setRootViewController {
+    self.window = [[UIWindow alloc] initWithFrame:SCREEN_RECT];
+    RootViewController *rootVC = [[RootViewController alloc] init];
+    LeftDrawerViewController *leftDrawerVC = [[LeftDrawerViewController alloc] init];
+    MidDrawerViewController *midDrawerVC = [[MidDrawerViewController alloc] init];
+    rootVC.leftDrawerView = [[UINavigationController alloc] initWithRootViewController:leftDrawerVC];
+    rootVC.midDrawerView = [[UINavigationController alloc] initWithRootViewController:midDrawerVC];
+    self.window.rootViewController = rootVC;
+    [self.window makeKeyAndVisible];
+}
 
 @end
