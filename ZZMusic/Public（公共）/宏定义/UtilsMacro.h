@@ -17,6 +17,20 @@
 #define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 #define RGB(r,g,b) RGBA(r,g,b,1.0f)
 
+///主色调
+#define MAIN_COLOR RGB(0,192,125)
+
+///34 34 34
+///字体黑色
+#define BLACK_TEXTCOLOR RGB(34,34,34)
+
+///107 107 107
+///字体灰色
+#define GRAY_TEXTCOLOR RGB(107,107,107)
+
+///蒙层背景色
+#define MONGOLIANLAYER_COLOR RGBA(0,0,0,0.3)
+
 ///获取系统时间戳
 #define getCurentTime [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]]
 
@@ -45,5 +59,11 @@
 
 ///动画执行时间
 #define ANIMATE_DURATION 0.25
+
+///WeakSelf
+#define WeakSelf __weak typeof(self) weakSelf = self
+
+///KeyWindow
+#define ZZKEYWINDOW [UIApplication sharedApplication].keyWindow
 
 #endif /* UtilsMacro_h */

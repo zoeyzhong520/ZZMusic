@@ -10,5 +10,7 @@
 #define CategoryMacro_h
 
 #import "UIViewController+Category.h"
+#import "UIButton+Category.h"
+#import "UIView+Category.h"
 
 #endif /* CategoryMacro_h */

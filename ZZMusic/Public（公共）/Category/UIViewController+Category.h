@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 typedef enum : NSUInteger {
-    left = 0,
-    right = 1,
+    Left = 0,
+    Right = 1,
 } Position;
 
 @interface UIViewController (Category)

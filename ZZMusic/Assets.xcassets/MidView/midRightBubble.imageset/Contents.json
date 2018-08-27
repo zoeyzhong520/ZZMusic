@@ -2,17 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "midLeftMenu@1x.png",
+      "filename" : "midRightBubble@1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "midLeftMenu@2x.png",
+      "filename" : "midRightBubble@2x.png",
       "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
     }
   ],
   "info" : {

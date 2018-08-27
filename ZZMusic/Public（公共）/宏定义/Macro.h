@@ -14,5 +14,7 @@
 #import "UtilsMacro.h"
 #import "NotificationMacro.h"
 #import "CategoryMacro.h"
+#import "ClassMacro.h"
+#import "FramesMacro.h"
 
 #endif /* Macro_h */
