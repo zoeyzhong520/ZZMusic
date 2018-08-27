@@ -8,13 +8,15 @@
 
 #import "MidDrawerBubbleView.h"
 
-@interface MidDrawerBubbleView ()
+@interface MidDrawerBubbleView ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UIView *contentView;
 
 @property (nonatomic, strong) NSArray *titles;
 
 @property (nonatomic, strong) NSArray *images;
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -49,6 +51,9 @@
 - (void)configContentView {
     BubbleLayer *bubbleLayer = [[BubbleLayer alloc] initWithSize:self.contentView.frame.size];
     [self.contentView.layer setMask:[bubbleLayer layer]];
+    
+    [self.contentView addSubview:self.tableView];
+    [self.tableView reloadData];
 }
 
 //点击事件
@@ -88,12 +93,42 @@
     [self.contentView.layer setMask:[bubbleLayer layer]];
 }
 
+#pragma mark UITableViewDelegate, UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.titles.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [UITableViewCell new];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
 #pragma mark Lazy
 - (NSArray *)titles {
     if (!_titles) {
         _titles = [NSArray array];
     }
     return _titles;
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        //气泡视图箭头高度为10
+        CGFloat rowHeight = (self.contentView.bounds.size.height - fontSizeScale(20)) / self.titles.count;
+        
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, fontSizeScale(10), self.contentView.bounds.size.width, self.contentView.bounds.size.height - fontSizeScale(20)) style:UITableViewStylePlain];
+        _tableView.rowHeight = rowHeight;
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+    }
+    return _tableView;
 }
 
 @end

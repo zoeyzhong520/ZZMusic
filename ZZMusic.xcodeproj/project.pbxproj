@@ -45,6 +45,8 @@
 		D8ADA8622132D38A003050F5 /* RootView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8612132D38A003050F5 /* RootView.m */; };
 		D8ADA8652132D3A3003050F5 /* RootBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8642132D3A3003050F5 /* RootBaseModel.m */; };
 		D8ADA86F2132D646003050F5 /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA86E2132D646003050F5 /* UIViewController+Category.m */; };
+		D8F76D70213444C000D85B41 /* MidDrawerBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F76D6F213444C000D85B41 /* MidDrawerBubbleTableViewCell.m */; };
+		D8F76D732134455200D85B41 /* UILabel+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F76D722134455200D85B41 /* UILabel+Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +164,10 @@
 		D8ADA86E2132D646003050F5 /* UIViewController+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Category.m"; sourceTree = "<group>"; };
 		D8ADA8712132DF76003050F5 /* CategoryMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryMacro.h; sourceTree = "<group>"; };
 		D8ADA8722132F47B003050F5 /* NotificationMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationMacro.h; sourceTree = "<group>"; };
+		D8F76D6E213444C000D85B41 /* MidDrawerBubbleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerBubbleTableViewCell.h; sourceTree = "<group>"; };
+		D8F76D6F213444C000D85B41 /* MidDrawerBubbleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerBubbleTableViewCell.m; sourceTree = "<group>"; };
+		D8F76D712134455200D85B41 /* UILabel+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Category.h"; sourceTree = "<group>"; };
+		D8F76D722134455200D85B41 /* UILabel+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Category.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -453,6 +459,8 @@
 				D8ADA8482132D17D003050F5 /* MidDrawerView.m */,
 				366EB2C62133C826007F4EE6 /* MidDrawerBubbleView.h */,
 				366EB2C72133C826007F4EE6 /* MidDrawerBubbleView.m */,
+				D8F76D6E213444C000D85B41 /* MidDrawerBubbleTableViewCell.h */,
+				D8F76D6F213444C000D85B41 /* MidDrawerBubbleTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -528,6 +536,8 @@
 				366EB29C21339B15007F4EE6 /* UIButton+Category.m */,
 				366EB2C92133C9B8007F4EE6 /* UIView+Category.h */,
 				366EB2CA2133C9B8007F4EE6 /* UIView+Category.m */,
+				D8F76D712134455200D85B41 /* UILabel+Category.h */,
+				D8F76D722134455200D85B41 /* UILabel+Category.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -689,7 +699,9 @@
 				366EB2C321339F2F007F4EE6 /* View+MASAdditions.m in Sources */,
 				D8ADA8652132D3A3003050F5 /* RootBaseModel.m in Sources */,
 				D8ADA8402132D140003050F5 /* MidDrawerViewController.m in Sources */,
+				D8F76D732134455200D85B41 /* UILabel+Category.m in Sources */,
 				366EB29D21339B15007F4EE6 /* UIButton+Category.m in Sources */,
+				D8F76D70213444C000D85B41 /* MidDrawerBubbleTableViewCell.m in Sources */,
 				D8ADA8432132D14F003050F5 /* RightDrawerViewController.m in Sources */,
 				366EB2C421339F2F007F4EE6 /* ViewController+MASAdditions.m in Sources */,
 				D8ADA8462132D16F003050F5 /* LeftDrawerView.m in Sources */,

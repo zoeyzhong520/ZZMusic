@@ -33,15 +33,34 @@
     [self addScreenEdgePanGestureRecognizer];
 }
 
-//设置边缘手势
+#pragma mark 设置边缘手势
 - (void)addScreenEdgePanGestureRecognizer {
     UIScreenEdgePanGestureRecognizer *leftGes = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(showLeftDrawer:)];
     leftGes.edges = UIRectEdgeLeft;
     [self.view addGestureRecognizer:leftGes];
-    
-    UIScreenEdgePanGestureRecognizer *rightGes = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(showLeftDrawer:)];
-    rightGes.edges = UIRectEdgeRight;
-    [self.view addGestureRecognizer:rightGes];
+}
+
+- (void)removeScreenEdgePanGestureRecognizer {
+    for (UIGestureRecognizer *gesture in self.view.gestureRecognizers) {
+        if ([gesture isKindOfClass:[UIScreenEdgePanGestureRecognizer class]]) {
+            [self.view removeGestureRecognizer:gesture];
+        }
+    }
+}
+
+#pragma mark 添加轻扫手势
+- (void)addSwipeGestureRecognizer {
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(hideLeftDrawer:)];
+    swipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:swipe];
+}
+
+- (void)removeSwipeGestureRecognizer {
+    for (UIGestureRecognizer *gesture in self.view.gestureRecognizers) {
+        if ([gesture isKindOfClass:[UISwipeGestureRecognizer class]]) {
+            [self.view removeGestureRecognizer:gesture];
+        }
+    }
 }
 
 //点击事件
@@ -50,10 +69,18 @@
         [UIView animateWithDuration:ANIMATE_DURATION animations:^{
             self.midDrawerView.view.frame = CGRectMake(SCREEN_WIDTH*4/5, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
             self.leftDrawerView.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+            
+            [self removeScreenEdgePanGestureRecognizer];
+            
+            [self addSwipeGestureRecognizer];
         }];
     } else {
         [UIView animateWithDuration:ANIMATE_DURATION animations:^{
             self.midDrawerView.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+            
+            [self addScreenEdgePanGestureRecognizer];
+            
+            [self removeSwipeGestureRecognizer];
         }];
     }
 }
@@ -74,6 +101,9 @@
         if (p.x > SCREEN_WIDTH/2) {
             // 如果超过,那么完全展示出来
             frame.origin.x = SCREEN_WIDTH*4/5;
+            [self removeScreenEdgePanGestureRecognizer];
+            
+            [self addSwipeGestureRecognizer];
         } else {
             frame.origin.x = 0;
         }
@@ -84,8 +114,18 @@
     }
 }
 
+- (void)hideLeftDrawer:(UISwipeGestureRecognizer *)gesture {
+    [UIView animateWithDuration:ANIMATE_DURATION animations:^{
+        self.midDrawerView.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        
+        [self addScreenEdgePanGestureRecognizer];
+        
+        [self removeSwipeGestureRecognizer];
+    }];
+}
+
 - (void)addBubbleView {
-    MidDrawerBubbleView *bubbleView = [[MidDrawerBubbleView alloc] initWithTitles:@[@"", @"", @""] images:@[@"", @"", @""]];
+    MidDrawerBubbleView *bubbleView = [[MidDrawerBubbleView alloc] initWithTitles:@[@"听歌识曲", @"扫一扫", @"视频海报"] images:@[@"听歌识曲", @"扫一扫", @"视频海报"]];
     [bubbleView show];
     UIView *sourceView = [UIView createViewWithBackgroundColor:[UIColor whiteColor]];
     sourceView.frame = CGRectMake(SCREEN_WIDTH - fontSizeScale(48), STATUS_BAR_HEIGHT, fontSizeScale(48), fontSizeScale(48));
@@ -96,16 +136,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark - Lazy
 - (BaseNavigationBar *)navigationBar {

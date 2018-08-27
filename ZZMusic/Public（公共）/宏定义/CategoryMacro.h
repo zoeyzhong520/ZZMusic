@@ -12,5 +12,6 @@
 #import "UIViewController+Category.h"
 #import "UIButton+Category.h"
 #import "UIView+Category.h"
+#import "UILabel+Category.h"
 
 #endif /* CategoryMacro_h */
