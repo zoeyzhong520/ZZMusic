@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		36014CE62133E4C200C09286 /* BubbleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014CE52133E4C200C09286 /* BubbleLayer.m */; };
+		36014CE92134DE3500C09286 /* UIImageView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014CE82134DE3500C09286 /* UIImageView+Category.m */; };
+		36014CEE2135194400C09286 /* LeftDrawerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014CED2135194400C09286 /* LeftDrawerTableViewCell.m */; };
+		36014CF121352CEC00C09286 /* LeftDrawerFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014CF021352CEC00C09286 /* LeftDrawerFooterView.m */; };
+		36014CF821354BCE00C09286 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014CF721354BCE00C09286 /* SettingViewController.m */; };
+		36014CFB21354BDF00C09286 /* SettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014CFA21354BDF00C09286 /* SettingView.m */; };
+		36014CFE21354BF100C09286 /* SettingBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014CFD21354BF100C09286 /* SettingBaseModel.m */; };
 		366EB299213398DD007F4EE6 /* BaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 366EB298213398DD007F4EE6 /* BaseNavigationBar.m */; };
 		366EB29D21339B15007F4EE6 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 366EB29C21339B15007F4EE6 /* UIButton+Category.m */; };
 		366EB2BA21339F2F007F4EE6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 366EB2A021339F2E007F4EE6 /* Info.plist */; };
@@ -33,14 +39,11 @@
 		D8ADA83A2132D0E4003050F5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8392132D0E4003050F5 /* BaseViewController.m */; };
 		D8ADA83D2132D12E003050F5 /* LeftDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA83C2132D12E003050F5 /* LeftDrawerViewController.m */; };
 		D8ADA8402132D140003050F5 /* MidDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA83F2132D140003050F5 /* MidDrawerViewController.m */; };
-		D8ADA8432132D14F003050F5 /* RightDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8422132D14F003050F5 /* RightDrawerViewController.m */; };
 		D8ADA8462132D16F003050F5 /* LeftDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8452132D16F003050F5 /* LeftDrawerView.m */; };
 		D8ADA8492132D17D003050F5 /* MidDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8482132D17D003050F5 /* MidDrawerView.m */; };
-		D8ADA84C2132D190003050F5 /* RightDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA84B2132D190003050F5 /* RightDrawerView.m */; };
 		D8ADA84F2132D24E003050F5 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA84E2132D24E003050F5 /* BaseModel.m */; };
 		D8ADA8522132D271003050F5 /* LeftDrawerBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8512132D271003050F5 /* LeftDrawerBaseModel.m */; };
 		D8ADA8552132D285003050F5 /* MidDrawerBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8542132D285003050F5 /* MidDrawerBaseModel.m */; };
-		D8ADA8582132D298003050F5 /* RightDrawerBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8572132D298003050F5 /* RightDrawerBaseModel.m */; };
 		D8ADA85F2132D372003050F5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA85E2132D372003050F5 /* RootViewController.m */; };
 		D8ADA8622132D38A003050F5 /* RootView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8612132D38A003050F5 /* RootView.m */; };
 		D8ADA8652132D3A3003050F5 /* RootBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA8642132D3A3003050F5 /* RootBaseModel.m */; };
@@ -69,6 +72,18 @@
 /* Begin PBXFileReference section */
 		36014CE42133E4C200C09286 /* BubbleLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleLayer.h; sourceTree = "<group>"; };
 		36014CE52133E4C200C09286 /* BubbleLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleLayer.m; sourceTree = "<group>"; };
+		36014CE72134DE3500C09286 /* UIImageView+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Category.h"; sourceTree = "<group>"; };
+		36014CE82134DE3500C09286 /* UIImageView+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Category.m"; sourceTree = "<group>"; };
+		36014CEC2135194400C09286 /* LeftDrawerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftDrawerTableViewCell.h; sourceTree = "<group>"; };
+		36014CED2135194400C09286 /* LeftDrawerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftDrawerTableViewCell.m; sourceTree = "<group>"; };
+		36014CEF21352CEC00C09286 /* LeftDrawerFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftDrawerFooterView.h; sourceTree = "<group>"; };
+		36014CF021352CEC00C09286 /* LeftDrawerFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftDrawerFooterView.m; sourceTree = "<group>"; };
+		36014CF621354BCE00C09286 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		36014CF721354BCE00C09286 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		36014CF921354BDF00C09286 /* SettingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingView.h; sourceTree = "<group>"; };
+		36014CFA21354BDF00C09286 /* SettingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingView.m; sourceTree = "<group>"; };
+		36014CFC21354BF100C09286 /* SettingBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingBaseModel.h; sourceTree = "<group>"; };
+		36014CFD21354BF100C09286 /* SettingBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingBaseModel.m; sourceTree = "<group>"; };
 		366EB28921339546007F4EE6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		366EB28A21339546007F4EE6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		366EB28B2133954E007F4EE6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -138,22 +153,16 @@
 		D8ADA83C2132D12E003050F5 /* LeftDrawerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftDrawerViewController.m; sourceTree = "<group>"; };
 		D8ADA83E2132D140003050F5 /* MidDrawerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerViewController.h; sourceTree = "<group>"; };
 		D8ADA83F2132D140003050F5 /* MidDrawerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerViewController.m; sourceTree = "<group>"; };
-		D8ADA8412132D14F003050F5 /* RightDrawerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightDrawerViewController.h; sourceTree = "<group>"; };
-		D8ADA8422132D14F003050F5 /* RightDrawerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightDrawerViewController.m; sourceTree = "<group>"; };
 		D8ADA8442132D16F003050F5 /* LeftDrawerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftDrawerView.h; sourceTree = "<group>"; };
 		D8ADA8452132D16F003050F5 /* LeftDrawerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftDrawerView.m; sourceTree = "<group>"; };
 		D8ADA8472132D17D003050F5 /* MidDrawerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerView.h; sourceTree = "<group>"; };
 		D8ADA8482132D17D003050F5 /* MidDrawerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerView.m; sourceTree = "<group>"; };
-		D8ADA84A2132D190003050F5 /* RightDrawerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightDrawerView.h; sourceTree = "<group>"; };
-		D8ADA84B2132D190003050F5 /* RightDrawerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightDrawerView.m; sourceTree = "<group>"; };
 		D8ADA84D2132D24E003050F5 /* BaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		D8ADA84E2132D24E003050F5 /* BaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		D8ADA8502132D271003050F5 /* LeftDrawerBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftDrawerBaseModel.h; sourceTree = "<group>"; };
 		D8ADA8512132D271003050F5 /* LeftDrawerBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftDrawerBaseModel.m; sourceTree = "<group>"; };
 		D8ADA8532132D285003050F5 /* MidDrawerBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerBaseModel.h; sourceTree = "<group>"; };
 		D8ADA8542132D285003050F5 /* MidDrawerBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerBaseModel.m; sourceTree = "<group>"; };
-		D8ADA8562132D298003050F5 /* RightDrawerBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightDrawerBaseModel.h; sourceTree = "<group>"; };
-		D8ADA8572132D298003050F5 /* RightDrawerBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightDrawerBaseModel.m; sourceTree = "<group>"; };
 		D8ADA85D2132D372003050F5 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		D8ADA85E2132D372003050F5 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		D8ADA8602132D38A003050F5 /* RootView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootView.h; sourceTree = "<group>"; };
@@ -210,6 +219,43 @@
 				36014CE52133E4C200C09286 /* BubbleLayer.m */,
 			);
 			path = BubbleLayer;
+			sourceTree = "<group>";
+		};
+		36014CF221354B9400C09286 /* Setting（设置） */ = {
+			isa = PBXGroup;
+			children = (
+				36014CF321354B9400C09286 /* Controller */,
+				36014CF421354B9400C09286 /* Model */,
+				36014CF521354B9400C09286 /* View */,
+			);
+			path = "Setting（设置）";
+			sourceTree = "<group>";
+		};
+		36014CF321354B9400C09286 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				36014CF621354BCE00C09286 /* SettingViewController.h */,
+				36014CF721354BCE00C09286 /* SettingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		36014CF421354B9400C09286 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36014CFC21354BF100C09286 /* SettingBaseModel.h */,
+				36014CFD21354BF100C09286 /* SettingBaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36014CF521354B9400C09286 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36014CF921354BDF00C09286 /* SettingView.h */,
+				36014CFA21354BDF00C09286 /* SettingView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		366EB293213398B7007F4EE6 /* Base */ = {
@@ -317,10 +363,10 @@
 				36014CE22133E4A700C09286 /* Tool */,
 				366EB29E21339F2E007F4EE6 /* Frames（框架） */,
 				D8ADA8312132ADF9003050F5 /* Public（公共） */,
+				36014CF221354B9400C09286 /* Setting（设置） */,
 				D8ADA8592132D337003050F5 /* RootView */,
 				D8ADA8252132ADBB003050F5 /* LeftDrawer（左抽屉） */,
 				D8ADA82D2132ADBB003050F5 /* MidDrawer（中间抽屉） */,
-				D8ADA8292132ADBB003050F5 /* RightDrawer（右抽屉） */,
 				D8ADA7F3213282D7003050F5 /* AppDelegate.h */,
 				D8ADA7F4213282D7003050F5 /* AppDelegate.m */,
 				D8ADA7F9213282D7003050F5 /* Main.storyboard */,
@@ -383,43 +429,10 @@
 			children = (
 				D8ADA8442132D16F003050F5 /* LeftDrawerView.h */,
 				D8ADA8452132D16F003050F5 /* LeftDrawerView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D8ADA8292132ADBB003050F5 /* RightDrawer（右抽屉） */ = {
-			isa = PBXGroup;
-			children = (
-				D8ADA82A2132ADBB003050F5 /* Controller */,
-				D8ADA82B2132ADBB003050F5 /* Model */,
-				D8ADA82C2132ADBB003050F5 /* View */,
-			);
-			path = "RightDrawer（右抽屉）";
-			sourceTree = "<group>";
-		};
-		D8ADA82A2132ADBB003050F5 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				D8ADA8412132D14F003050F5 /* RightDrawerViewController.h */,
-				D8ADA8422132D14F003050F5 /* RightDrawerViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		D8ADA82B2132ADBB003050F5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				D8ADA8562132D298003050F5 /* RightDrawerBaseModel.h */,
-				D8ADA8572132D298003050F5 /* RightDrawerBaseModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		D8ADA82C2132ADBB003050F5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D8ADA84A2132D190003050F5 /* RightDrawerView.h */,
-				D8ADA84B2132D190003050F5 /* RightDrawerView.m */,
+				36014CEC2135194400C09286 /* LeftDrawerTableViewCell.h */,
+				36014CED2135194400C09286 /* LeftDrawerTableViewCell.m */,
+				36014CEF21352CEC00C09286 /* LeftDrawerFooterView.h */,
+				36014CF021352CEC00C09286 /* LeftDrawerFooterView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -538,6 +551,8 @@
 				366EB2CA2133C9B8007F4EE6 /* UIView+Category.m */,
 				D8F76D712134455200D85B41 /* UILabel+Category.h */,
 				D8F76D722134455200D85B41 /* UILabel+Category.m */,
+				36014CE72134DE3500C09286 /* UIImageView+Category.h */,
+				36014CE82134DE3500C09286 /* UIImageView+Category.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -676,10 +691,12 @@
 				D8ADA8522132D271003050F5 /* LeftDrawerBaseModel.m in Sources */,
 				D8ADA8552132D285003050F5 /* MidDrawerBaseModel.m in Sources */,
 				366EB2C121339F2F007F4EE6 /* NSArray+MASAdditions.m in Sources */,
-				D8ADA84C2132D190003050F5 /* RightDrawerView.m in Sources */,
+				36014CF121352CEC00C09286 /* LeftDrawerFooterView.m in Sources */,
 				D8ADA83A2132D0E4003050F5 /* BaseViewController.m in Sources */,
+				36014CFB21354BDF00C09286 /* SettingView.m in Sources */,
 				366EB2BB21339F2F007F4EE6 /* MASCompositeConstraint.m in Sources */,
 				366EB2BF21339F2F007F4EE6 /* MASViewAttribute.m in Sources */,
+				36014CEE2135194400C09286 /* LeftDrawerTableViewCell.m in Sources */,
 				366EB2BC21339F2F007F4EE6 /* MASConstraint.m in Sources */,
 				366EB299213398DD007F4EE6 /* BaseNavigationBar.m in Sources */,
 				D8ADA8622132D38A003050F5 /* RootView.m in Sources */,
@@ -688,23 +705,24 @@
 				366EB2BD21339F2F007F4EE6 /* MASConstraintMaker.m in Sources */,
 				D8ADA86F2132D646003050F5 /* UIViewController+Category.m in Sources */,
 				366EB2CB2133C9B8007F4EE6 /* UIView+Category.m in Sources */,
-				D8ADA8582132D298003050F5 /* RightDrawerBaseModel.m in Sources */,
 				366EB2BE21339F2F007F4EE6 /* MASLayoutConstraint.m in Sources */,
 				36014CE62133E4C200C09286 /* BubbleLayer.m in Sources */,
 				366EB2C82133C826007F4EE6 /* MidDrawerBubbleView.m in Sources */,
+				36014CE92134DE3500C09286 /* UIImageView+Category.m in Sources */,
 				D8ADA803213282D8003050F5 /* main.m in Sources */,
 				366EB2C021339F2F007F4EE6 /* MASViewConstraint.m in Sources */,
 				D8ADA7F5213282D7003050F5 /* AppDelegate.m in Sources */,
 				D8ADA85F2132D372003050F5 /* RootViewController.m in Sources */,
+				36014CF821354BCE00C09286 /* SettingViewController.m in Sources */,
 				366EB2C321339F2F007F4EE6 /* View+MASAdditions.m in Sources */,
 				D8ADA8652132D3A3003050F5 /* RootBaseModel.m in Sources */,
 				D8ADA8402132D140003050F5 /* MidDrawerViewController.m in Sources */,
 				D8F76D732134455200D85B41 /* UILabel+Category.m in Sources */,
 				366EB29D21339B15007F4EE6 /* UIButton+Category.m in Sources */,
 				D8F76D70213444C000D85B41 /* MidDrawerBubbleTableViewCell.m in Sources */,
-				D8ADA8432132D14F003050F5 /* RightDrawerViewController.m in Sources */,
 				366EB2C421339F2F007F4EE6 /* ViewController+MASAdditions.m in Sources */,
 				D8ADA8462132D16F003050F5 /* LeftDrawerView.m in Sources */,
+				36014CFE21354BF100C09286 /* SettingBaseModel.m in Sources */,
 				D8ADA8492132D17D003050F5 /* MidDrawerView.m in Sources */,
 				D8ADA83D2132D12E003050F5 /* LeftDrawerViewController.m in Sources */,
 			);

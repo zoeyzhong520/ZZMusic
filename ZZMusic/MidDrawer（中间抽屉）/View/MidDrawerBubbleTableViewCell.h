@@ -10,4 +10,11 @@
 
 @interface MidDrawerBubbleTableViewCell : UITableViewCell
 
+@property (nonatomic, copy) NSString *titleText;
+
+@property (nonatomic, copy) NSString *imgStr;
+
+///创建cell
++ (MidDrawerBubbleTableViewCell *)createCellWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
+
 @end

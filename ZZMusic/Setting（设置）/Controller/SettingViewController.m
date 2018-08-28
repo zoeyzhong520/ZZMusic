@@ -1,22 +1,32 @@
 //
-//  RightDrawerViewController.m
+//  SettingViewController.m
 //  ZZMusic
 //
-//  Created by 仲召俊 on 2018/8/26.
+//  Created by zhifu360 on 2018/8/28.
 //  Copyright © 2018年 zhognzhaojun. All rights reserved.
 //
 
-#import "RightDrawerViewController.h"
+#import "SettingViewController.h"
 
-@interface RightDrawerViewController ()
+@interface SettingViewController ()
 
 @end
 
-@implementation RightDrawerViewController
+@implementation SettingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self setPage];
+}
+
+- (void)setPage {
+    self.title = @"设置";
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

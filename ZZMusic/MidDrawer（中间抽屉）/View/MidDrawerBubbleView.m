@@ -7,8 +7,9 @@
 //
 
 #import "MidDrawerBubbleView.h"
+#import "MidDrawerBubbleTableViewCell.h"
 
-@interface MidDrawerBubbleView ()<UITableViewDelegate, UITableViewDataSource>
+@interface MidDrawerBubbleView ()<UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UIView *contentView;
 
@@ -35,12 +36,13 @@
 - (void)createView {
     self.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     self.backgroundColor = MONGOLIANLAYER_COLOR;
-    [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hide)]];
+    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hide)];
+    tapGes.delegate = self;
+    [self addGestureRecognizer:tapGes];
     
     if (self.contentView == nil) {
         self.contentView = [UIView createViewWithBackgroundColor:[UIColor whiteColor]];
         self.contentView.frame = CGRectMake((SCREEN_WIDTH - BUBBLE_WIDTH) / 2, (SCREEN_HEIGHT - self.titles.count * BUBBLE_SINGLEROW_HEIGHT) / 2, BUBBLE_WIDTH, self.titles.count * BUBBLE_SINGLEROW_HEIGHT);
-        [self.contentView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)]];
         [self addSubview:self.contentView];
         
         [self configContentView];
@@ -52,13 +54,12 @@
     BubbleLayer *bubbleLayer = [[BubbleLayer alloc] initWithSize:self.contentView.frame.size];
     [self.contentView.layer setMask:[bubbleLayer layer]];
     
+    UIButton *button = [UIButton createButtonWithTarget:nil action:nil title:nil textColor:nil imgStr:nil];
+    button.frame = self.contentView.bounds;
+    [self.contentView addSubview:button];
+    
     [self.contentView addSubview:self.tableView];
     [self.tableView reloadData];
-}
-
-//点击事件
-- (void)tapAction:(UITapGestureRecognizer *)gesture {
-    //不执行操作
 }
 
 #pragma mark 显示
@@ -103,11 +104,20 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [UITableViewCell new];
+    MidDrawerBubbleTableViewCell *cell = [MidDrawerBubbleTableViewCell createCellWithTableView:tableView indexPath:indexPath];
+    cell.titleText = self.titles[indexPath.row];
+    cell.imgStr = self.images[indexPath.row];
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+}
+
+#pragma mark UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    return ![NSStringFromClass([touch.view class]) isEqualToString:@"UITableViewCellContentView"];
 }
 
 #pragma mark Lazy
@@ -121,12 +131,14 @@
 - (UITableView *)tableView {
     if (!_tableView) {
         //气泡视图箭头高度为10
-        CGFloat rowHeight = (self.contentView.bounds.size.height - fontSizeScale(20)) / self.titles.count;
+        CGFloat rowHeight = (self.contentView.bounds.size.height - 10) / self.titles.count;
         
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, fontSizeScale(10), self.contentView.bounds.size.width, self.contentView.bounds.size.height - fontSizeScale(20)) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 10, self.contentView.bounds.size.width, self.contentView.bounds.size.height) style:UITableViewStylePlain];
         _tableView.rowHeight = rowHeight;
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        [_tableView registerClass:[MidDrawerBubbleTableViewCell class] forCellReuseIdentifier:@"MidDrawerBubbleTableViewCellID"];
+        _tableView.scrollEnabled = NO;
     }
     return _tableView;
 }

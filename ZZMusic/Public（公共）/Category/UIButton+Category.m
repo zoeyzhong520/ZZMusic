@@ -20,4 +20,10 @@
     return button;
 }
 
+- (void)setEdgeInsetsWithTitleEdgeInsets:(UIEdgeInsets)titleEdgeInsets imageEdgeInsets:(UIEdgeInsets)imageEdgeInsets {
+    
+    self.titleEdgeInsets = titleEdgeInsets;
+    self.imageEdgeInsets = imageEdgeInsets;
+}
+
 @end

@@ -10,9 +10,10 @@
 
 @implementation UIViewController (Category)
 
-- (void)addBarButtonItemWithPosition:(Position)position imgStr:(NSString *)imgStr target:(id)target action:(SEL)action {
+- (void)addBarButtonItemWithPosition:(Position)position imgStr:(NSString *)imgStr action:(SEL)action {
     
-    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:imgStr ? imgStr : @""] style:UIBarButtonItemStylePlain target:target action:action];
+    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:imgStr ? imgStr : @""] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] style:UIBarButtonItemStylePlain target:self action:action ? action : @selector(pop)];
+    buttonItem.tintColor = BLACK_TEXTCOLOR;
     if (position == Left) {
         self.navigationItem.leftBarButtonItem = buttonItem;
     } else if (position == Right) {
@@ -20,14 +21,18 @@
     }
 }
 
-- (void)addBarButtonItemWithPosition:(Position)position title:(NSString *)title target:(id)target action:(SEL)action {
+- (void)addBarButtonItemWithPosition:(Position)position title:(NSString *)title action:(SEL)action {
     
-    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithTitle:title ? title : @"" style:UIBarButtonItemStylePlain target:target action:action];
+    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithTitle:title ? title : @"" style:UIBarButtonItemStylePlain target:self action:action ? action : @selector(pop)];
     if (position == Left) {
         self.navigationItem.leftBarButtonItem = buttonItem;
     } else if (position == Right) {
         self.navigationItem.rightBarButtonItem = buttonItem;
     }
+}
+
+- (void)pop {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

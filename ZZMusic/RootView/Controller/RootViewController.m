@@ -10,7 +10,8 @@
 
 @interface RootViewController ()
 
-@property (nonatomic, strong) BaseNavigationBar *navigationBar;
+///添加到midDrawerView的蒙层
+@property (nonatomic, strong) UIView *mongolianView;
 
 @end
 
@@ -29,8 +30,8 @@
     
     [self addChildViewController:self.midDrawerView];
     [self.view addSubview:self.midDrawerView.view];
-    [self.midDrawerView.view addSubview:self.navigationBar];
     [self addScreenEdgePanGestureRecognizer];
+    [self.midDrawerView.view addSubview:self.mongolianView];
 }
 
 #pragma mark 设置边缘手势
@@ -65,36 +66,36 @@
 
 //点击事件
 - (void)openLeftDrawer {
-    if (self.midDrawerView.view.frame.origin.x == 0) {
-        [UIView animateWithDuration:ANIMATE_DURATION animations:^{
-            self.midDrawerView.view.frame = CGRectMake(SCREEN_WIDTH*4/5, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-            self.leftDrawerView.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-            
-            [self removeScreenEdgePanGestureRecognizer];
-            
-            [self addSwipeGestureRecognizer];
-        }];
-    } else {
-        [UIView animateWithDuration:ANIMATE_DURATION animations:^{
-            self.midDrawerView.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-            
-            [self addScreenEdgePanGestureRecognizer];
-            
-            [self removeSwipeGestureRecognizer];
-        }];
-    }
+    self.mongolianView.alpha = 0.0;
+    self.mongolianView.hidden = NO;
+    
+    [UIView animateWithDuration:ANIMATE_DURATION animations:^{
+        self.midDrawerView.view.frame = CGRectMake(SCREEN_WIDTH*4/5, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        self.leftDrawerView.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        
+        [self removeScreenEdgePanGestureRecognizer];
+        
+        [self addSwipeGestureRecognizer];
+        //mongolianView蒙层alpha值与边缘手势保持一致
+        self.mongolianView.alpha = (SCREEN_WIDTH*4/5) / SCREEN_WIDTH;
+    }];
 }
 
 - (void)showLeftDrawer:(UIScreenEdgePanGestureRecognizer *)gesture {
-    // 让view跟着手指去移动
-    // frame的x应该为多少??应该获取到手指的x值
-    // 取到手势在当前控制器视图中识别的位置
+    /*
+     -让view跟着手指去移动
+     -frame的x应该为多少??应该获取到手指的x值
+     -取到手势在当前控制器视图中识别的位置
+     */
     CGPoint p = [gesture locationInView:self.view];
     CGRect frame = self.midDrawerView.view.frame;
     // 更改midDrawerView的x值. 手指的位置
     frame.origin.x = p.x;
     // 重新设置上去
     self.midDrawerView.view.frame = frame;
+    //设置mongolianView蒙层的颜色渐变
+    self.mongolianView.hidden = NO;
+    self.mongolianView.alpha = p.x / SCREEN_WIDTH;
     
     if (gesture.state == UIGestureRecognizerStateEnded || gesture.state == UIGestureRecognizerStateCancelled) {
         // 判断midDrawerView在屏幕上显示是否超过一半
@@ -102,7 +103,6 @@
             // 如果超过,那么完全展示出来
             frame.origin.x = SCREEN_WIDTH*4/5;
             [self removeScreenEdgePanGestureRecognizer];
-            
             [self addSwipeGestureRecognizer];
         } else {
             frame.origin.x = 0;
@@ -110,26 +110,37 @@
         
         [UIView animateWithDuration:ANIMATE_DURATION animations:^{
             self.midDrawerView.view.frame = frame;
+            self.mongolianView.hidden = p.x > SCREEN_WIDTH/2 ? NO : YES;
         }];
     }
 }
 
-- (void)hideLeftDrawer:(UISwipeGestureRecognizer *)gesture {
+- (void)hideLeftDrawer:(UIGestureRecognizer *)gesture {//有动画
+    self.mongolianView.hidden = YES;
+    
     [UIView animateWithDuration:ANIMATE_DURATION animations:^{
         self.midDrawerView.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-        
         [self addScreenEdgePanGestureRecognizer];
-        
         [self removeSwipeGestureRecognizer];
     }];
 }
 
-- (void)addBubbleView {
-    MidDrawerBubbleView *bubbleView = [[MidDrawerBubbleView alloc] initWithTitles:@[@"听歌识曲", @"扫一扫", @"视频海报"] images:@[@"听歌识曲", @"扫一扫", @"视频海报"]];
-    [bubbleView show];
-    UIView *sourceView = [UIView createViewWithBackgroundColor:[UIColor whiteColor]];
-    sourceView.frame = CGRectMake(SCREEN_WIDTH - fontSizeScale(48), STATUS_BAR_HEIGHT, fontSizeScale(48), fontSizeScale(48));
-    bubbleView.sourceView = sourceView;
+- (void)openSetting {//无动画
+    self.mongolianView.hidden = YES;
+    self.midDrawerView.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    [self removeScreenEdgePanGestureRecognizer];
+    [self removeSwipeGestureRecognizer];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openLeftDrawer) name:OPEN_LEFTDRAWER_NOTIFICATION object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openSetting) name:OPEN_SETTING_NOTIFICATION object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -138,24 +149,14 @@
 }
 
 #pragma mark - Lazy
-- (BaseNavigationBar *)navigationBar {
-    if (!_navigationBar) {
-        _navigationBar = [[BaseNavigationBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, STATUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT)];
-        WeakSelf;
-        _navigationBar.clickBlock = ^(BarButtonType barButtonType) {
-            switch (barButtonType) {
-                case LeftMenuButton:
-                    [weakSelf openLeftDrawer];
-                    break;
-                case RightBubbleButton:
-                    [weakSelf addBubbleView];
-                    break;
-                default:
-                    break;
-            }
-        };
+- (UIView *)mongolianView {
+    if (!_mongolianView) {
+        _mongolianView = [UIView createViewWithBackgroundColor:MONGOLIANLAYER_COLOR];
+        _mongolianView.hidden = YES;
+        _mongolianView.frame = SCREEN_RECT;
+        [_mongolianView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideLeftDrawer:)]];
     }
-    return _navigationBar;
+    return _mongolianView;
 }
 
 @end

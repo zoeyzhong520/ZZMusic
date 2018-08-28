@@ -16,9 +16,9 @@ typedef enum : NSUInteger {
 @interface UIViewController (Category)
 
 ///添加UIBarButtonItem imgStr
-- (void)addBarButtonItemWithPosition:(Position)position imgStr:(NSString *)imgStr target:(id)target action:(SEL)action;
+- (void)addBarButtonItemWithPosition:(Position)position imgStr:(NSString *)imgStr action:(SEL)action;
 
 ///添加UIBarButtonItem title
-- (void)addBarButtonItemWithPosition:(Position)position title:(NSString *)title target:(id)target action:(SEL)action;
+- (void)addBarButtonItemWithPosition:(Position)position title:(NSString *)title action:(SEL)action;
 
 @end

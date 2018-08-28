@@ -31,6 +31,9 @@
 ///蒙层背景色
 #define MONGOLIANLAYER_COLOR RGBA(0,0,0,0.3)
 
+///分割线条颜色
+#define LINE_COLOR RGB(230,230,230)
+
 ///获取系统时间戳
 #define getCurentTime [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]]
 
@@ -56,6 +59,20 @@
 
 ///常用粗体大小
 #define ZZBoldFont(size) [UIFont boldSystemFontOfSize:fontSizeScale(size)]
+
+///小号字体
+#define SMALL_FONT ZZFont(12)
+///常态字体
+#define NORMAL_FONT ZZFont(14)
+///大号字体
+#define BIG_FONT ZZFont(16)
+
+///小号加粗字体
+#define SMALL_BOLDFONT ZZFont(12)
+///常态加粗字体
+#define NORMAL_BOLDFONT ZZFont(14)
+///大号加粗字体
+#define BIG_BOLDFONT ZZFont(16)
 
 ///动画执行时间
 #define ANIMATE_DURATION 0.25
