@@ -14,5 +14,7 @@
 #import "BaseNavigationBar.h"
 #import "MidDrawerBubbleView.h"
 #import "BubbleLayer.h"
+#import "LoginViewController.h"
+#import "ZZMusicScrollView.h"
 
 #endif /* ClassMacro_h */

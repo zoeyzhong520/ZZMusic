@@ -7,11 +7,13 @@
 //
 
 #import "BaseViewController.h"
+#import "LeftDrawerViewController.h"
+#import "MidDrawerViewController.h"
 
 @interface RootViewController : BaseViewController
 
-@property (nonatomic, strong) UIViewController *leftDrawerView;
+@property (nonatomic, strong) LeftDrawerViewController *leftDrawerView;
 
-@property (nonatomic, strong) UIViewController *midDrawerView;
+@property (nonatomic, strong) MidDrawerViewController *midDrawerView;
 
 @end

@@ -21,4 +21,10 @@ typedef enum : NSUInteger {
 ///添加UIBarButtonItem title
 - (void)addBarButtonItemWithPosition:(Position)position title:(NSString *)title action:(SEL)action;
 
+///PresentLoginViewController
+- (void)presentLoginViewController;
+
+///ShowViewControllerWithClassName
+- (void)showViewControllerWithClassName:(NSString *)className;
+
 @end

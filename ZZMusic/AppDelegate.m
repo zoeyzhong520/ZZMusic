@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
-#import "LeftDrawerViewController.h"
-#import "MidDrawerViewController.h"
 
 @interface AppDelegate ()
 
@@ -83,9 +81,9 @@
     RootViewController *rootVC = [[RootViewController alloc] init];
     LeftDrawerViewController *leftDrawerVC = [[LeftDrawerViewController alloc] init];
     MidDrawerViewController *midDrawerVC = [[MidDrawerViewController alloc] init];
-    rootVC.leftDrawerView = [[UINavigationController alloc] initWithRootViewController:leftDrawerVC];
-    rootVC.midDrawerView = [[UINavigationController alloc] initWithRootViewController:midDrawerVC];
-    self.window.rootViewController = rootVC;
+    rootVC.leftDrawerView = leftDrawerVC;
+    rootVC.midDrawerView = midDrawerVC;
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:rootVC];;
     [self.window makeKeyAndVisible];
 }
 

@@ -38,7 +38,7 @@
 #define BANNER_HEIGHT 215
 
 ///气泡视图宽度
-#define BUBBLE_WIDTH 150
+#define BUBBLE_WIDTH 130
 #define BUBBLE_SINGLEROW_HEIGHT 40
 
 #endif /* SizeMacro_h */

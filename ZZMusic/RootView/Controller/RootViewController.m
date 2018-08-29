@@ -8,10 +8,7 @@
 
 #import "RootViewController.h"
 
-@interface RootViewController ()
-
-///添加到midDrawerView的蒙层
-@property (nonatomic, strong) UIView *mongolianView;
+@interface RootViewController ()<UINavigationControllerDelegate>
 
 @end
 
@@ -25,13 +22,29 @@
 }
 
 - (void)setPage {
+    self.navigationController.delegate = self;
+    
+    //设置返回按钮颜色
+    self.navigationController.navigationBar.tintColor = BLACK_TEXTCOLOR;
+    //设置导航栏字体
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:BIG_FONT, NSForegroundColorAttributeName:BLACK_TEXTCOLOR}];
+    //设置边缘手势
+    [self addScreenEdgePanGestureRecognizer];
+    
+    WeakSelf;
+    
     [self addChildViewController:self.leftDrawerView];
     [self.view addSubview:self.leftDrawerView.view];
+    self.leftDrawerView.footerView.buttonClickBlock = ^(LeftDrawerFooterClickType clickType) {
+        [weakSelf hideLeftDrawer:nil];
+        if (clickType == Login) { [weakSelf presentLoginViewController]; }
+        else if (clickType == Setting) { [weakSelf.midDrawerView showViewControllerWithClassName:@"SettingViewController"]; }
+    };
     
     [self addChildViewController:self.midDrawerView];
     [self.view addSubview:self.midDrawerView.view];
-    [self addScreenEdgePanGestureRecognizer];
-    [self.midDrawerView.view addSubview:self.mongolianView];
+    self.midDrawerView.navigationBar.leftButtonClickBlock = ^{ [weakSelf openLeftDrawer]; };
+    self.midDrawerView.clickMongolianView = ^{ [weakSelf hideLeftDrawer:nil]; };
 }
 
 #pragma mark 设置边缘手势
@@ -66,8 +79,8 @@
 
 //点击事件
 - (void)openLeftDrawer {
-    self.mongolianView.alpha = 0.0;
-    self.mongolianView.hidden = NO;
+    self.midDrawerView.mongolianView.alpha = 0.0;
+    self.midDrawerView.mongolianView.hidden = NO;
     
     [UIView animateWithDuration:ANIMATE_DURATION animations:^{
         self.midDrawerView.view.frame = CGRectMake(SCREEN_WIDTH*4/5, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -77,7 +90,7 @@
         
         [self addSwipeGestureRecognizer];
         //mongolianView蒙层alpha值与边缘手势保持一致
-        self.mongolianView.alpha = (SCREEN_WIDTH*4/5) / SCREEN_WIDTH;
+        self.midDrawerView.mongolianView.alpha = (SCREEN_WIDTH*4/5) / SCREEN_WIDTH;
     }];
 }
 
@@ -94,8 +107,8 @@
     // 重新设置上去
     self.midDrawerView.view.frame = frame;
     //设置mongolianView蒙层的颜色渐变
-    self.mongolianView.hidden = NO;
-    self.mongolianView.alpha = p.x / SCREEN_WIDTH;
+    self.midDrawerView.mongolianView.hidden = NO;
+    self.midDrawerView.mongolianView.alpha = p.x / SCREEN_WIDTH;
     
     if (gesture.state == UIGestureRecognizerStateEnded || gesture.state == UIGestureRecognizerStateCancelled) {
         // 判断midDrawerView在屏幕上显示是否超过一半
@@ -110,13 +123,13 @@
         
         [UIView animateWithDuration:ANIMATE_DURATION animations:^{
             self.midDrawerView.view.frame = frame;
-            self.mongolianView.hidden = p.x > SCREEN_WIDTH/2 ? NO : YES;
+            self.midDrawerView.mongolianView.hidden = p.x > SCREEN_WIDTH/2 ? NO : YES;
         }];
     }
 }
 
 - (void)hideLeftDrawer:(UIGestureRecognizer *)gesture {//有动画
-    self.mongolianView.hidden = YES;
+    self.midDrawerView.mongolianView.hidden = YES;
     
     [UIView animateWithDuration:ANIMATE_DURATION animations:^{
         self.midDrawerView.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -125,38 +138,14 @@
     }];
 }
 
-- (void)openSetting {//无动画
-    self.mongolianView.hidden = YES;
-    self.midDrawerView.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-    [self removeScreenEdgePanGestureRecognizer];
-    [self removeSwipeGestureRecognizer];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openLeftDrawer) name:OPEN_LEFTDRAWER_NOTIFICATION object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openSetting) name:OPEN_SETTING_NOTIFICATION object:nil];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Lazy
-- (UIView *)mongolianView {
-    if (!_mongolianView) {
-        _mongolianView = [UIView createViewWithBackgroundColor:MONGOLIANLAYER_COLOR];
-        _mongolianView.hidden = YES;
-        _mongolianView.frame = SCREEN_RECT;
-        [_mongolianView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideLeftDrawer:)]];
-    }
-    return _mongolianView;
+#pragma mark UINavigationControllerDelegate
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:[viewController isKindOfClass:[RootViewController class]] animated:YES];
 }
 
 @end

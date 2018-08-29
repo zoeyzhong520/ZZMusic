@@ -14,6 +14,15 @@
 		36014CF821354BCE00C09286 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014CF721354BCE00C09286 /* SettingViewController.m */; };
 		36014CFB21354BDF00C09286 /* SettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014CFA21354BDF00C09286 /* SettingView.m */; };
 		36014CFE21354BF100C09286 /* SettingBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014CFD21354BF100C09286 /* SettingBaseModel.m */; };
+		36014D012136450100C09286 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014D002136450100C09286 /* SettingTableViewCell.m */; };
+		36014D0821366AA700C09286 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014D0721366AA700C09286 /* LoginViewController.m */; };
+		36014D0B21366AB500C09286 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014D0A21366AB500C09286 /* LoginView.m */; };
+		36014D0E21366AC500C09286 /* LoginBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014D0D21366AC500C09286 /* LoginBaseModel.m */; };
+		36014D132136930B00C09286 /* MidDrawerMineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014D122136930B00C09286 /* MidDrawerMineView.m */; };
+		36014D162136936D00C09286 /* MidDrawerMusicHallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014D152136936D00C09286 /* MidDrawerMusicHallView.m */; };
+		36014D192136938F00C09286 /* MidDrawerFindView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014D182136938F00C09286 /* MidDrawerFindView.m */; };
+		36014D1D2136977100C09286 /* ZZMusicScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014D1C2136977100C09286 /* ZZMusicScrollView.m */; };
+		36014D202136A0E100C09286 /* BaseNavigationTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014D1F2136A0E100C09286 /* BaseNavigationTitleView.m */; };
 		366EB299213398DD007F4EE6 /* BaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 366EB298213398DD007F4EE6 /* BaseNavigationBar.m */; };
 		366EB29D21339B15007F4EE6 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 366EB29C21339B15007F4EE6 /* UIButton+Category.m */; };
 		366EB2BA21339F2F007F4EE6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 366EB2A021339F2E007F4EE6 /* Info.plist */; };
@@ -84,6 +93,24 @@
 		36014CFA21354BDF00C09286 /* SettingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingView.m; sourceTree = "<group>"; };
 		36014CFC21354BF100C09286 /* SettingBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingBaseModel.h; sourceTree = "<group>"; };
 		36014CFD21354BF100C09286 /* SettingBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingBaseModel.m; sourceTree = "<group>"; };
+		36014CFF2136450100C09286 /* SettingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingTableViewCell.h; sourceTree = "<group>"; };
+		36014D002136450100C09286 /* SettingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewCell.m; sourceTree = "<group>"; };
+		36014D0621366AA700C09286 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		36014D0721366AA700C09286 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		36014D0921366AB500C09286 /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		36014D0A21366AB500C09286 /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		36014D0C21366AC500C09286 /* LoginBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginBaseModel.h; sourceTree = "<group>"; };
+		36014D0D21366AC500C09286 /* LoginBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginBaseModel.m; sourceTree = "<group>"; };
+		36014D112136930B00C09286 /* MidDrawerMineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerMineView.h; sourceTree = "<group>"; };
+		36014D122136930B00C09286 /* MidDrawerMineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerMineView.m; sourceTree = "<group>"; };
+		36014D142136936D00C09286 /* MidDrawerMusicHallView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerMusicHallView.h; sourceTree = "<group>"; };
+		36014D152136936D00C09286 /* MidDrawerMusicHallView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerMusicHallView.m; sourceTree = "<group>"; };
+		36014D172136938F00C09286 /* MidDrawerFindView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerFindView.h; sourceTree = "<group>"; };
+		36014D182136938F00C09286 /* MidDrawerFindView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerFindView.m; sourceTree = "<group>"; };
+		36014D1B2136977100C09286 /* ZZMusicScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZMusicScrollView.h; sourceTree = "<group>"; };
+		36014D1C2136977100C09286 /* ZZMusicScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZMusicScrollView.m; sourceTree = "<group>"; };
+		36014D1E2136A0E100C09286 /* BaseNavigationTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationTitleView.h; sourceTree = "<group>"; };
+		36014D1F2136A0E100C09286 /* BaseNavigationTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationTitleView.m; sourceTree = "<group>"; };
 		366EB28921339546007F4EE6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		366EB28A21339546007F4EE6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		366EB28B2133954E007F4EE6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -207,6 +234,7 @@
 		36014CE22133E4A700C09286 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				36014D1A2136976100C09286 /* ZZMusicScrollView */,
 				36014CE32133E4A700C09286 /* BubbleLayer */,
 			);
 			path = Tool;
@@ -254,8 +282,56 @@
 			children = (
 				36014CF921354BDF00C09286 /* SettingView.h */,
 				36014CFA21354BDF00C09286 /* SettingView.m */,
+				36014CFF2136450100C09286 /* SettingTableViewCell.h */,
+				36014D002136450100C09286 /* SettingTableViewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		36014D0221366A7600C09286 /* Login（登录） */ = {
+			isa = PBXGroup;
+			children = (
+				36014D0321366A7600C09286 /* Controller */,
+				36014D0421366A7600C09286 /* Model */,
+				36014D0521366A7600C09286 /* View */,
+			);
+			path = "Login（登录）";
+			sourceTree = "<group>";
+		};
+		36014D0321366A7600C09286 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				36014D0621366AA700C09286 /* LoginViewController.h */,
+				36014D0721366AA700C09286 /* LoginViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		36014D0421366A7600C09286 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36014D0C21366AC500C09286 /* LoginBaseModel.h */,
+				36014D0D21366AC500C09286 /* LoginBaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36014D0521366A7600C09286 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36014D0921366AB500C09286 /* LoginView.h */,
+				36014D0A21366AB500C09286 /* LoginView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36014D1A2136976100C09286 /* ZZMusicScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				36014D1B2136977100C09286 /* ZZMusicScrollView.h */,
+				36014D1C2136977100C09286 /* ZZMusicScrollView.m */,
+			);
+			path = ZZMusicScrollView;
 			sourceTree = "<group>";
 		};
 		366EB293213398B7007F4EE6 /* Base */ = {
@@ -291,6 +367,8 @@
 			children = (
 				366EB297213398DD007F4EE6 /* BaseNavigationBar.h */,
 				366EB298213398DD007F4EE6 /* BaseNavigationBar.m */,
+				36014D1E2136A0E100C09286 /* BaseNavigationTitleView.h */,
+				36014D1F2136A0E100C09286 /* BaseNavigationTitleView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -361,8 +439,9 @@
 			children = (
 				D8ADA8322132AEC4003050F5 /* ZZMusicPrefixHeader.pch */,
 				36014CE22133E4A700C09286 /* Tool */,
-				366EB29E21339F2E007F4EE6 /* Frames（框架） */,
 				D8ADA8312132ADF9003050F5 /* Public（公共） */,
+				366EB29E21339F2E007F4EE6 /* Frames（框架） */,
+				36014D0221366A7600C09286 /* Login（登录） */,
 				36014CF221354B9400C09286 /* Setting（设置） */,
 				D8ADA8592132D337003050F5 /* RootView */,
 				D8ADA8252132ADBB003050F5 /* LeftDrawer（左抽屉） */,
@@ -474,6 +553,12 @@
 				366EB2C72133C826007F4EE6 /* MidDrawerBubbleView.m */,
 				D8F76D6E213444C000D85B41 /* MidDrawerBubbleTableViewCell.h */,
 				D8F76D6F213444C000D85B41 /* MidDrawerBubbleTableViewCell.m */,
+				36014D112136930B00C09286 /* MidDrawerMineView.h */,
+				36014D122136930B00C09286 /* MidDrawerMineView.m */,
+				36014D142136936D00C09286 /* MidDrawerMusicHallView.h */,
+				36014D152136936D00C09286 /* MidDrawerMusicHallView.m */,
+				36014D172136938F00C09286 /* MidDrawerFindView.h */,
+				36014D182136938F00C09286 /* MidDrawerFindView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -690,24 +775,31 @@
 			files = (
 				D8ADA8522132D271003050F5 /* LeftDrawerBaseModel.m in Sources */,
 				D8ADA8552132D285003050F5 /* MidDrawerBaseModel.m in Sources */,
+				36014D1D2136977100C09286 /* ZZMusicScrollView.m in Sources */,
+				36014D0821366AA700C09286 /* LoginViewController.m in Sources */,
 				366EB2C121339F2F007F4EE6 /* NSArray+MASAdditions.m in Sources */,
 				36014CF121352CEC00C09286 /* LeftDrawerFooterView.m in Sources */,
 				D8ADA83A2132D0E4003050F5 /* BaseViewController.m in Sources */,
 				36014CFB21354BDF00C09286 /* SettingView.m in Sources */,
 				366EB2BB21339F2F007F4EE6 /* MASCompositeConstraint.m in Sources */,
 				366EB2BF21339F2F007F4EE6 /* MASViewAttribute.m in Sources */,
+				36014D012136450100C09286 /* SettingTableViewCell.m in Sources */,
 				36014CEE2135194400C09286 /* LeftDrawerTableViewCell.m in Sources */,
 				366EB2BC21339F2F007F4EE6 /* MASConstraint.m in Sources */,
 				366EB299213398DD007F4EE6 /* BaseNavigationBar.m in Sources */,
 				D8ADA8622132D38A003050F5 /* RootView.m in Sources */,
 				D8ADA84F2132D24E003050F5 /* BaseModel.m in Sources */,
 				366EB2C221339F2F007F4EE6 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				36014D0E21366AC500C09286 /* LoginBaseModel.m in Sources */,
 				366EB2BD21339F2F007F4EE6 /* MASConstraintMaker.m in Sources */,
 				D8ADA86F2132D646003050F5 /* UIViewController+Category.m in Sources */,
+				36014D0B21366AB500C09286 /* LoginView.m in Sources */,
 				366EB2CB2133C9B8007F4EE6 /* UIView+Category.m in Sources */,
 				366EB2BE21339F2F007F4EE6 /* MASLayoutConstraint.m in Sources */,
 				36014CE62133E4C200C09286 /* BubbleLayer.m in Sources */,
+				36014D202136A0E100C09286 /* BaseNavigationTitleView.m in Sources */,
 				366EB2C82133C826007F4EE6 /* MidDrawerBubbleView.m in Sources */,
+				36014D132136930B00C09286 /* MidDrawerMineView.m in Sources */,
 				36014CE92134DE3500C09286 /* UIImageView+Category.m in Sources */,
 				D8ADA803213282D8003050F5 /* main.m in Sources */,
 				366EB2C021339F2F007F4EE6 /* MASViewConstraint.m in Sources */,
@@ -720,11 +812,13 @@
 				D8F76D732134455200D85B41 /* UILabel+Category.m in Sources */,
 				366EB29D21339B15007F4EE6 /* UIButton+Category.m in Sources */,
 				D8F76D70213444C000D85B41 /* MidDrawerBubbleTableViewCell.m in Sources */,
+				36014D192136938F00C09286 /* MidDrawerFindView.m in Sources */,
 				366EB2C421339F2F007F4EE6 /* ViewController+MASAdditions.m in Sources */,
 				D8ADA8462132D16F003050F5 /* LeftDrawerView.m in Sources */,
 				36014CFE21354BF100C09286 /* SettingBaseModel.m in Sources */,
 				D8ADA8492132D17D003050F5 /* MidDrawerView.m in Sources */,
 				D8ADA83D2132D12E003050F5 /* LeftDrawerViewController.m in Sources */,
+				36014D162136936D00C09286 /* MidDrawerMusicHallView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

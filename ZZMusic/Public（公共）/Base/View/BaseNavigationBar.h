@@ -8,13 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum : NSUInteger {
-    LeftMenuButton = 0,
-    RightBubbleButton = 1,
-} BarButtonType;
-
 @interface BaseNavigationBar : UIView
 
-@property (nonatomic, copy) void(^clickBlock)(BarButtonType);
+///左侧菜单按钮
+@property (nonatomic, copy) dispatch_block_t leftButtonClickBlock;
+///右侧气泡视图按钮
+@property (nonatomic, copy) dispatch_block_t rightButtonClickBlock;
 
 @end

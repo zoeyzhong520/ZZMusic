@@ -7,11 +7,11 @@
 //
 
 #import "MidDrawerViewController.h"
-#import "SettingViewController.h"
+#import "MidDrawerView.h"
 
 @interface MidDrawerViewController ()<UINavigationControllerDelegate>
 
-@property (nonatomic, strong) BaseNavigationBar *navigationBar;
+@property (nonatomic, strong) MidDrawerView *midDrawerView;
 
 @end
 
@@ -27,9 +27,11 @@
 - (void)setPage {
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.navigationController.delegate = self;
-    
     [self.view addSubview:self.navigationBar];
+    
+    [self.view addSubview:self.midDrawerView];
+    
+    [self.view addSubview:self.mongolianView];
 }
 
 //设置气泡视图
@@ -41,19 +43,9 @@
     bubbleView.sourceView = sourceView;
 }
 
-//打开设置
-- (void)openSetting {
-    [self.navigationController pushViewController:[SettingViewController new] animated:YES];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openSetting) name:OPEN_SETTING_NOTIFICATION object:nil];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+//点击事件
+- (void)tapMongolianView {
+    if (self.clickMongolianView) { self.clickMongolianView(); }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,30 +53,31 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - UINavigationControllerDelegate
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:[viewController isKindOfClass:[self class]] animated:YES];
-}
-
 #pragma mark - Lazy
 - (BaseNavigationBar *)navigationBar {
     if (!_navigationBar) {
         _navigationBar = [[BaseNavigationBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, STATUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT)];
         WeakSelf;
-        _navigationBar.clickBlock = ^(BarButtonType barButtonType) {
-            switch (barButtonType) {
-                case LeftMenuButton:
-                    [[NSNotificationCenter defaultCenter] postNotificationName:OPEN_LEFTDRAWER_NOTIFICATION object:nil];
-                    break;
-                case RightBubbleButton:
-                    [weakSelf addBubbleView];
-                    break;
-                default:
-                    break;
-            }
-        };
+        _navigationBar.rightButtonClickBlock = ^{ [weakSelf addBubbleView]; };
     }
     return _navigationBar;
+}
+
+- (UIView *)mongolianView {
+    if (!_mongolianView) {
+        _mongolianView = [UIView createViewWithBackgroundColor:MONGOLIANLAYER_COLOR];
+        _mongolianView.hidden = YES;
+        _mongolianView.frame = SCREEN_RECT;
+        [_mongolianView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapMongolianView)]];
+    }
+    return _mongolianView;
+}
+
+- (MidDrawerView *)midDrawerView {
+    if (!_midDrawerView) {
+        _midDrawerView = [[MidDrawerView alloc] initWithFrame:CGRectMake(0, STATUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT, self.view.bounds.size.width, CONTENT_HEIGHT)];
+    }
+    return _midDrawerView;
 }
 
 @end

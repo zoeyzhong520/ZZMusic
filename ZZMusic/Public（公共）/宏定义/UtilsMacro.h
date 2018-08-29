@@ -34,6 +34,9 @@
 ///分割线条颜色
 #define LINE_COLOR RGB(230,230,230)
 
+///分组背景色
+#define SECTION_BACKGROUNDCOLOR RGB(244,244,244)
+
 ///获取系统时间戳
 #define getCurentTime [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]]
 

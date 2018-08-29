@@ -24,6 +24,7 @@
 - (void)addBarButtonItemWithPosition:(Position)position title:(NSString *)title action:(SEL)action {
     
     UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithTitle:title ? title : @"" style:UIBarButtonItemStylePlain target:self action:action ? action : @selector(pop)];
+    buttonItem.tintColor = BLACK_TEXTCOLOR;
     if (position == Left) {
         self.navigationItem.leftBarButtonItem = buttonItem;
     } else if (position == Right) {
@@ -33,6 +34,18 @@
 
 - (void)pop {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)presentLoginViewController {
+    [self presentViewController:[[UINavigationController alloc] initWithRootViewController:[LoginViewController new]] animated:YES completion:nil];
+}
+
+- (void)showViewControllerWithClassName:(NSString *)className {
+    if (!NSClassFromString(className)) {
+        return;
+    }
+    UIViewController *vc = [[NSClassFromString(className) alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
