@@ -7,7 +7,6 @@
 //
 
 #import "BaseNavigationBar.h"
-#import "BaseNavigationTitleView.h"
 
 @interface BaseNavigationBar ()
 
@@ -15,8 +14,6 @@
 @property (nonatomic, strong) UIButton *leftMenuButton;
 //右侧呼出气泡视图按钮
 @property (nonatomic, strong) UIButton *rightBubbleButton;
-
-@property (nonatomic, strong) BaseNavigationTitleView *titleView;
 
 @end
 

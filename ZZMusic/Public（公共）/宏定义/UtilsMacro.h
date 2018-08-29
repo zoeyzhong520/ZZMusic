@@ -37,6 +37,10 @@
 ///分组背景色
 #define SECTION_BACKGROUNDCOLOR RGB(244,244,244)
 
+///MidDrawer标签未选中字体颜色
+//234 249 241
+#define MIDDRAWER_UNSELECTED_COLOR RGB(234,249,241)
+
 ///获取系统时间戳
 #define getCurentTime [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]]
 

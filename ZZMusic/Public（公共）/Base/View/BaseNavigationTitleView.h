@@ -13,4 +13,8 @@
 ///initWithFrame
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titles;
 
+@property (nonatomic, copy) void(^buttonClickBlock)(NSInteger index);
+///传入当前应高亮的标签下标
+@property (nonatomic, assign) NSInteger selectedIndex;
+
 @end

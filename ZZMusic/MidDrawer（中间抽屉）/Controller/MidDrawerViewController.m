@@ -13,6 +13,9 @@
 
 @property (nonatomic, strong) MidDrawerView *midDrawerView;
 
+///UISearchController
+@property (nonatomic, strong) UISearchController *searchController;
+
 @end
 
 @implementation MidDrawerViewController
@@ -29,9 +32,11 @@
     
     [self.view addSubview:self.navigationBar];
     
+    [self.view addSubview:self.mongolianView];
+    
     [self.view addSubview:self.midDrawerView];
     
-    [self.view addSubview:self.mongolianView];
+    [self createSearchController];
 }
 
 //设置气泡视图
@@ -48,6 +53,11 @@
     if (self.clickMongolianView) { self.clickMongolianView(); }
 }
 
+- (void)createSearchController {
+    UISearchController *search = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.searchController = search;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -59,6 +69,7 @@
         _navigationBar = [[BaseNavigationBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, STATUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT)];
         WeakSelf;
         _navigationBar.rightButtonClickBlock = ^{ [weakSelf addBubbleView]; };
+        _navigationBar.titleView.buttonClickBlock = ^(NSInteger index) { [weakSelf.midDrawerView configScrollViewContentOffset:index]; };
     }
     return _navigationBar;
 }
@@ -76,6 +87,8 @@
 - (MidDrawerView *)midDrawerView {
     if (!_midDrawerView) {
         _midDrawerView = [[MidDrawerView alloc] initWithFrame:CGRectMake(0, STATUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT, self.view.bounds.size.width, CONTENT_HEIGHT)];
+        WeakSelf;
+        _midDrawerView.scrollViewDidEndDeceleratingBlock = ^(NSInteger currentIndex) { weakSelf.navigationBar.titleView.selectedIndex = currentIndex; };
     }
     return _midDrawerView;
 }

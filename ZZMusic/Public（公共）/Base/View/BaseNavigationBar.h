@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseNavigationTitleView.h"
 
 @interface BaseNavigationBar : UIView
 
@@ -14,5 +15,7 @@
 @property (nonatomic, copy) dispatch_block_t leftButtonClickBlock;
 ///右侧气泡视图按钮
 @property (nonatomic, copy) dispatch_block_t rightButtonClickBlock;
+
+@property (nonatomic, strong) BaseNavigationTitleView *titleView;
 
 @end

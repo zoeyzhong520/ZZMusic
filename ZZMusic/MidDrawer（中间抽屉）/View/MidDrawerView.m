@@ -11,7 +11,7 @@
 #import "MidDrawerMusicHallView.h"
 #import "MidDrawerFindView.h"
 
-@interface MidDrawerView ()
+@interface MidDrawerView ()<UIScrollViewDelegate>
 
 ///滚动视图
 @property (nonatomic, strong) ZZMusicScrollView *scrollView;
@@ -42,6 +42,16 @@
     [self.scrollView addSubview:self.findView];
 }
 
+- (void)configScrollViewContentOffset:(NSInteger)index {
+    self.scrollView.contentOffset = CGPointMake(SCREEN_WIDTH*index, 0);
+}
+
+#pragma mark UIScrollViewDelegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSInteger currentIndex = scrollView.contentOffset.x / SCREEN_WIDTH;
+    if (self.scrollViewDidEndDeceleratingBlock) { self.scrollViewDidEndDeceleratingBlock(currentIndex); }
+}
+
 #pragma mark Lazy
 - (ZZMusicScrollView *)scrollView {
     if (!_scrollView) {
@@ -50,6 +60,7 @@
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.contentSize = CGSizeMake(SCREEN_WIDTH*3, self.bounds.size.height);
         _scrollView.bounces = NO;
+        _scrollView.delegate = self;
     }
     return _scrollView;
 }

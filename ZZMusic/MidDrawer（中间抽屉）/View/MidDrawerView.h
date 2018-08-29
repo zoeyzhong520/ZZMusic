@@ -10,4 +10,10 @@
 
 @interface MidDrawerView : UIView
 
+///设置ScrollView的contentOffset
+- (void)configScrollViewContentOffset:(NSInteger)index;
+
+///滚动时执行的闭包，抛出当前页码
+@property (nonatomic, copy) void(^scrollViewDidEndDeceleratingBlock)(NSInteger currentIndex);
+
 @end
