@@ -72,11 +72,11 @@
 
 #pragma mark Setter
 - (void)setIsLeftMenuButtonVisible:(BOOL)isLeftMenuButtonVisible {
-    self.leftMenuButton.hidden = isLeftMenuButtonVisible;
+    self.leftMenuButton.hidden = !isLeftMenuButtonVisible;
 }
 
 - (void)setIsRightBubbleButtonVisible:(BOOL)isRightBubbleButtonVisible {
-    self.rightBubbleButton.hidden = isRightBubbleButtonVisible;
+    self.rightBubbleButton.hidden = !isRightBubbleButtonVisible;
 }
 
 #pragma mark - Lazy

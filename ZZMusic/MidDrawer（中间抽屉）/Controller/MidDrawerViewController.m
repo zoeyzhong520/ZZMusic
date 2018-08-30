@@ -69,8 +69,8 @@
     self.searchBar.transform = CGAffineTransformIdentity;
     self.searchHistoryView.frame = CGRectMake(0, CGRectGetMaxY(self.searchBar.frame), self.view.bounds.size.width, CONTENT_HEIGHT);
     [UIView animateWithDuration:0.4 animations:^{
-        self.navigationBar.isLeftMenuButtonVisible = YES;
-        self.navigationBar.isRightBubbleButtonVisible = YES;
+        self.navigationBar.isLeftMenuButtonVisible = NO;
+        self.navigationBar.isRightBubbleButtonVisible = NO;
         self.navigationBar.transform = CGAffineTransformMakeTranslation(0, -SEARCHBAR_HEIGHT);
         self.searchBar.transform = CGAffineTransformMakeTranslation(0, -SEARCHBAR_HEIGHT);
         self.searchHistoryView.frame = CGRectMake(0, CGRectGetMaxY(self.searchBar.frame), self.view.bounds.size.width, CONTENT_HEIGHT+SEARCHBAR_HEIGHT);
@@ -85,8 +85,8 @@
     self.searchBar.transform = CGAffineTransformMakeTranslation(0, -SEARCHBAR_HEIGHT);
     self.searchHistoryView.frame = CGRectMake(0, CGRectGetMaxY(self.searchBar.frame), self.view.bounds.size.width, CONTENT_HEIGHT+SEARCHBAR_HEIGHT);
     [UIView animateWithDuration:0.4 animations:^{
-        self.navigationBar.isLeftMenuButtonVisible = NO;
-        self.navigationBar.isRightBubbleButtonVisible = NO;
+        self.navigationBar.isLeftMenuButtonVisible = YES;
+        self.navigationBar.isRightBubbleButtonVisible = YES;
         self.navigationBar.transform = CGAffineTransformMakeTranslation(0, 0);
         self.searchBar.transform = CGAffineTransformIdentity;
         self.searchHistoryView.frame = CGRectMake(0, CGRectGetMaxY(self.searchBar.frame), self.view.bounds.size.width, CONTENT_HEIGHT);
