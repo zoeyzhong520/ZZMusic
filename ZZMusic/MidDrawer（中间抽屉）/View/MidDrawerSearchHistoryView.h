@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#pragma mark 搜索历史记录
+
 @interface MidDrawerSearchHistoryView : UIView
 
 @end

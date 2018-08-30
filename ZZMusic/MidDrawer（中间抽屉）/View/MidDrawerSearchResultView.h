@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#pragma mark 搜索结果
+
 @interface MidDrawerSearchResultView : UIView
 
 @end

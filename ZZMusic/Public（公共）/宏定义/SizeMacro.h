@@ -42,6 +42,6 @@
 #define BUBBLE_SINGLEROW_HEIGHT 40
 
 ///搜索栏高度
-#define SEARCHBAR_HEIGHT 44
+#define SEARCHBAR_HEIGHT 56
 
 #endif /* SizeMacro_h */

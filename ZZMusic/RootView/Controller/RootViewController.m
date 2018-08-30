@@ -30,6 +30,7 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:BIG_FONT, NSForegroundColorAttributeName:BLACK_TEXTCOLOR}];
     //设置边缘手势
     [self addScreenEdgePanGestureRecognizer];
+    [self addPanGestureRecognizer];
     
     WeakSelf;
     
@@ -77,6 +78,20 @@
     }
 }
 
+#pragma mark 添加拖拽手势
+- (void)addPanGestureRecognizer {
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(showLeftDrawer:)];
+    [self.view addGestureRecognizer:pan];
+}
+
+- (void)removePanGestureRecognizer {
+    for (UIGestureRecognizer *gesture in self.view.gestureRecognizers) {
+        if ([gesture isKindOfClass:[UIPanGestureRecognizer class]]) {
+            [self.view removeGestureRecognizer:gesture];
+        }
+    }
+}
+
 //点击事件
 - (void)openLeftDrawer {
     self.midDrawerView.mongolianView.alpha = 0.0;
@@ -87,14 +102,14 @@
         self.leftDrawerView.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
         
         [self removeScreenEdgePanGestureRecognizer];
-        
+        [self removePanGestureRecognizer];
         [self addSwipeGestureRecognizer];
         //mongolianView蒙层alpha值与边缘手势保持一致
         self.midDrawerView.mongolianView.alpha = (SCREEN_WIDTH*4/5) / SCREEN_WIDTH;
     }];
 }
 
-- (void)showLeftDrawer:(UIScreenEdgePanGestureRecognizer *)gesture {
+- (void)showLeftDrawer:(UIGestureRecognizer *)gesture {
     /*
      -让view跟着手指去移动
      -frame的x应该为多少??应该获取到手指的x值
@@ -116,6 +131,7 @@
             // 如果超过,那么完全展示出来
             frame.origin.x = SCREEN_WIDTH*4/5;
             [self removeScreenEdgePanGestureRecognizer];
+            [self removePanGestureRecognizer];
             [self addSwipeGestureRecognizer];
         } else {
             frame.origin.x = 0;
@@ -134,6 +150,7 @@
     [UIView animateWithDuration:ANIMATE_DURATION animations:^{
         self.midDrawerView.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
         [self addScreenEdgePanGestureRecognizer];
+        [self addPanGestureRecognizer];
         [self removeSwipeGestureRecognizer];
     }];
 }

@@ -15,7 +15,11 @@
 @property (nonatomic, copy) dispatch_block_t leftButtonClickBlock;
 ///右侧气泡视图按钮
 @property (nonatomic, copy) dispatch_block_t rightButtonClickBlock;
-
+///titleView
 @property (nonatomic, strong) BaseNavigationTitleView *titleView;
+///是否显示左边菜单按钮
+@property (nonatomic, assign) BOOL isLeftMenuButtonVisible;
+///是否显示右边气泡视图按钮
+@property (nonatomic, assign) BOOL isRightBubbleButtonVisible;
 
 @end

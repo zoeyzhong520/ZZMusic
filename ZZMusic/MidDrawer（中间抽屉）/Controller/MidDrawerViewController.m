@@ -65,11 +65,15 @@
 
 #pragma mark UISearchBarDelegate
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
-    self.navigationBar.frame = CGRectMake(0, 0, SCREEN_WIDTH, STATUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT);
+    self.navigationBar.transform = CGAffineTransformIdentity;
     self.searchBar.transform = CGAffineTransformIdentity;
+    self.searchHistoryView.frame = CGRectMake(0, CGRectGetMaxY(self.searchBar.frame), self.view.bounds.size.width, CONTENT_HEIGHT);
     [UIView animateWithDuration:0.4 animations:^{
-        self.navigationBar.frame = CGRectMake(0, 0, SCREEN_WIDTH, STATUS_BAR_HEIGHT);
-        self.searchBar.transform = CGAffineTransformMakeTranslation(0, -NAVIGATION_BAR_HEIGHT);
+        self.navigationBar.isLeftMenuButtonVisible = YES;
+        self.navigationBar.isRightBubbleButtonVisible = YES;
+        self.navigationBar.transform = CGAffineTransformMakeTranslation(0, -SEARCHBAR_HEIGHT);
+        self.searchBar.transform = CGAffineTransformMakeTranslation(0, -SEARCHBAR_HEIGHT);
+        self.searchHistoryView.frame = CGRectMake(0, CGRectGetMaxY(self.searchBar.frame), self.view.bounds.size.width, CONTENT_HEIGHT+SEARCHBAR_HEIGHT);
     }];
     
     self.searchHistoryView.hidden = NO;
@@ -77,18 +81,23 @@
 }
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
-    self.navigationBar.frame = CGRectMake(0, 0, SCREEN_WIDTH, STATUS_BAR_HEIGHT);
-    self.searchBar.transform = CGAffineTransformMakeTranslation(0, -NAVIGATION_BAR_HEIGHT);
+    self.navigationBar.transform = CGAffineTransformMakeTranslation(0, -SEARCHBAR_HEIGHT);
+    self.searchBar.transform = CGAffineTransformMakeTranslation(0, -SEARCHBAR_HEIGHT);
+    self.searchHistoryView.frame = CGRectMake(0, CGRectGetMaxY(self.searchBar.frame), self.view.bounds.size.width, CONTENT_HEIGHT+SEARCHBAR_HEIGHT);
     [UIView animateWithDuration:0.4 animations:^{
-        self.navigationBar.frame = CGRectMake(0, 0, SCREEN_WIDTH, STATUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT);
+        self.navigationBar.isLeftMenuButtonVisible = NO;
+        self.navigationBar.isRightBubbleButtonVisible = NO;
+        self.navigationBar.transform = CGAffineTransformMakeTranslation(0, 0);
         self.searchBar.transform = CGAffineTransformIdentity;
+        self.searchHistoryView.frame = CGRectMake(0, CGRectGetMaxY(self.searchBar.frame), self.view.bounds.size.width, CONTENT_HEIGHT);
+    } completion:^(BOOL finished) {
+        self.searchHistoryView.hidden = YES;
     }];
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
     searchBar.showsCancelButton = NO;
-    self.searchHistoryView.hidden = YES;
 }
 
 #pragma mark Lazy
@@ -114,7 +123,7 @@
 
 - (MidDrawerView *)midDrawerView {
     if (!_midDrawerView) {
-        _midDrawerView = [[MidDrawerView alloc] initWithFrame:CGRectMake(0, STATUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT, self.view.bounds.size.width, CONTENT_HEIGHT)];
+        _midDrawerView = [[MidDrawerView alloc] initWithFrame:CGRectMake(0, STATUS_BAR_HEIGHT+NAVIGATION_BAR_HEIGHT+SEARCHBAR_HEIGHT, self.view.bounds.size.width, CONTENT_HEIGHT-SEARCHBAR_HEIGHT)];
         WeakSelf;
         _midDrawerView.scrollViewDidEndDeceleratingBlock = ^(NSInteger currentIndex) { weakSelf.navigationBar.titleView.selectedIndex = currentIndex; };
     }
@@ -124,9 +133,7 @@
 - (ZZMusicSearchBar *)searchBar {
     if (!_searchBar) {
         _searchBar = [[ZZMusicSearchBar alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.navigationBar.frame), self.view.bounds.size.width, SEARCHBAR_HEIGHT)];
-        UIImage *img = [UIImage GetImageWithColor:MAIN_COLOR andHeight:SEARCHBAR_HEIGHT];
-        [_searchBar setBackgroundImage:img];
-        [_searchBar setBackgroundColor:[UIColor clearColor]];
+        [_searchBar setImage:[UIImage imageNamed:@"search"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
         _searchBar.delegate = self;
     }
     return _searchBar;
