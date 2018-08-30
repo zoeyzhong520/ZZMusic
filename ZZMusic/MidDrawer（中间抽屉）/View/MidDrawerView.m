@@ -59,6 +59,7 @@
         _scrollView.pagingEnabled = YES;
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.contentSize = CGSizeMake(SCREEN_WIDTH*3, self.bounds.size.height);
+        _scrollView.contentOffset = CGPointMake(SCREEN_WIDTH, 0);
         _scrollView.bounces = NO;
         _scrollView.delegate = self;
     }

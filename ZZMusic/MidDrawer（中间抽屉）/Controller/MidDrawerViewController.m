@@ -8,13 +8,16 @@
 
 #import "MidDrawerViewController.h"
 #import "MidDrawerView.h"
+#import "MidDrawerSearchHistoryView.h"
 
-@interface MidDrawerViewController ()<UINavigationControllerDelegate>
+@interface MidDrawerViewController ()<UINavigationControllerDelegate, UISearchBarDelegate>
 
 @property (nonatomic, strong) MidDrawerView *midDrawerView;
 
-///UISearchController
-@property (nonatomic, strong) UISearchController *searchController;
+///搜索框
+@property (nonatomic, strong) ZZMusicSearchBar *searchBar;
+///搜索历史View
+@property (nonatomic, strong) MidDrawerSearchHistoryView *searchHistoryView;
 
 @end
 
@@ -32,11 +35,13 @@
     
     [self.view addSubview:self.navigationBar];
     
-    [self.view addSubview:self.mongolianView];
-    
     [self.view addSubview:self.midDrawerView];
     
-    [self createSearchController];
+    [self.view addSubview:self.mongolianView];
+    
+    [self.view addSubview:self.searchBar];
+    
+    [self.view addSubview:self.searchHistoryView];
 }
 
 //设置气泡视图
@@ -53,17 +58,40 @@
     if (self.clickMongolianView) { self.clickMongolianView(); }
 }
 
-- (void)createSearchController {
-    UISearchController *search = [[UISearchController alloc] initWithSearchResultsController:nil];
-    self.searchController = search;
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Lazy
+#pragma mark UISearchBarDelegate
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    self.navigationBar.frame = CGRectMake(0, 0, SCREEN_WIDTH, STATUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT);
+    self.searchBar.transform = CGAffineTransformIdentity;
+    [UIView animateWithDuration:0.4 animations:^{
+        self.navigationBar.frame = CGRectMake(0, 0, SCREEN_WIDTH, STATUS_BAR_HEIGHT);
+        self.searchBar.transform = CGAffineTransformMakeTranslation(0, -NAVIGATION_BAR_HEIGHT);
+    }];
+    
+    self.searchHistoryView.hidden = NO;
+    searchBar.showsCancelButton = YES;
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    self.navigationBar.frame = CGRectMake(0, 0, SCREEN_WIDTH, STATUS_BAR_HEIGHT);
+    self.searchBar.transform = CGAffineTransformMakeTranslation(0, -NAVIGATION_BAR_HEIGHT);
+    [UIView animateWithDuration:0.4 animations:^{
+        self.navigationBar.frame = CGRectMake(0, 0, SCREEN_WIDTH, STATUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT);
+        self.searchBar.transform = CGAffineTransformIdentity;
+    }];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+    searchBar.showsCancelButton = NO;
+    self.searchHistoryView.hidden = YES;
+}
+
+#pragma mark Lazy
 - (BaseNavigationBar *)navigationBar {
     if (!_navigationBar) {
         _navigationBar = [[BaseNavigationBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, STATUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT)];
@@ -91,6 +119,25 @@
         _midDrawerView.scrollViewDidEndDeceleratingBlock = ^(NSInteger currentIndex) { weakSelf.navigationBar.titleView.selectedIndex = currentIndex; };
     }
     return _midDrawerView;
+}
+
+- (ZZMusicSearchBar *)searchBar {
+    if (!_searchBar) {
+        _searchBar = [[ZZMusicSearchBar alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.navigationBar.frame), self.view.bounds.size.width, SEARCHBAR_HEIGHT)];
+        UIImage *img = [UIImage GetImageWithColor:MAIN_COLOR andHeight:SEARCHBAR_HEIGHT];
+        [_searchBar setBackgroundImage:img];
+        [_searchBar setBackgroundColor:[UIColor clearColor]];
+        _searchBar.delegate = self;
+    }
+    return _searchBar;
+}
+
+- (MidDrawerSearchHistoryView *)searchHistoryView {
+    if (!_searchHistoryView) {
+        _searchHistoryView = [[MidDrawerSearchHistoryView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.searchBar.frame), self.view.bounds.size.width, CONTENT_HEIGHT)];
+        _searchHistoryView.hidden = YES;
+    }
+    return _searchHistoryView;
 }
 
 @end

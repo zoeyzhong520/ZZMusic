@@ -47,7 +47,7 @@
         }];
         
         //默认选中第一个
-        if (i == 0) { _selectedButton = button; [_selectedButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal]; }
+        if (i == 1) { _selectedButton = button; [_selectedButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal]; }
         
         [self.buttons addObject:button];
     }

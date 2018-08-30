@@ -16,5 +16,6 @@
 #import "BubbleLayer.h"
 #import "LoginViewController.h"
 #import "ZZMusicScrollView.h"
+#import "ZZMusicSearchBar.h"
 
 #endif /* ClassMacro_h */
