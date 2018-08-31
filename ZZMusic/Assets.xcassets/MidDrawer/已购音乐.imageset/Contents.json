@@ -2,17 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "search@1x.png",
+      "filename" : "已购音乐@1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "search@2x.png",
+      "filename" : "已购音乐@2x.png",
       "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
     }
   ],
   "info" : {

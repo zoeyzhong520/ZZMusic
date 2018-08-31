@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    TranslationTop = 0,
+    TranslationLeft,
+    TranslationBottom,
+    TranslationRight,
+    TranslationNone
+} TranslationDirection;
+
 @interface ZZMusicScrollView : UIScrollView
+
+///判断手势方向
++ (TranslationDirection)commitTranslation:(CGPoint)translation;
 
 @end

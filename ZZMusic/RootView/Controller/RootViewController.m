@@ -32,6 +32,8 @@
     [self addScreenEdgePanGestureRecognizer];
     [self addPanGestureRecognizer];
     
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     WeakSelf;
     
     [self addChildViewController:self.leftDrawerView];
@@ -80,16 +82,16 @@
 
 #pragma mark 添加拖拽手势
 - (void)addPanGestureRecognizer {
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(showLeftDrawer:)];
-    [self.view addGestureRecognizer:pan];
+//    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(showLeftDrawer:)];
+//    [self.view addGestureRecognizer:pan];
 }
 
 - (void)removePanGestureRecognizer {
-    for (UIGestureRecognizer *gesture in self.view.gestureRecognizers) {
-        if ([gesture isKindOfClass:[UIPanGestureRecognizer class]]) {
-            [self.view removeGestureRecognizer:gesture];
-        }
-    }
+//    for (UIGestureRecognizer *gesture in self.view.gestureRecognizers) {
+//        if ([gesture isKindOfClass:[UIPanGestureRecognizer class]]) {
+//            [self.view removeGestureRecognizer:gesture];
+//        }
+//    }
 }
 
 //点击事件

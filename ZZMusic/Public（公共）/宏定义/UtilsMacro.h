@@ -41,6 +41,9 @@
 //234 249 241
 #define MIDDRAWER_UNSELECTED_COLOR RGB(234,249,241)
 
+///阴影颜色
+#define SHADOW_COLOR LINE_COLOR
+
 ///获取系统时间戳
 #define getCurentTime [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]]
 

@@ -16,4 +16,7 @@
 ///设置文本、图片的间距
 - (void)setEdgeInsetsWithTitleEdgeInsets:(UIEdgeInsets)titleEdgeInsets imageEdgeInsets:(UIEdgeInsets)imageEdgeInsets;
 
+///设置图片在上、文本在下
+- (void)setTopImageBottomTitle;
+
 @end

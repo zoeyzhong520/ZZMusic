@@ -37,11 +37,11 @@
     
     [self.view addSubview:self.midDrawerView];
     
-    [self.view addSubview:self.mongolianView];
-    
     [self.view addSubview:self.searchBar];
     
     [self.view addSubview:self.searchHistoryView];
+    
+    [self.view addSubview:self.mongolianView];
 }
 
 //设置气泡视图
@@ -56,6 +56,11 @@
 //点击事件
 - (void)tapMongolianView {
     if (self.clickMongolianView) { self.clickMongolianView(); }
+}
+
+///我的
+- (void)handleMineViewClickType:(MidDrawerMineViewClickType)type {
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -126,6 +131,7 @@
         _midDrawerView = [[MidDrawerView alloc] initWithFrame:CGRectMake(0, STATUS_BAR_HEIGHT+NAVIGATION_BAR_HEIGHT+SEARCHBAR_HEIGHT, self.view.bounds.size.width, CONTENT_HEIGHT-SEARCHBAR_HEIGHT)];
         WeakSelf;
         _midDrawerView.scrollViewDidEndDeceleratingBlock = ^(NSInteger currentIndex) { weakSelf.navigationBar.titleView.selectedIndex = currentIndex; };
+        _midDrawerView.mineView.clickBlock = ^(MidDrawerMineViewClickType type) { [weakSelf handleMineViewClickType:type]; };
     }
     return _midDrawerView;
 }

@@ -7,20 +7,11 @@
 //
 
 #import "MidDrawerView.h"
-#import "MidDrawerMineView.h"
-#import "MidDrawerMusicHallView.h"
-#import "MidDrawerFindView.h"
 
 @interface MidDrawerView ()<UIScrollViewDelegate>
 
 ///滚动视图
 @property (nonatomic, strong) ZZMusicScrollView *scrollView;
-///我的
-@property (nonatomic, strong) MidDrawerMineView *mineView;
-///音乐馆
-@property (nonatomic, strong) MidDrawerMusicHallView *musicHallView;
-///发现
-@property (nonatomic, strong) MidDrawerFindView *findView;
 
 @end
 

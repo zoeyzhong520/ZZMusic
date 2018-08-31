@@ -68,7 +68,7 @@
     [self.imgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(-fontSizeScale(15));
         make.centerY.mas_equalTo(0);
-        make.size.mas_equalTo(CGSizeMake(fontSizeScale(14), fontSizeScale(14)));
+        make.size.mas_equalTo(CGSizeMake(fontSizeScale(12), fontSizeScale(12)));
     }];
     
     [self.bottomLine mas_makeConstraints:^(MASConstraintMaker *make) {
