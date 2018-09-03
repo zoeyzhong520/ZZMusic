@@ -12,5 +12,6 @@
 #define FramesMacro_h
 
 #import "Masonry.h"
+#import "UIImageView+WebCache.h"
 
 #endif /* FramesMacro_h */

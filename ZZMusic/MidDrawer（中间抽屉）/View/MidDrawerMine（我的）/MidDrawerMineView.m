@@ -83,7 +83,7 @@
 
 - (MidDrawerMineTableHeaderView *)tableHeaderView {
     if (!_tableHeaderView) {
-        _tableHeaderView = [[MidDrawerMineTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, fontSizeScale(320))];
+        _tableHeaderView = [[MidDrawerMineTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, fontSizeScale(350))];
         WeakSelf;
         _tableHeaderView.clickBlock = ^(MidDrawerMineTableHeaderViewClickType type) {
             switch (type) {

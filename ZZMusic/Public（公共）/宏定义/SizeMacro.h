@@ -35,7 +35,7 @@
 #define SCREEN_RESOLUTION (SCREEN_WIDTH * SCREEN_HEIGHT * ([UIScreen mainScreen].scale))
 
 ///广告栏高度
-#define BANNER_HEIGHT 215
+#define BANNER_HEIGHT 140
 
 ///气泡视图宽度
 #define BUBBLE_WIDTH 130

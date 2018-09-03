@@ -61,7 +61,7 @@
 - (void)addConstraints {
     [self.loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(fontSizeScale(40));
+        make.height.mas_equalTo(fontSizeScale(45));
     }];
     
     [self.activityView mas_makeConstraints:^(MASConstraintMaker *make) {

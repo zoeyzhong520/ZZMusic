@@ -133,7 +133,7 @@
 #pragma mark Lazy
 - (MidDrawerMineTableHeaderLoginOptionView *)loginOptionView {
     if (!_loginOptionView) {
-        _loginOptionView = [[MidDrawerMineTableHeaderLoginOptionView alloc] initWithFrame:CGRectMake(fontSizeScale(5), 0, self.bounds.size.width-fontSizeScale(10), fontSizeScale(100))];
+        _loginOptionView = [[MidDrawerMineTableHeaderLoginOptionView alloc] initWithFrame:CGRectMake(fontSizeScale(5), 0, self.bounds.size.width-fontSizeScale(10), fontSizeScale(110))];
         _loginOptionView.layer.shadowColor = SHADOW_COLOR.CGColor;
         _loginOptionView.layer.shadowOpacity = 0.8f;
         _loginOptionView.layer.shadowOffset = CGSizeMake(0, 0);
@@ -157,7 +157,7 @@
 - (UIView *)songListView {
     if (!_songListView) {
         _songListView = [UIView createViewWithBackgroundColor:[UIColor whiteColor]];
-        _songListView.frame = CGRectMake(0, CGRectGetMaxY(self.featuresView.frame), self.bounds.size.width, fontSizeScale(60));
+        _songListView.frame = CGRectMake(0, CGRectGetMaxY(self.featuresView.frame), self.bounds.size.width, fontSizeScale(80));
     }
     return _songListView;
 }

@@ -93,4 +93,15 @@
 ///KeyWindow
 #define ZZKEYWINDOW [UIApplication sharedApplication].keyWindow
 
+///BANNER图片地址
+#define BANNER_IMAGEPATH_FIRST @"http://pic.qiantucdn.com/58pic/19/43/70/56d3eb16b3c51_1024.jpg"
+#define BANNER_IMAGEPATH_SECOND @"http://imgsrc.baidu.com/imgad/pic/item/8b82b9014a90f6038eed546a3212b31bb051edbb.jpg"
+#define BANNER_IMAGEPATH_THIRD @"http://imgsrc.baidu.com/imgad/pic/item/9e3df8dcd100baa1706f8e964c10b912c8fc2e58.jpg"
+#define BANNER_IMAGEPATH_FOURTH @"http://imgsrc.baidu.com/image/c0%3Dpixel_huitu%2C0%2C0%2C294%2C40/sign=92648692083b5bb5aada28be5fabb055/77094b36acaf2edd199cced0861001e93901939e.jpg"
+#define BANNER_IMAGEPATH_FIFTH @"http://imgsrc.baidu.com/imgad/pic/item/b17eca8065380cd7ce6868c0aa44ad34598281ad.jpg"
+#define BANNER_IMAGEPATH_SIXTH @"http://imgsrc.baidu.com/imgad/pic/item/4a36acaf2edda3cc0b837b0d0ae93901213f92bc.jpg"
+
+///Banner占位图
+#define PLACEHOLDER_IMAGE [UIImage imageNamed:@"placeholder"]
+
 #endif /* UtilsMacro_h */
