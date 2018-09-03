@@ -26,12 +26,12 @@
     self.imageEdgeInsets = imageEdgeInsets;
 }
 
-- (void)setTopImageBottomTitle {
+- (void)setTopImageBottomTitleWithMargin:(CGFloat)margin {
     self.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
     //文字距离上边框的距离增加imageView的高度，距离左边框减少imageView的宽度，距离下边框和右边框距离不变
-    self.titleEdgeInsets = UIEdgeInsetsMake(self.imageView.frame.size.height+40, -self.imageView.frame.size.width, 0.0, 0.0);
+    self.titleEdgeInsets = UIEdgeInsetsMake(self.imageView.frame.size.height+margin, -self.imageView.frame.size.width, 0.0, 0.0);
     //图片距离右边框距离减少图片的宽度，其它不变
-    self.imageEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, 0.0, -self.titleLabel.frame.size.width);
+    self.imageEdgeInsets = UIEdgeInsetsMake(-margin, 0.0, 0.0, -self.titleLabel.frame.size.width);
 }
 
 @end

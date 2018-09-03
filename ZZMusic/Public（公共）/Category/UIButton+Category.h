@@ -17,6 +17,6 @@
 - (void)setEdgeInsetsWithTitleEdgeInsets:(UIEdgeInsets)titleEdgeInsets imageEdgeInsets:(UIEdgeInsets)imageEdgeInsets;
 
 ///设置图片在上、文本在下
-- (void)setTopImageBottomTitle;
+- (void)setTopImageBottomTitleWithMargin:(CGFloat)margin;
 
 @end

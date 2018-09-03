@@ -33,6 +33,8 @@
 @property (nonatomic, strong) UILabel *songAlbumSubTitleLabel;
 ///新歌新碟imgView
 @property (nonatomic, strong) UIImageView *songAlbumImgView;
+///新歌新碟line
+@property (nonatomic, strong) UIView *songAlbumLine;
 
 ///数字专辑·票务View
 @property (nonatomic, strong) UIView *digitalAlbumView;
@@ -42,6 +44,8 @@
 @property (nonatomic, strong) UILabel *digitalAlbumSubTitleLabel;
 ///数字专辑·票务imgView
 @property (nonatomic, strong) UIImageView *digitalAlbumImgView;
+///数字专辑·票务line
+@property (nonatomic, strong) UIView *digitalAlbumLine;
 
 @end
 
@@ -97,8 +101,8 @@
 
 //设置operationView
 - (void)configOperationView {
-    NSArray *images = @[@"",@"",@"",@"",@""];
-    NSArray *names = @[@"歌手",@"排行",@"分类歌单",@"电台",@"视频"];
+    NSArray *images = @[@"歌手",@"排行",@"分类歌单",@"电台",@"视频"];
+    NSArray *names = @[@"歌手",@"排行",@"分类",@"电台",@"视频"];
     CGFloat W = self.operationView.bounds.size.width/5;
     CGFloat H = self.operationView.bounds.size.height;
     
@@ -106,6 +110,7 @@
         UIButton *button = [UIButton createButtonWithTarget:self action:@selector(buttonClick:) title:names[i] textColor:BLACK_TEXTCOLOR imgStr:images[i]];
         button.titleLabel.font = NORMAL_FONT;
         button.frame = CGRectMake(W*i, 0, W, H);
+        [button setTopImageBottomTitleWithMargin:15];
         [self.operationView addSubview:button];
     }
 }
@@ -141,6 +146,8 @@
     
     [self.songAlbumView addSubview:self.songAlbumImgView];
     
+    [self.songAlbumView addSubview:self.songAlbumLine];
+    
     [self.songAlbumImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.right.mas_equalTo(0);
         make.width.mas_equalTo((BANNER_HEIGHT-fontSizeScale(10))/2);
@@ -158,6 +165,12 @@
         make.right.mas_equalTo(self.songAlbumImgView.mas_left);
         make.height.mas_equalTo(fontSizeScale(12));
     }];
+    
+    [self.songAlbumLine mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.mas_equalTo(0);
+        make.right.mas_equalTo(self.songAlbumImgView.mas_left);
+        make.width.mas_equalTo(fontSizeScale(0.5));
+    }];
 }
 
 //设置digitalAlbumView
@@ -167,6 +180,8 @@
     [self.digitalAlbumView addSubview:self.digitalAlbumSubTitleLabel];
     
     [self.digitalAlbumView addSubview:self.digitalAlbumImgView];
+    
+    [self.digitalAlbumView addSubview:self.digitalAlbumLine];
     
     [self.digitalAlbumImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.right.mas_equalTo(0);
@@ -184,6 +199,12 @@
         make.top.mas_equalTo(self.digitalAlbumTitleLabel.mas_bottom).offset(fontSizeScale(10));
         make.right.mas_equalTo(self.digitalAlbumImgView.mas_left);
         make.height.mas_equalTo(fontSizeScale(12));
+    }];
+    
+    [self.digitalAlbumLine mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.mas_equalTo(0);
+        make.right.mas_equalTo(self.digitalAlbumImgView.mas_left);
+        make.width.mas_equalTo(fontSizeScale(0.5));
     }];
 }
 
@@ -203,7 +224,7 @@
 - (UIView *)operationView {
     if (!_operationView) {
         _operationView = [UIView createViewWithBackgroundColor:[UIColor whiteColor]];
-        _operationView.frame = CGRectMake(fontSizeScale(10), CGRectGetMaxY(self.adCarouselView.frame), self.bounds.size.width-fontSizeScale(20), fontSizeScale(50));
+        _operationView.frame = CGRectMake(fontSizeScale(10), CGRectGetMaxY(self.adCarouselView.frame), self.bounds.size.width-fontSizeScale(20), fontSizeScale(80));
         _operationView.layer.shadowColor = LINE_COLOR.CGColor;
         _operationView.layer.shadowOffset = CGSizeMake(0, 0);
         _operationView.layer.shadowOpacity = 0.8f;
@@ -213,7 +234,7 @@
 
 - (UIView *)personalityRadioView {
     if (!_personalityRadioView) {
-        _personalityRadioView = [UIView createViewWithBackgroundColor:[UIColor redColor]];
+        _personalityRadioView = [UIView createViewWithBackgroundColor:LINE_COLOR];
     }
     return _personalityRadioView;
 }
@@ -228,14 +249,14 @@
 
 - (UIImageView *)personalityRadioImgView {
     if (!_personalityRadioImgView) {
-        _personalityRadioImgView = [UIImageView createImageViewWithImg:@""];
+        _personalityRadioImgView = [UIImageView createImageViewWithImg:@"CD"];
     }
     return _personalityRadioImgView;
 }
 
 - (UIButton *)personalityRadioPlayButton {
     if (!_personalityRadioPlayButton) {
-        _personalityRadioPlayButton = [UIButton createButtonWithTarget:self action:@selector(buttonClick:) title:nil textColor:nil imgStr:@""];
+        _personalityRadioPlayButton = [UIButton createButtonWithTarget:self action:@selector(buttonClick:) title:nil textColor:nil imgStr:@"个性电台播放"];
         _personalityRadioPlayButton.tag = 888;
     }
     return _personalityRadioPlayButton;
@@ -243,7 +264,7 @@
 
 - (UIView *)songAlbumView {
     if (!_songAlbumView) {
-        _songAlbumView = [UIView createViewWithBackgroundColor:LINE_COLOR];
+        _songAlbumView = [UIView createViewWithBackgroundColor:SECTION_BACKGROUNDCOLOR];
     }
     return _songAlbumView;
 }
@@ -264,15 +285,21 @@
 
 - (UIImageView *)songAlbumImgView {
     if (!_songAlbumImgView) {
-        _songAlbumImgView = [UIImageView createImageViewWithImg:@""];
-        _songAlbumImgView.backgroundColor = GRAY_TEXTCOLOR;
+        _songAlbumImgView = [UIImageView createImageViewWithImg:@"CD"];
     }
     return _songAlbumImgView;
 }
 
+- (UIView *)songAlbumLine {
+    if (!_songAlbumLine) {
+        _songAlbumLine = [UIView createViewWithBackgroundColor:LINE_COLOR];
+    }
+    return _songAlbumLine;
+}
+
 - (UIView *)digitalAlbumView {
     if (!_digitalAlbumView) {
-        _digitalAlbumView = [UIView createViewWithBackgroundColor:LINE_COLOR];
+        _digitalAlbumView = [UIView createViewWithBackgroundColor:SECTION_BACKGROUNDCOLOR];
     }
     return _digitalAlbumView;
 }
@@ -293,10 +320,16 @@
 
 - (UIImageView *)digitalAlbumImgView {
     if (!_digitalAlbumImgView) {
-        _digitalAlbumImgView = [UIImageView createImageViewWithImg:@""];
-        _digitalAlbumImgView.backgroundColor = GRAY_TEXTCOLOR;
+        _digitalAlbumImgView = [UIImageView createImageViewWithImg:@"CD"];
     }
     return _digitalAlbumImgView;
+}
+
+- (UIView *)digitalAlbumLine {
+    if (!_digitalAlbumLine) {
+        _digitalAlbumLine = [UIView createViewWithBackgroundColor:LINE_COLOR];
+    }
+    return _digitalAlbumLine;
 }
 
 @end

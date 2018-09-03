@@ -55,7 +55,7 @@
         button.titleLabel.font = NORMAL_FONT;
         button.frame = CGRectMake(W*(i%3), H*(i/3), W, H);
         button.tag = i;
-        [button setTopImageBottomTitle];
+        [button setTopImageBottomTitleWithMargin:20];
         [self.featuresView addSubview:button];
     }
 }
