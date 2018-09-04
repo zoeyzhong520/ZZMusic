@@ -9,6 +9,10 @@
 #import "MidDrawerMusicHallView.h"
 #import "MidDrawerMusicHallHeaderView.h"
 #import "MidDrawerMusicHallCollectionViewMusicCell.h"
+#import "MidDrawerMusicHallCollectionViewVideoCell.h"
+#import "MidDrawerMusicHallCollectionViewRoundCell.h"
+#import "MidDrawerMusicHallCollectionViewColumnCell.h"
+#import "MidDrawerMusicHallCollectionViewLiveBroadCastCell.h"
 #import "MidDrawerMusicHallSectionHeaderView.h"
 
 @interface MidDrawerMusicHallView ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
@@ -43,12 +47,51 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 6;
+    MidDrawerBaseModel *model = self.dataArray[section];
+    
+    if ([model.sectionType isEqualToString:@"SongList"] || [model.sectionType isEqualToString:@"Album"] || [model.sectionType isEqualToString:@"Radio"]) {//为你推荐歌单、最新专辑、精选电台
+        return 6;
+    } else if ([model.sectionType isEqualToString:@"Content"] || [model.sectionType isEqualToString:@"MV"] || [model.sectionType isEqualToString:@"Column"]) {//独家内容、最新MV、专栏
+        return 4;
+    } else {//乐人
+        return 3;
+    }
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    MidDrawerMusicHallCollectionViewMusicCell *cell = [MidDrawerMusicHallCollectionViewMusicCell createCellWithCollectionView:collectionView indexPath:indexPath];
-    return cell;
+    
+    MidDrawerBaseModel *model = self.dataArray[indexPath.section];
+    
+    if ([model.sectionType isEqualToString:@"SongList"]) {//为你推荐歌单
+        MidDrawerMusicHallCollectionViewMusicCell *cell = [MidDrawerMusicHallCollectionViewMusicCell createCellWithCollectionView:collectionView indexPath:indexPath];
+        return cell;
+    } else if ([model.sectionType isEqualToString:@"Album"]) {//最新专辑
+        MidDrawerMusicHallCollectionViewMusicCell *cell = [MidDrawerMusicHallCollectionViewMusicCell createCellWithCollectionView:collectionView indexPath:indexPath];
+        cell.isSubTitleVisible = YES;
+        return cell;
+    } else if ([model.sectionType isEqualToString:@"Content"]) {//独家内容
+        MidDrawerMusicHallCollectionViewVideoCell *cell = [MidDrawerMusicHallCollectionViewVideoCell createCellWithCollectionView:collectionView indexPath:indexPath];
+        return cell;
+    } else if ([model.sectionType isEqualToString:@"Radio"]) {//精选电台
+        if (indexPath.row < 3) {
+            MidDrawerMusicHallCollectionViewRoundCell *cell = [MidDrawerMusicHallCollectionViewRoundCell createCellWithCollectionView:collectionView indexPath:indexPath];
+            return cell;
+        } else {
+            MidDrawerMusicHallCollectionViewLiveBroadCastCell *cell = [MidDrawerMusicHallCollectionViewLiveBroadCastCell createCellWithCollectionView:collectionView indexPath:indexPath];
+            return cell;
+        }
+    } else if ([model.sectionType isEqualToString:@"MV"]) {//最新MV
+        MidDrawerMusicHallCollectionViewVideoCell *cell = [MidDrawerMusicHallCollectionViewVideoCell createCellWithCollectionView:collectionView indexPath:indexPath];
+        cell.isSubTitleVisible = YES;
+        return cell;
+    } else if ([model.sectionType isEqualToString:@"Column"]) {//专栏
+        MidDrawerMusicHallCollectionViewColumnCell *cell = [MidDrawerMusicHallCollectionViewColumnCell createCellWithCollectionView:collectionView indexPath:indexPath];
+        return cell;
+    } else {//乐人
+        MidDrawerMusicHallCollectionViewMusicCell *cell = [MidDrawerMusicHallCollectionViewMusicCell createCellWithCollectionView:collectionView indexPath:indexPath];
+        cell.isSubTitleVisible = YES;
+        return cell;
+    }
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -56,7 +99,19 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(fontSizeScale(124), BANNER_HEIGHT+fontSizeScale(30));
+    MidDrawerBaseModel *model = self.dataArray[indexPath.section];
+    
+    if ([model.sectionType isEqualToString:@"SongList"] || [model.sectionType isEqualToString:@"Album"] || [model.sectionType isEqualToString:@"Musician"]) {//为你推荐歌单、最新专辑、乐人
+        return CGSizeMake(fontSizeScale(124), BANNER_HEIGHT+fontSizeScale(30));
+    } else if ([model.sectionType isEqualToString:@"Content"]) {//独家内容
+        return CGSizeMake(fontSizeScale(186), BANNER_HEIGHT);
+    } else if ([model.sectionType isEqualToString:@"Radio"]) {//精选电台
+        return CGSizeMake(fontSizeScale(124), BANNER_HEIGHT+fontSizeScale(40));
+    } else if ([model.sectionType isEqualToString:@"MV"]) {//最新MV
+        return CGSizeMake(fontSizeScale(186), BANNER_HEIGHT);
+    } else {//专栏
+        return CGSizeMake(fontSizeScale(186), BANNER_HEIGHT-fontSizeScale(20));
+    }
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
@@ -75,7 +130,8 @@
     
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         MidDrawerMusicHallSectionHeaderView *sectionHeaderView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"Header" forIndexPath:indexPath];
-        sectionHeaderView.titleText = self.dataArray[indexPath.section];
+        MidDrawerBaseModel *model = self.dataArray[indexPath.section];
+        sectionHeaderView.titleText = model.sectionTitle;
         return sectionHeaderView;
     }
     return nil;
@@ -91,6 +147,10 @@
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         [_collectionView registerClass:[MidDrawerMusicHallCollectionViewMusicCell class] forCellWithReuseIdentifier:@"MidDrawerMusicHallCollectionViewMusicCellID"];
+        [_collectionView registerClass:[MidDrawerMusicHallCollectionViewVideoCell class] forCellWithReuseIdentifier:@"MidDrawerMusicHallCollectionViewVideoCellID"];
+        [_collectionView registerClass:[MidDrawerMusicHallCollectionViewRoundCell class] forCellWithReuseIdentifier:@"MidDrawerMusicHallCollectionViewRoundCellID"];
+        [_collectionView registerClass:[MidDrawerMusicHallCollectionViewColumnCell class] forCellWithReuseIdentifier:@"MidDrawerMusicHallCollectionViewColumnCellID"];
+        [_collectionView registerClass:[MidDrawerMusicHallCollectionViewLiveBroadCastCell class] forCellWithReuseIdentifier:@"MidDrawerMusicHallCollectionViewLiveBroadCastCellID"];
         [_collectionView registerClass:[MidDrawerMusicHallSectionHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"Header"];
         _collectionView.backgroundColor = [UIColor whiteColor];
     }
@@ -106,7 +166,17 @@
 
 - (NSArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = @[@"为你推荐歌单",@"最新专辑",@"独家内容",@"精选电台",@"最新MV",@"专栏",@"乐人"];
+        NSMutableArray *resultArr = [NSMutableArray arrayWithCapacity:0];
+        
+        NSArray *tmpArray = @[@{@"sectionTitle":@"为你推荐歌单",@"sectionType":@"SongList"}, @{@"sectionTitle":@"最新专辑",@"sectionType":@"Album"}, @{@"sectionTitle":@"独家内容",@"sectionType":@"Content"}, @{@"sectionTitle":@"精选电台",@"sectionType":@"Radio"}, @{@"sectionTitle":@"最新MV",@"sectionType":@"MV"}, @{@"sectionTitle":@"专栏",@"sectionType":@"Column"}, @{@"sectionTitle":@"乐人",@"sectionType":@"Musician"}];
+        
+        for (NSDictionary *dict in tmpArray) {
+            MidDrawerBaseModel *model = [[MidDrawerBaseModel alloc] init];
+            [model setValuesForKeysWithDictionary:dict];
+            [resultArr addObject:model];
+        }
+        
+        _dataArray = [NSArray arrayWithArray:resultArr];
     }
     return _dataArray;
 }

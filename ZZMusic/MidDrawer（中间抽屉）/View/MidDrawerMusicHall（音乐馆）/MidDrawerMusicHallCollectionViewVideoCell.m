@@ -1,16 +1,16 @@
 //
-//  MidDrawerMusicHallCollectionViewMusicCell.m
+//  MidDrawerMusicHallCollectionViewVideoCell.m
 //  ZZMusic
 //
-//  Created by zhifu360 on 2018/9/3.
+//  Created by zhifu360 on 2018/9/4.
 //  Copyright © 2018年 zhognzhaojun. All rights reserved.
 //
 
-#import "MidDrawerMusicHallCollectionViewMusicCell.h"
+#import "MidDrawerMusicHallCollectionViewVideoCell.h"
 
-@interface MidDrawerMusicHallCollectionViewMusicCell ()
+@interface MidDrawerMusicHallCollectionViewVideoCell ()
 
-///图片
+///imgView
 @property (nonatomic, strong) UIImageView *imgView;
 ///播放按钮
 @property (nonatomic, strong) UIButton *playButton;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation MidDrawerMusicHallCollectionViewMusicCell
+@implementation MidDrawerMusicHallCollectionViewVideoCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -50,21 +50,21 @@
     }];
     
     [self.playButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.bottom.mas_equalTo(0);
-        make.size.mas_equalTo(CGSizeMake(fontSizeScale(30), fontSizeScale(30)));
+        make.left.bottom.mas_equalTo(0);
+        make.size.mas_equalTo(CGSizeMake(fontSizeScale(100), fontSizeScale(24)));
     }];
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(5);
+        make.top.mas_equalTo(self.imgView.mas_bottom).offset(fontSizeScale(5));
+        make.left.mas_equalTo(fontSizeScale(5));
         make.right.mas_equalTo(-fontSizeScale(5));
         make.height.mas_equalTo(fontSizeScale(12));
-        make.top.mas_equalTo(self.imgView.mas_bottom).offset(fontSizeScale(5));
     }];
     
     [self.subTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(5);
-        make.right.mas_equalTo(-fontSizeScale(5));
         make.top.mas_equalTo(self.titleLabel.mas_bottom).offset(fontSizeScale(5));
+        make.left.mas_equalTo(fontSizeScale(5));
+        make.right.mas_equalTo(-fontSizeScale(5));
         make.height.mas_equalTo(fontSizeScale(12));
     }];
 }
@@ -74,8 +74,9 @@
     
 }
 
-+ (MidDrawerMusicHallCollectionViewMusicCell *)createCellWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
-    MidDrawerMusicHallCollectionViewMusicCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MidDrawerMusicHallCollectionViewMusicCellID" forIndexPath:indexPath];
++ (MidDrawerMusicHallCollectionViewVideoCell *)createCellWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
+    
+    MidDrawerMusicHallCollectionViewVideoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MidDrawerMusicHallCollectionViewVideoCellID" forIndexPath:indexPath];
     if (!cell) {
         NSLog(@"创建cell失败！");
     }
@@ -98,21 +99,22 @@
 
 - (UIButton *)playButton {
     if (!_playButton) {
-        _playButton = [UIButton createButtonWithTarget:self action:@selector(buttonClick) title:nil textColor:nil imgStr:@"个性电台播放"];
+        _playButton = [UIButton createButtonWithTarget:self action:@selector(buttonClick) title:@"" textColor:[UIColor whiteColor] imgStr:@""];
+        _playButton.titleLabel.font = SMALL_FONT;
     }
     return _playButton;
 }
 
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
-        _titleLabel = [UILabel createLabelWithText:@"8 Letters" font:SMALL_FONT textColor:BLACK_TEXTCOLOR];
+        _titleLabel = [UILabel createLabelWithText:@"Survivors" font:SMALL_FONT textColor:BLACK_TEXTCOLOR];
     }
     return _titleLabel;
 }
 
 - (UILabel *)subTitleLabel {
     if (!_subTitleLabel) {
-        _subTitleLabel = [UILabel createLabelWithText:@"Why Dont`t We" font:SMALL_FONT textColor:GRAY_TEXTCOLOR];
+        _subTitleLabel = [UILabel createLabelWithText:@"跟着游吟诗人在城市中漫步" font:SMALL_FONT textColor:GRAY_TEXTCOLOR];
         _subTitleLabel.hidden = YES;
     }
     return _subTitleLabel;

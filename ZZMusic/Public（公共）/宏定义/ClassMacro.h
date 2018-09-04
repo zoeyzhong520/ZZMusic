@@ -17,5 +17,6 @@
 #import "LoginViewController.h"
 #import "ZZMusicScrollView.h"
 #import "ZZMusicSearchBar.h"
+#import "MidDrawerBaseModel.h"
 
 #endif /* ClassMacro_h */

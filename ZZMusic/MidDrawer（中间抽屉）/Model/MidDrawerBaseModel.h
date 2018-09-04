@@ -10,4 +10,9 @@
 
 @interface MidDrawerBaseModel : BaseModel
 
+///分组标题
+@property (nonatomic, copy) NSString *sectionTitle;
+///分组类别
+@property (nonatomic, copy) NSString *sectionType;
+
 @end

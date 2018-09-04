@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-#pragma mark 音乐馆-音乐Cell（正方形）
+#pragma mark 音乐馆-音乐Cell（方形）
 
 @interface MidDrawerMusicHallCollectionViewMusicCell : UICollectionViewCell
 
 ///创建cell
 + (MidDrawerMusicHallCollectionViewMusicCell *)createCellWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath;
+
+///是否显示副标题
+@property (nonatomic, assign) BOOL isSubTitleVisible;
 
 @end
