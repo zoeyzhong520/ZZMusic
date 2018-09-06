@@ -42,7 +42,9 @@
 //添加约束
 - (void)addConstraints {
     [self.imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        
+        make.centerX.mas_equalTo(0);
+        make.top.mas_equalTo(fontSizeScale(20));
+        make.size.mas_equalTo(CGSizeMake(fontSizeScale(110), fontSizeScale(110)));
     }];
     
     [self.playButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -51,8 +53,9 @@
     }];
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.imgView.mas_bottom);
-        make.left.right.bottom.mas_equalTo(0);
+        make.top.mas_equalTo(self.imgView.mas_bottom).offset(fontSizeScale(20));
+        make.left.right.mas_equalTo(0);
+        make.height.mas_equalTo(fontSizeScale(14));
     }];
 }
 
@@ -76,7 +79,7 @@
         _imgView = [UIImageView createImageViewWithImg:@""];
         _imgView.backgroundColor = SECTION_BACKGROUNDCOLOR;
         _imgView.layer.masksToBounds = YES;
-        _imgView.layer.cornerRadius = (self.bounds.size.height-fontSizeScale(60))/2;
+        _imgView.layer.cornerRadius = fontSizeScale(55);
     }
     return _imgView;
 }
@@ -90,7 +93,7 @@
 
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
-        _titleLabel = [UILabel createLabelWithText:@"XX" font:NORMAL_FONT textColor:BLACK_TEXTCOLOR];
+        _titleLabel = [UILabel createLabelWithText:@"古风" font:NORMAL_FONT textColor:BLACK_TEXTCOLOR];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _titleLabel;

@@ -47,7 +47,6 @@
         make.top.mas_equalTo(self.imgView.mas_bottom).offset(fontSizeScale(5));
         make.left.mas_equalTo(fontSizeScale(5));
         make.right.mas_equalTo(-fontSizeScale(5));
-        make.height.mas_equalTo(30);
     }];
 }
 
@@ -71,7 +70,8 @@
 
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
-        _titleLabel = [UILabel createLabelWithText:@"" font:SMALL_FONT textColor:BLACK_TEXTCOLOR];
+        _titleLabel = [UILabel createLabelWithText:@"乐见大牌|王菊，清宫戏照样SLAY全场" font:SMALL_FONT textColor:BLACK_TEXTCOLOR];
+        _titleLabel.numberOfLines = 0;
     }
     return _titleLabel;
 }

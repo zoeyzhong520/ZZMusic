@@ -58,7 +58,6 @@
         make.top.mas_equalTo(self.imgView.mas_bottom).offset(fontSizeScale(5));
         make.left.mas_equalTo(fontSizeScale(5));
         make.right.mas_equalTo(-fontSizeScale(5));
-        make.height.mas_equalTo(fontSizeScale(24));
     }];
     
     [self.subTitle mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -97,6 +96,7 @@
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         _titleLabel = [UILabel createLabelWithText:@"开学新生训练：找回学习的快乐" font:SMALL_FONT textColor:BLACK_TEXTCOLOR];
+        _titleLabel.numberOfLines = 0;
     }
     return _titleLabel;
 }

@@ -95,22 +95,22 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSLog(@"indexPath.row = %ld", indexPath.row);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     MidDrawerBaseModel *model = self.dataArray[indexPath.section];
     
     if ([model.sectionType isEqualToString:@"SongList"] || [model.sectionType isEqualToString:@"Album"] || [model.sectionType isEqualToString:@"Musician"]) {//为你推荐歌单、最新专辑、乐人
-        return CGSizeMake(fontSizeScale(124), BANNER_HEIGHT+fontSizeScale(30));
+        return CGSizeMake(fontSizeScale(124), MUSICHALL_BANNER_HEIGHT+fontSizeScale(30));
     } else if ([model.sectionType isEqualToString:@"Content"]) {//独家内容
-        return CGSizeMake(fontSizeScale(186), BANNER_HEIGHT);
+        return CGSizeMake(fontSizeScale(186), MUSICHALL_BANNER_HEIGHT);
     } else if ([model.sectionType isEqualToString:@"Radio"]) {//精选电台
-        return CGSizeMake(fontSizeScale(124), BANNER_HEIGHT+fontSizeScale(40));
+        return CGSizeMake(fontSizeScale(124), MUSICHALL_BANNER_HEIGHT+fontSizeScale(40));
     } else if ([model.sectionType isEqualToString:@"MV"]) {//最新MV
-        return CGSizeMake(fontSizeScale(186), BANNER_HEIGHT);
+        return CGSizeMake(fontSizeScale(186), MUSICHALL_BANNER_HEIGHT);
     } else {//专栏
-        return CGSizeMake(fontSizeScale(186), BANNER_HEIGHT-fontSizeScale(20));
+        return CGSizeMake(fontSizeScale(186), MUSICHALL_BANNER_HEIGHT-fontSizeScale(20));
     }
 }
 
@@ -143,7 +143,7 @@
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         flowLayout.headerReferenceSize = CGSizeMake(self.bounds.size.width, fontSizeScale(60));
         _collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:flowLayout];
-        _collectionView.contentInset = UIEdgeInsetsMake(BANNER_HEIGHT*2+fontSizeScale(110), 0, 0, 0);
+        _collectionView.contentInset = UIEdgeInsetsMake(MUSICHALL_BANNER_HEIGHT*2+fontSizeScale(110), 0, 0, 0);
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         [_collectionView registerClass:[MidDrawerMusicHallCollectionViewMusicCell class] forCellWithReuseIdentifier:@"MidDrawerMusicHallCollectionViewMusicCellID"];
@@ -159,7 +159,7 @@
 
 - (MidDrawerMusicHallHeaderView *)headerView {
     if (!_headerView) {
-        _headerView = [[MidDrawerMusicHallHeaderView alloc] initWithFrame:CGRectMake(0, -(BANNER_HEIGHT*2+fontSizeScale(110)), self.bounds.size.width, BANNER_HEIGHT*2+fontSizeScale(110))];
+        _headerView = [[MidDrawerMusicHallHeaderView alloc] initWithFrame:CGRectMake(0, -(MUSICHALL_BANNER_HEIGHT*2+fontSizeScale(110)), self.bounds.size.width, MUSICHALL_BANNER_HEIGHT*2+fontSizeScale(110))];
     }
     return _headerView;
 }

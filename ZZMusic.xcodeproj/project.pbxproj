@@ -82,6 +82,8 @@
 		36D671D7213E25A500132688 /* MidDrawerMusicHallCollectionViewLiveBroadCastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D671D6213E25A500132688 /* MidDrawerMusicHallCollectionViewLiveBroadCastCell.m */; };
 		36D671DA213E25F900132688 /* MidDrawerMusicHallCollectionViewRoundCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D671D9213E25F900132688 /* MidDrawerMusicHallCollectionViewRoundCell.m */; };
 		36D671DD213E27DC00132688 /* MidDrawerMusicHallCollectionViewColumnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D671DC213E27DC00132688 /* MidDrawerMusicHallCollectionViewColumnCell.m */; };
+		36D671F7213FA3AB00132688 /* MidDrawerFindAdCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D671F6213FA3AB00132688 /* MidDrawerFindAdCarouselView.m */; };
+		36D671FA213FA8F300132688 /* MidDrawerFindHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D671F9213FA8F300132688 /* MidDrawerFindHeaderView.m */; };
 		D8ADA7F5213282D7003050F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA7F4213282D7003050F5 /* AppDelegate.m */; };
 		D8ADA7FB213282D7003050F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7F9213282D7003050F5 /* Main.storyboard */; };
 		D8ADA7FD213282D8003050F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7FC213282D8003050F5 /* Assets.xcassets */; };
@@ -289,6 +291,10 @@
 		36D671D9213E25F900132688 /* MidDrawerMusicHallCollectionViewRoundCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerMusicHallCollectionViewRoundCell.m; sourceTree = "<group>"; };
 		36D671DB213E27DC00132688 /* MidDrawerMusicHallCollectionViewColumnCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerMusicHallCollectionViewColumnCell.h; sourceTree = "<group>"; };
 		36D671DC213E27DC00132688 /* MidDrawerMusicHallCollectionViewColumnCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerMusicHallCollectionViewColumnCell.m; sourceTree = "<group>"; };
+		36D671F5213FA3AB00132688 /* MidDrawerFindAdCarouselView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerFindAdCarouselView.h; sourceTree = "<group>"; };
+		36D671F6213FA3AB00132688 /* MidDrawerFindAdCarouselView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerFindAdCarouselView.m; sourceTree = "<group>"; };
+		36D671F8213FA8F300132688 /* MidDrawerFindHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerFindHeaderView.h; sourceTree = "<group>"; };
+		36D671F9213FA8F300132688 /* MidDrawerFindHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerFindHeaderView.m; sourceTree = "<group>"; };
 		D8ADA7F0213282D7003050F5 /* ZZMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8ADA7F3213282D7003050F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8ADA7F4213282D7003050F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -680,6 +686,19 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		36D671F4213F8CBE00132688 /* MidDrawerFind（发现） */ = {
+			isa = PBXGroup;
+			children = (
+				36014D172136938F00C09286 /* MidDrawerFindView.h */,
+				36014D182136938F00C09286 /* MidDrawerFindView.m */,
+				36D671F5213FA3AB00132688 /* MidDrawerFindAdCarouselView.h */,
+				36D671F6213FA3AB00132688 /* MidDrawerFindAdCarouselView.m */,
+				36D671F8213FA8F300132688 /* MidDrawerFindHeaderView.h */,
+				36D671F9213FA8F300132688 /* MidDrawerFindHeaderView.m */,
+			);
+			path = "MidDrawerFind（发现）";
+			sourceTree = "<group>";
+		};
 		D8ADA7E7213282D7003050F5 = {
 			isa = PBXGroup;
 			children = (
@@ -813,6 +832,7 @@
 		D8ADA8302132ADBB003050F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				36D671F4213F8CBE00132688 /* MidDrawerFind（发现） */,
 				36D67167213CE0D400132688 /* MidDrawerMusicHall（音乐馆） */,
 				36D67108213949CC00132688 /* MidDrawerSearch（搜索） */,
 				36D671072139498400132688 /* MidDrawerMine（我的） */,
@@ -822,8 +842,6 @@
 				366EB2C72133C826007F4EE6 /* MidDrawerBubbleView.m */,
 				D8F76D6E213444C000D85B41 /* MidDrawerBubbleTableViewCell.h */,
 				D8F76D6F213444C000D85B41 /* MidDrawerBubbleTableViewCell.m */,
-				36014D172136938F00C09286 /* MidDrawerFindView.h */,
-				36014D182136938F00C09286 /* MidDrawerFindView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1105,6 +1123,7 @@
 				36D671BB213D117400132688 /* SDWebImageFrame.m in Sources */,
 				D8ADA7F5213282D7003050F5 /* AppDelegate.m in Sources */,
 				D8ADA85F2132D372003050F5 /* RootViewController.m in Sources */,
+				36D671FA213FA8F300132688 /* MidDrawerFindHeaderView.m in Sources */,
 				36D671C4213D117400132688 /* UIImage+GIF.m in Sources */,
 				36D671C9213D117400132688 /* UIView+WebCache.m in Sources */,
 				36014CF821354BCE00C09286 /* SettingViewController.m in Sources */,
@@ -1118,6 +1137,7 @@
 				36D671DD213E27DC00132688 /* MidDrawerMusicHallCollectionViewColumnCell.m in Sources */,
 				366EB29D21339B15007F4EE6 /* UIButton+Category.m in Sources */,
 				36D671032139314400132688 /* MidDrawerMineTableSectionHeaderView.m in Sources */,
+				36D671F7213FA3AB00132688 /* MidDrawerFindAdCarouselView.m in Sources */,
 				D8F76D70213444C000D85B41 /* MidDrawerBubbleTableViewCell.m in Sources */,
 				36014D192136938F00C09286 /* MidDrawerFindView.m in Sources */,
 				366EB2C421339F2F007F4EE6 /* ViewController+MASAdditions.m in Sources */,

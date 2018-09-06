@@ -81,21 +81,21 @@
     [self.personalityRadioView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(fontSizeScale(10));
         make.top.mas_equalTo(self.operationView.mas_bottom).offset(fontSizeScale(20));
-        make.size.mas_equalTo(CGSizeMake(BANNER_HEIGHT, BANNER_HEIGHT));
+        make.size.mas_equalTo(CGSizeMake(MUSICHALL_BANNER_HEIGHT, MUSICHALL_BANNER_HEIGHT));
     }];
     
     [self.songAlbumView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.personalityRadioView.mas_right).offset(fontSizeScale(10));
         make.topMargin.mas_equalTo(self.personalityRadioView);
         make.right.mas_equalTo(-fontSizeScale(10));
-        make.height.mas_equalTo((BANNER_HEIGHT-fontSizeScale(10))/2);
+        make.height.mas_equalTo((MUSICHALL_BANNER_HEIGHT-fontSizeScale(10))/2);
     }];
     
     [self.digitalAlbumView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.personalityRadioView.mas_right).offset(fontSizeScale(10));
         make.bottomMargin.mas_equalTo(self.personalityRadioView);
         make.right.mas_equalTo(-fontSizeScale(10));
-        make.height.mas_equalTo((BANNER_HEIGHT-fontSizeScale(10))/2);
+        make.height.mas_equalTo((MUSICHALL_BANNER_HEIGHT-fontSizeScale(10))/2);
     }];
 }
 
@@ -150,7 +150,7 @@
     
     [self.songAlbumImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.right.mas_equalTo(0);
-        make.width.mas_equalTo((BANNER_HEIGHT-fontSizeScale(10))/2);
+        make.width.mas_equalTo((MUSICHALL_BANNER_HEIGHT-fontSizeScale(10))/2);
     }];
     
     [self.songAlbumTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -185,7 +185,7 @@
     
     [self.digitalAlbumImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.right.mas_equalTo(0);
-        make.width.mas_equalTo((BANNER_HEIGHT-fontSizeScale(10))/2);
+        make.width.mas_equalTo((MUSICHALL_BANNER_HEIGHT-fontSizeScale(10))/2);
     }];
     
     [self.digitalAlbumTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -216,7 +216,7 @@
 #pragma mark Lazy
 - (MidDrawerMusicHallAdCarouselView *)adCarouselView {
     if (!_adCarouselView) {
-        _adCarouselView = [[MidDrawerMusicHallAdCarouselView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, BANNER_HEIGHT) images:@[BANNER_IMAGEPATH_FIFTH,BANNER_IMAGEPATH_SECOND,BANNER_IMAGEPATH_THIRD,BANNER_IMAGEPATH_FOURTH,BANNER_IMAGEPATH_FIFTH,BANNER_IMAGEPATH_SIXTH]];
+        _adCarouselView = [[MidDrawerMusicHallAdCarouselView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, MUSICHALL_BANNER_HEIGHT) images:@[BANNER_IMAGEPATH_FIFTH,BANNER_IMAGEPATH_SECOND,BANNER_IMAGEPATH_THIRD,BANNER_IMAGEPATH_FOURTH,BANNER_IMAGEPATH_FIFTH,BANNER_IMAGEPATH_SIXTH]];
     }
     return _adCarouselView;
 }
