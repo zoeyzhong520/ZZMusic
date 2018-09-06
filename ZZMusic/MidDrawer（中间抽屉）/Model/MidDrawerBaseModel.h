@@ -14,5 +14,7 @@
 @property (nonatomic, copy) NSString *sectionTitle;
 ///分组类别
 @property (nonatomic, copy) NSString *sectionType;
+///cell类别
+@property (nonatomic, copy) NSString *cellType;
 
 @end

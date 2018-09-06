@@ -120,7 +120,7 @@
 
 - (UIImageView *)leftImageView {
     if (!_leftImageView) {
-        _leftImageView = [UIImageView createImageViewWithImg:@""];
+        _leftImageView = [UIImageView createImageViewWithImg:nil];
         [_leftImageView sd_setImageWithURL:[NSURL URLWithString:_images.count > 1 ? _images[_imageCount-1] : @""] placeholderImage:PLACEHOLDER_IMAGE];
         _leftImageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, self.bounds.size.height);
     }
@@ -129,7 +129,7 @@
 
 - (UIImageView *)centerImageView {
     if (!_centerImageView) {
-        _centerImageView = [UIImageView createImageViewWithImg:@""];
+        _centerImageView = [UIImageView createImageViewWithImg:nil];
         [_centerImageView sd_setImageWithURL:[NSURL URLWithString:_images.count > 0 ? _images[0] : @""] placeholderImage:PLACEHOLDER_IMAGE];
         _centerImageView.frame = CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, self.bounds.size.height);
     }
@@ -138,7 +138,7 @@
 
 - (UIImageView *)rightImageView {
     if (!_rightImageView) {
-        _rightImageView = [UIImageView createImageViewWithImg:@""];
+        _rightImageView = [UIImageView createImageViewWithImg:nil];
         [_rightImageView sd_setImageWithURL:[NSURL URLWithString:_images.count > 1 ? _images[1] : @""] placeholderImage:PLACEHOLDER_IMAGE];
         _rightImageView.frame = CGRectMake(SCREEN_WIDTH*2, 0, SCREEN_WIDTH, self.bounds.size.height);
     }

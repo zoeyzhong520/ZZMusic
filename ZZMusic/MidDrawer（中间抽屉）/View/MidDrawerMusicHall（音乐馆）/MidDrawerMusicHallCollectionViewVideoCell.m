@@ -91,7 +91,7 @@
 #pragma mark Lazy
 - (UIImageView *)imgView {
     if (!_imgView) {
-        _imgView = [UIImageView createImageViewWithImg:@""];
+        _imgView = [UIImageView createImageViewWithImg:nil];
         _imgView.backgroundColor = SECTION_BACKGROUNDCOLOR;
     }
     return _imgView;

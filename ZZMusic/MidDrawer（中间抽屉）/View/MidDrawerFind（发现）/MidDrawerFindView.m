@@ -8,6 +8,10 @@
 
 #import "MidDrawerFindView.h"
 #import "MidDrawerFindHeaderView.h"
+#import "MidDrawerFindVideoTableViewCell.h"
+#import "MidDrawerFindArticleTableViewCell.h"
+#import "MidDrawerFindNewsletterTableViewCell.h"
+#import "MidDrawerFindNewsDiscoverTableViewCell.h"
 
 @interface MidDrawerFindView ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -41,15 +45,43 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 15;
+    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [UITableViewCell new];
+    MidDrawerBaseModel *model = self.dataArray[indexPath.row];
+    
+    if ([model.cellType isEqualToString:@"Video"]) {//分享视频
+        MidDrawerFindVideoTableViewCell *cell = [MidDrawerFindVideoTableViewCell createCellWithTableView:tableView indexPath:indexPath];
+        return cell;
+    } else if ([model.cellType isEqualToString:@"Article"]) {//发布文章
+        MidDrawerFindArticleTableViewCell *cell = [MidDrawerFindArticleTableViewCell createCellWithTableView:tableView indexPath:indexPath];
+        return cell;
+    } else if ([model.cellType isEqualToString:@"Newsletter"]) {//快讯
+        MidDrawerFindNewsletterTableViewCell *cell = [MidDrawerFindNewsletterTableViewCell createCellWithTableView:tableView indexPath:indexPath];
+        return cell;
+    } else {//发现
+        MidDrawerFindNewsDiscoverTableViewCell *cell = [MidDrawerFindNewsDiscoverTableViewCell createCellWithTableView:tableView indexPath:indexPath];
+        return cell;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MidDrawerBaseModel *model = self.dataArray[indexPath.row];
+    
+    if ([model.cellType isEqualToString:@"Video"]) {//分享视频
+        return FIND_BANNER_HEIGHT+fontSizeScale(105);
+    } else if ([model.cellType isEqualToString:@"Article"]) {//发布文章
+        return FIND_BANNER_HEIGHT+fontSizeScale(115);
+    } else if ([model.cellType isEqualToString:@"Newsletter"]) {//快讯
+        return fontSizeScale(160);
+    } else {//发现
+        return fontSizeScale(120);
+    }
 }
 
 #pragma mark Lazy
@@ -58,14 +90,26 @@
         _tableView = [[UITableView alloc] initWithFrame:self.bounds style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.rowHeight = fontSizeScale(40);
+        [_tableView registerClass:[MidDrawerFindVideoTableViewCell class] forCellReuseIdentifier:@"MidDrawerFindVideoTableViewCellID"];
+        [_tableView registerClass:[MidDrawerFindArticleTableViewCell class] forCellReuseIdentifier:@"MidDrawerFindArticleTableViewCellID"];
+        [_tableView registerClass:[MidDrawerFindNewsletterTableViewCell class] forCellReuseIdentifier:@"MidDrawerFindNewsletterTableViewCellID"];
+        [_tableView registerClass:[MidDrawerFindNewsDiscoverTableViewCell class] forCellReuseIdentifier:@"MidDrawerFindNewsDiscoverTableViewCellID"];
     }
     return _tableView;
 }
 
 - (NSArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = [NSArray array];
+        NSMutableArray *resultArray = [NSMutableArray arrayWithCapacity:0];
+        
+        NSArray *tmpArray = @[@{@"cellType":@"Video"}, @{@"cellType":@"Article"}, @{@"cellType":@"Newsletter"}, @{@"cellType":@"Discover"}];
+        for (NSDictionary *dict in tmpArray) {
+            MidDrawerBaseModel *model = [[MidDrawerBaseModel alloc] init];
+            [model setValuesForKeysWithDictionary:dict];
+            [resultArray addObject:model];
+        }
+        
+        _dataArray = [NSArray arrayWithArray:resultArray];
     }
     return _dataArray;
 }

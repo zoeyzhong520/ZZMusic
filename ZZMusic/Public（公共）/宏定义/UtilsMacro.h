@@ -100,6 +100,8 @@
 #define BANNER_IMAGEPATH_FOURTH @"http://imgsrc.baidu.com/image/c0%3Dpixel_huitu%2C0%2C0%2C294%2C40/sign=92648692083b5bb5aada28be5fabb055/77094b36acaf2edd199cced0861001e93901939e.jpg"
 #define BANNER_IMAGEPATH_FIFTH @"http://imgsrc.baidu.com/imgad/pic/item/b17eca8065380cd7ce6868c0aa44ad34598281ad.jpg"
 #define BANNER_IMAGEPATH_SIXTH @"http://imgsrc.baidu.com/imgad/pic/item/4a36acaf2edda3cc0b837b0d0ae93901213f92bc.jpg"
+///头像地址
+#define AVATAR_PATH @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536214465177&di=8ebe2317e01aa7f74081cf8174490ec1&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20180726%2Ffad321a0c441487aae8c6a65df639f72.jpeg"
 
 ///Banner占位图
 #define PLACEHOLDER_IMAGE [UIImage imageNamed:@"placeholder"]

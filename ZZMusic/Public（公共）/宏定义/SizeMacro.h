@@ -38,7 +38,7 @@
 ///音乐馆
 #define MUSICHALL_BANNER_HEIGHT 140
 ///发现
-#define FIND_BANNER_HEIGHT 140
+#define FIND_BANNER_HEIGHT 180
 
 ///气泡视图宽度
 #define BUBBLE_WIDTH 130

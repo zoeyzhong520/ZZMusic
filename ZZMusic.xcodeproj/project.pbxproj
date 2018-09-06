@@ -84,6 +84,13 @@
 		36D671DD213E27DC00132688 /* MidDrawerMusicHallCollectionViewColumnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D671DC213E27DC00132688 /* MidDrawerMusicHallCollectionViewColumnCell.m */; };
 		36D671F7213FA3AB00132688 /* MidDrawerFindAdCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D671F6213FA3AB00132688 /* MidDrawerFindAdCarouselView.m */; };
 		36D671FA213FA8F300132688 /* MidDrawerFindHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D671F9213FA8F300132688 /* MidDrawerFindHeaderView.m */; };
+		36D671FD2140C49B00132688 /* MidDrawerFindHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D671FC2140C49B00132688 /* MidDrawerFindHeaderCollectionViewCell.m */; };
+		36D672002140D71500132688 /* MidDrawerFindVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D671FF2140D71500132688 /* MidDrawerFindVideoTableViewCell.m */; };
+		36D672032140D75500132688 /* MidDrawerFindArticleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D672022140D75500132688 /* MidDrawerFindArticleTableViewCell.m */; };
+		36D672062140D78800132688 /* MidDrawerFindNewsletterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D672052140D78800132688 /* MidDrawerFindNewsletterTableViewCell.m */; };
+		36D6721921410DA000132688 /* MidDrawerFindNewsletterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6721821410DA000132688 /* MidDrawerFindNewsletterCollectionViewCell.m */; };
+		36D6721C21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6721B21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.m */; };
+		36D6721F21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6721E21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.m */; };
 		D8ADA7F5213282D7003050F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA7F4213282D7003050F5 /* AppDelegate.m */; };
 		D8ADA7FB213282D7003050F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7F9213282D7003050F5 /* Main.storyboard */; };
 		D8ADA7FD213282D8003050F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7FC213282D8003050F5 /* Assets.xcassets */; };
@@ -295,6 +302,20 @@
 		36D671F6213FA3AB00132688 /* MidDrawerFindAdCarouselView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerFindAdCarouselView.m; sourceTree = "<group>"; };
 		36D671F8213FA8F300132688 /* MidDrawerFindHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerFindHeaderView.h; sourceTree = "<group>"; };
 		36D671F9213FA8F300132688 /* MidDrawerFindHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerFindHeaderView.m; sourceTree = "<group>"; };
+		36D671FB2140C49B00132688 /* MidDrawerFindHeaderCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerFindHeaderCollectionViewCell.h; sourceTree = "<group>"; };
+		36D671FC2140C49B00132688 /* MidDrawerFindHeaderCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerFindHeaderCollectionViewCell.m; sourceTree = "<group>"; };
+		36D671FE2140D71500132688 /* MidDrawerFindVideoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerFindVideoTableViewCell.h; sourceTree = "<group>"; };
+		36D671FF2140D71500132688 /* MidDrawerFindVideoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerFindVideoTableViewCell.m; sourceTree = "<group>"; };
+		36D672012140D75500132688 /* MidDrawerFindArticleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerFindArticleTableViewCell.h; sourceTree = "<group>"; };
+		36D672022140D75500132688 /* MidDrawerFindArticleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerFindArticleTableViewCell.m; sourceTree = "<group>"; };
+		36D672042140D78800132688 /* MidDrawerFindNewsletterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerFindNewsletterTableViewCell.h; sourceTree = "<group>"; };
+		36D672052140D78800132688 /* MidDrawerFindNewsletterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerFindNewsletterTableViewCell.m; sourceTree = "<group>"; };
+		36D6721721410DA000132688 /* MidDrawerFindNewsletterCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerFindNewsletterCollectionViewCell.h; sourceTree = "<group>"; };
+		36D6721821410DA000132688 /* MidDrawerFindNewsletterCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerFindNewsletterCollectionViewCell.m; sourceTree = "<group>"; };
+		36D6721A21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerFindNewsDiscoverTableViewCell.h; sourceTree = "<group>"; };
+		36D6721B21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerFindNewsDiscoverTableViewCell.m; sourceTree = "<group>"; };
+		36D6721D21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerFindNewsDiscoverCollectionViewCell.h; sourceTree = "<group>"; };
+		36D6721E21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerFindNewsDiscoverCollectionViewCell.m; sourceTree = "<group>"; };
 		D8ADA7F0213282D7003050F5 /* ZZMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8ADA7F3213282D7003050F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8ADA7F4213282D7003050F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -695,6 +716,20 @@
 				36D671F6213FA3AB00132688 /* MidDrawerFindAdCarouselView.m */,
 				36D671F8213FA8F300132688 /* MidDrawerFindHeaderView.h */,
 				36D671F9213FA8F300132688 /* MidDrawerFindHeaderView.m */,
+				36D671FB2140C49B00132688 /* MidDrawerFindHeaderCollectionViewCell.h */,
+				36D671FC2140C49B00132688 /* MidDrawerFindHeaderCollectionViewCell.m */,
+				36D671FE2140D71500132688 /* MidDrawerFindVideoTableViewCell.h */,
+				36D671FF2140D71500132688 /* MidDrawerFindVideoTableViewCell.m */,
+				36D672012140D75500132688 /* MidDrawerFindArticleTableViewCell.h */,
+				36D672022140D75500132688 /* MidDrawerFindArticleTableViewCell.m */,
+				36D672042140D78800132688 /* MidDrawerFindNewsletterTableViewCell.h */,
+				36D672052140D78800132688 /* MidDrawerFindNewsletterTableViewCell.m */,
+				36D6721721410DA000132688 /* MidDrawerFindNewsletterCollectionViewCell.h */,
+				36D6721821410DA000132688 /* MidDrawerFindNewsletterCollectionViewCell.m */,
+				36D6721A21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.h */,
+				36D6721B21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.m */,
+				36D6721D21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.h */,
+				36D6721E21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.m */,
 			);
 			path = "MidDrawerFind（发现）";
 			sourceTree = "<group>";
@@ -1074,6 +1109,7 @@
 				36D671B0213D117400132688 /* NSData+ImageContentType.m in Sources */,
 				36D671CD213D1A8700132688 /* MidDrawerMusicHallHeaderView.m in Sources */,
 				366EB2BB21339F2F007F4EE6 /* MASCompositeConstraint.m in Sources */,
+				36D671FD2140C49B00132688 /* MidDrawerFindHeaderCollectionViewCell.m in Sources */,
 				366EB2BF21339F2F007F4EE6 /* MASViewAttribute.m in Sources */,
 				36014D012136450100C09286 /* SettingTableViewCell.m in Sources */,
 				36014CEE2135194400C09286 /* LeftDrawerTableViewCell.m in Sources */,
@@ -1102,6 +1138,8 @@
 				36D6716A213CE40A00132688 /* MidDrawerMusicHallAdCarouselView.m in Sources */,
 				366EB2CB2133C9B8007F4EE6 /* UIView+Category.m in Sources */,
 				36D671C0213D117400132688 /* SDWebImageTransition.m in Sources */,
+				36D672032140D75500132688 /* MidDrawerFindArticleTableViewCell.m in Sources */,
+				36D6721921410DA000132688 /* MidDrawerFindNewsletterCollectionViewCell.m in Sources */,
 				366EB2BE21339F2F007F4EE6 /* MASLayoutConstraint.m in Sources */,
 				36D5F9C42137E995002BB7AD /* UIImage+Category.m in Sources */,
 				36D671B1213D117400132688 /* NSImage+WebCache.m in Sources */,
@@ -1110,16 +1148,19 @@
 				36014D202136A0E100C09286 /* BaseNavigationTitleView.m in Sources */,
 				366EB2C82133C826007F4EE6 /* MidDrawerBubbleView.m in Sources */,
 				36D671BD213D117400132688 /* SDWebImageImageIOCoder.m in Sources */,
+				36D6721F21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.m in Sources */,
 				36D671D7213E25A500132688 /* MidDrawerMusicHallCollectionViewLiveBroadCastCell.m in Sources */,
 				36014D132136930B00C09286 /* MidDrawerMineView.m in Sources */,
 				36D671D4213E256300132688 /* MidDrawerMusicHallCollectionViewVideoCell.m in Sources */,
 				36014CE92134DE3500C09286 /* UIImageView+Category.m in Sources */,
 				36D671B6213D117400132688 /* SDWebImageCoderHelper.m in Sources */,
 				36D671B8213D117400132688 /* SDWebImageCompat.m in Sources */,
+				36D672002140D71500132688 /* MidDrawerFindVideoTableViewCell.m in Sources */,
 				36D671BA213D117400132688 /* SDWebImageDownloaderOperation.m in Sources */,
 				36D671B9213D117400132688 /* SDWebImageDownloader.m in Sources */,
 				D8ADA803213282D8003050F5 /* main.m in Sources */,
 				366EB2C021339F2F007F4EE6 /* MASViewConstraint.m in Sources */,
+				36D672062140D78800132688 /* MidDrawerFindNewsletterTableViewCell.m in Sources */,
 				36D671BB213D117400132688 /* SDWebImageFrame.m in Sources */,
 				D8ADA7F5213282D7003050F5 /* AppDelegate.m in Sources */,
 				D8ADA85F2132D372003050F5 /* RootViewController.m in Sources */,
@@ -1138,6 +1179,7 @@
 				366EB29D21339B15007F4EE6 /* UIButton+Category.m in Sources */,
 				36D671032139314400132688 /* MidDrawerMineTableSectionHeaderView.m in Sources */,
 				36D671F7213FA3AB00132688 /* MidDrawerFindAdCarouselView.m in Sources */,
+				36D6721C21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.m in Sources */,
 				D8F76D70213444C000D85B41 /* MidDrawerBubbleTableViewCell.m in Sources */,
 				36014D192136938F00C09286 /* MidDrawerFindView.m in Sources */,
 				366EB2C421339F2F007F4EE6 /* ViewController+MASAdditions.m in Sources */,
