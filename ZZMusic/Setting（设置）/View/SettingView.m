@@ -88,12 +88,12 @@
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:self.bounds style:UITableViewStylePlain];
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.rowHeight = fontSizeScale(40);
         _tableView.sectionHeaderHeight = fontSizeScale(30);
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerClass:[SettingTableViewCell class] forCellReuseIdentifier:@"SettingTableViewCellID"];
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableView;
 }

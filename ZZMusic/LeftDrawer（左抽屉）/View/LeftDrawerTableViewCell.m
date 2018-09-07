@@ -30,6 +30,9 @@
 }
 
 - (void)createView {
+    self.backgroundColor = [UIColor whiteColor];
+    self.contentView.backgroundColor = [UIColor whiteColor];
+    
     [self.contentView addSubview:self.titleLabel];
     
     [self.contentView addSubview:self.subTitleLabel];

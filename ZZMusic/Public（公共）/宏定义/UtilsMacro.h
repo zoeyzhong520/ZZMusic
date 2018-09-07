@@ -106,4 +106,7 @@
 ///Banner占位图
 #define PLACEHOLDER_IMAGE [UIImage imageNamed:@"placeholder"]
 
+///版本号
+#define VERSION_NUMBER [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]
+
 #endif /* UtilsMacro_h */

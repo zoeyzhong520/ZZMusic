@@ -53,17 +53,21 @@
     
     if ([model.cellType isEqualToString:@"Video"]) {//分享视频
         MidDrawerFindVideoTableViewCell *cell = [MidDrawerFindVideoTableViewCell createCellWithTableView:tableView indexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else if ([model.cellType isEqualToString:@"Article"]) {//发布文章
         MidDrawerFindArticleTableViewCell *cell = [MidDrawerFindArticleTableViewCell createCellWithTableView:tableView indexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else if ([model.cellType isEqualToString:@"Newsletter"]) {//快讯
         MidDrawerFindNewsletterTableViewCell *cell = [MidDrawerFindNewsletterTableViewCell createCellWithTableView:tableView indexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.model = model;
         return cell;
     } else {//发现
         MidDrawerFindNewsDiscoverTableViewCell *cell = [MidDrawerFindNewsDiscoverTableViewCell createCellWithTableView:tableView indexPath:indexPath];
         cell.model = model;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
 }

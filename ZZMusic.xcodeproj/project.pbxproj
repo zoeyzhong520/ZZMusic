@@ -129,6 +129,9 @@
 		D8E6ABCF213D8AB300B4AF9C /* MidDrawerMusicHallSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E6ABCE213D8AB300B4AF9C /* MidDrawerMusicHallSectionHeaderView.m */; };
 		D8F76D70213444C000D85B41 /* MidDrawerBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F76D6F213444C000D85B41 /* MidDrawerBubbleTableViewCell.m */; };
 		D8F76D732134455200D85B41 /* UILabel+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F76D722134455200D85B41 /* UILabel+Category.m */; };
+		D8FF1F722142B2EC007136BF /* AboutView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FF1F712142B2EC007136BF /* AboutView.m */; };
+		D8FF1F752142B55F007136BF /* AboutTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FF1F742142B55F007136BF /* AboutTableHeaderView.m */; };
+		D8FF1F7B2142BAC4007136BF /* AboutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FF1F7A2142BAC4007136BF /* AboutTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,14 +184,6 @@
 		36014D1C2136977100C09286 /* ZZMusicScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZMusicScrollView.m; sourceTree = "<group>"; };
 		36014D1E2136A0E100C09286 /* BaseNavigationTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationTitleView.h; sourceTree = "<group>"; };
 		36014D1F2136A0E100C09286 /* BaseNavigationTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationTitleView.m; sourceTree = "<group>"; };
-		366EB28921339546007F4EE6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		366EB28A21339546007F4EE6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		366EB28B2133954E007F4EE6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
-		366EB28C2133954E007F4EE6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		366EB28D21339557007F4EE6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		366EB28E21339557007F4EE6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		366EB290213395D5007F4EE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		366EB292213395E8007F4EE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		366EB297213398DD007F4EE6 /* BaseNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationBar.h; sourceTree = "<group>"; };
 		366EB298213398DD007F4EE6 /* BaseNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationBar.m; sourceTree = "<group>"; };
 		366EB29A21339977007F4EE6 /* ClassMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassMacro.h; sourceTree = "<group>"; };
@@ -416,6 +411,14 @@
 		D8F76D6F213444C000D85B41 /* MidDrawerBubbleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerBubbleTableViewCell.m; sourceTree = "<group>"; };
 		D8F76D712134455200D85B41 /* UILabel+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Category.h"; sourceTree = "<group>"; };
 		D8F76D722134455200D85B41 /* UILabel+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Category.m"; sourceTree = "<group>"; };
+		D8FF1F6E2142AFA9007136BF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		D8FF1F6F2142AFAA007136BF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		D8FF1F702142B2EC007136BF /* AboutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutView.h; sourceTree = "<group>"; };
+		D8FF1F712142B2EC007136BF /* AboutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutView.m; sourceTree = "<group>"; };
+		D8FF1F732142B55F007136BF /* AboutTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutTableHeaderView.h; sourceTree = "<group>"; };
+		D8FF1F742142B55F007136BF /* AboutTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutTableHeaderView.m; sourceTree = "<group>"; };
+		D8FF1F792142BAC4007136BF /* AboutTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutTableViewCell.h; sourceTree = "<group>"; };
+		D8FF1F7A2142BAC4007136BF /* AboutTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -509,6 +512,12 @@
 				36014CFA21354BDF00C09286 /* SettingView.m */,
 				36014CFF2136450100C09286 /* SettingTableViewCell.h */,
 				36014D002136450100C09286 /* SettingTableViewCell.m */,
+				D8FF1F702142B2EC007136BF /* AboutView.h */,
+				D8FF1F712142B2EC007136BF /* AboutView.m */,
+				D8FF1F732142B55F007136BF /* AboutTableHeaderView.h */,
+				D8FF1F742142B55F007136BF /* AboutTableHeaderView.m */,
+				D8FF1F792142BAC4007136BF /* AboutTableViewCell.h */,
+				D8FF1F7A2142BAC4007136BF /* AboutTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1135,7 +1144,6 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = D8ADA7E7213282D7003050F5;
@@ -1192,6 +1200,7 @@
 				36D6723121426EA200132688 /* PersonalityDressViewController.m in Sources */,
 				36014D1D2136977100C09286 /* ZZMusicScrollView.m in Sources */,
 				36014D0821366AA700C09286 /* LoginViewController.m in Sources */,
+				D8FF1F722142B2EC007136BF /* AboutView.m in Sources */,
 				36D6725821427D6000132688 /* SVProgressHUD.m in Sources */,
 				36D671B5213D117400132688 /* SDWebImageCoder.m in Sources */,
 				36D6724621426F1400132688 /* AboutViewController.m in Sources */,
@@ -1257,6 +1266,7 @@
 				36D671B8213D117400132688 /* SDWebImageCompat.m in Sources */,
 				36D672002140D71500132688 /* MidDrawerFindVideoTableViewCell.m in Sources */,
 				36D671BA213D117400132688 /* SDWebImageDownloaderOperation.m in Sources */,
+				D8FF1F752142B55F007136BF /* AboutTableHeaderView.m in Sources */,
 				36D671B9213D117400132688 /* SDWebImageDownloader.m in Sources */,
 				D8ADA803213282D8003050F5 /* main.m in Sources */,
 				366EB2C021339F2F007F4EE6 /* MASViewConstraint.m in Sources */,
@@ -1283,6 +1293,7 @@
 				36D671032139314400132688 /* MidDrawerMineTableSectionHeaderView.m in Sources */,
 				36D671F7213FA3AB00132688 /* MidDrawerFindAdCarouselView.m in Sources */,
 				36D6725921427D6000132688 /* SVRadialGradientLayer.m in Sources */,
+				D8FF1F7B2142BAC4007136BF /* AboutTableViewCell.m in Sources */,
 				36D6721C21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.m in Sources */,
 				D8F76D70213444C000D85B41 /* MidDrawerBubbleTableViewCell.m in Sources */,
 				36014D192136938F00C09286 /* MidDrawerFindView.m in Sources */,
@@ -1338,10 +1349,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D8ADA7FA213282D7003050F5 /* Base */,
-				366EB28921339546007F4EE6 /* zh-Hans */,
-				366EB28B2133954E007F4EE6 /* zh-Hant */,
-				366EB28D21339557007F4EE6 /* ja */,
-				366EB290213395D5007F4EE6 /* en */,
+				D8FF1F6E2142AFA9007136BF /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1350,10 +1358,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D8ADA7FF213282D8003050F5 /* Base */,
-				366EB28A21339546007F4EE6 /* zh-Hans */,
-				366EB28C2133954E007F4EE6 /* zh-Hant */,
-				366EB28E21339557007F4EE6 /* ja */,
-				366EB292213395E8007F4EE6 /* en */,
+				D8FF1F6F2142AFAA007136BF /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
