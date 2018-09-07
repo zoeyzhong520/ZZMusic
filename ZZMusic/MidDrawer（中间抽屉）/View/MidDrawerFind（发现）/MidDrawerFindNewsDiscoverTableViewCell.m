@@ -8,6 +8,7 @@
 
 #import "MidDrawerFindNewsDiscoverTableViewCell.h"
 #import "MidDrawerFindNewsDiscoverCollectionViewCell.h"
+#import "MidDrawerFindCollectionViewFlowLayout.h"
 
 @interface MidDrawerFindNewsDiscoverTableViewCell ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -29,6 +30,9 @@
 
 - (void)createView {
     [self.contentView addSubview:self.collectionView];
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self.contentView);
+    }];
     [self.collectionView reloadData];
 }
 
@@ -62,6 +66,10 @@
     
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(fontSizeScale(130), self.bounds.size.height-fontSizeScale(40));
+}
+
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
@@ -71,7 +79,7 @@
         [headerView addSubview:self.sectionTitleLabel];
         [self.sectionTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.mas_equalTo(fontSizeScale(5));
-            make.size.mas_equalTo(CGSizeMake([self.sectionTitleLabel singleLineSize].width, fontSizeScale(14)));
+            make.size.mas_equalTo(CGSizeMake([self.sectionTitleLabel singleLineWidth], fontSizeScale(14)));
         }];
         
         return headerView;
@@ -91,15 +99,10 @@
 #pragma mark Lazy
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
-        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-        flowLayout.minimumLineSpacing = fontSizeScale(5);
-        flowLayout.sectionInset = UIEdgeInsetsMake(0, fontSizeScale(2.5), 0, fontSizeScale(2.5));
-        flowLayout.itemSize = CGSizeMake(fontSizeScale(130), fontSizeScale(80));
-        flowLayout.headerReferenceSize = CGSizeMake(SCREEN_WIDTH, fontSizeScale(30));
-        flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        MidDrawerFindCollectionViewFlowLayout *flowLayout = [[MidDrawerFindCollectionViewFlowLayout alloc] init];
         
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, fontSizeScale(120)) collectionViewLayout:flowLayout];
-        _collectionView.backgroundColor = [UIColor whiteColor];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+        _collectionView.backgroundColor = [UIColor yellowColor];
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.delegate = self;
         _collectionView.dataSource = self;

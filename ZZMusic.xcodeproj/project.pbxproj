@@ -91,6 +91,7 @@
 		36D6721921410DA000132688 /* MidDrawerFindNewsletterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6721821410DA000132688 /* MidDrawerFindNewsletterCollectionViewCell.m */; };
 		36D6721C21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6721B21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.m */; };
 		36D6721F21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6721E21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.m */; };
+		36D6722221420FB800132688 /* MidDrawerFindCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6722121420FB800132688 /* MidDrawerFindCollectionViewFlowLayout.m */; };
 		D8ADA7F5213282D7003050F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA7F4213282D7003050F5 /* AppDelegate.m */; };
 		D8ADA7FB213282D7003050F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7F9213282D7003050F5 /* Main.storyboard */; };
 		D8ADA7FD213282D8003050F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7FC213282D8003050F5 /* Assets.xcassets */; };
@@ -316,6 +317,8 @@
 		36D6721B21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerFindNewsDiscoverTableViewCell.m; sourceTree = "<group>"; };
 		36D6721D21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerFindNewsDiscoverCollectionViewCell.h; sourceTree = "<group>"; };
 		36D6721E21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerFindNewsDiscoverCollectionViewCell.m; sourceTree = "<group>"; };
+		36D6722021420FB800132688 /* MidDrawerFindCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerFindCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		36D6722121420FB800132688 /* MidDrawerFindCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerFindCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		D8ADA7F0213282D7003050F5 /* ZZMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8ADA7F3213282D7003050F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8ADA7F4213282D7003050F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -730,6 +733,8 @@
 				36D6721B21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.m */,
 				36D6721D21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.h */,
 				36D6721E21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.m */,
+				36D6722021420FB800132688 /* MidDrawerFindCollectionViewFlowLayout.h */,
+				36D6722121420FB800132688 /* MidDrawerFindCollectionViewFlowLayout.m */,
 			);
 			path = "MidDrawerFind（发现）";
 			sourceTree = "<group>";
@@ -1118,6 +1123,7 @@
 				366EB2BC21339F2F007F4EE6 /* MASConstraint.m in Sources */,
 				36D671B7213D117400132688 /* SDWebImageCodersManager.m in Sources */,
 				366EB299213398DD007F4EE6 /* BaseNavigationBar.m in Sources */,
+				36D6722221420FB800132688 /* MidDrawerFindCollectionViewFlowLayout.m in Sources */,
 				36D671B4213D117400132688 /* SDImageCacheConfig.m in Sources */,
 				36D6716D213D030500132688 /* MidDrawerMusicHallCollectionViewMusicCell.m in Sources */,
 				D8ADA8622132D38A003050F5 /* RootView.m in Sources */,

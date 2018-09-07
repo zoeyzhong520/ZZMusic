@@ -14,6 +14,6 @@
 + (UILabel *)createLabelWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor;
 
 ///计算单行文本Size
-- (CGSize)singleLineSize;
+- (CGFloat)singleLineWidth;
 
 @end

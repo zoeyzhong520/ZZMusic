@@ -19,12 +19,12 @@
     return label;
 }
 
-- (CGSize)singleLineSize {
+- (CGFloat)singleLineWidth {
     if (!self.text) {
-        return CGSizeZero;
+        return 0.0;
     }
     
-    return [self.text sizeWithAttributes:@{NSFontAttributeName:self.font}];
+    return [self.text sizeWithAttributes:@{NSFontAttributeName:self.font}].width+2;
 }
 
 @end

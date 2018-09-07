@@ -69,7 +69,7 @@
 - (void)addConstraints {
     [self.avatarImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(fontSizeScale(20));
-        make.left.mas_equalTo(fontSizeScale(5));
+        make.left.mas_equalTo(fontSizeScale(10));
         make.size.mas_equalTo(CGSizeMake(fontSizeScale(30), fontSizeScale(30)));
     }];
     
@@ -79,27 +79,27 @@
     }];
     
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.avatarImgView.mas_right).offset(fontSizeScale(5));
+        make.left.mas_equalTo(self.avatarImgView.mas_right).offset(fontSizeScale(10));
         make.centerY.mas_equalTo(self.avatarImgView);
-        make.size.mas_equalTo(CGSizeMake([self.nameLabel singleLineSize].width, fontSizeScale(14)));
+        make.size.mas_equalTo(CGSizeMake([self.nameLabel singleLineWidth], fontSizeScale(14)));
     }];
     
     [self.typeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.nameLabel.mas_right).offset(fontSizeScale(5));
+        make.left.mas_equalTo(self.nameLabel.mas_right).offset(fontSizeScale(10));
         make.centerY.mas_equalTo(self.nameLabel);
-        make.size.mas_equalTo(CGSizeMake([self.typeLabel singleLineSize].width, fontSizeScale(12)));
+        make.size.mas_equalTo(CGSizeMake([self.typeLabel singleLineWidth], fontSizeScale(12)));
     }];
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.avatarImgView.mas_bottom).offset(fontSizeScale(5));
-        make.left.mas_equalTo(fontSizeScale(5));
-        make.right.mas_equalTo(-fontSizeScale(5));
+        make.top.mas_equalTo(self.avatarImgView.mas_bottom).offset(fontSizeScale(10));
+        make.left.mas_equalTo(fontSizeScale(10));
+        make.right.mas_equalTo(-fontSizeScale(10));
     }];
     
     [self.imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.titleLabel.mas_bottom).offset(fontSizeScale(5));
-        make.left.mas_equalTo(fontSizeScale(5));
-        make.right.mas_equalTo(-fontSizeScale(5));
+        make.top.mas_equalTo(self.titleLabel.mas_bottom).offset(fontSizeScale(10));
+        make.left.mas_equalTo(fontSizeScale(10));
+        make.right.mas_equalTo(-fontSizeScale(10));
         make.height.mas_equalTo(FIND_BANNER_HEIGHT);
     }];
     
@@ -109,19 +109,19 @@
     }];
     
     [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.imgView.mas_bottom).offset(fontSizeScale(5));
+        make.bottom.mas_equalTo(-fontSizeScale(10));
         make.leftMargin.mas_equalTo(self.imgView);
-        make.size.mas_equalTo(CGSizeMake([self.timeLabel singleLineSize].width, fontSizeScale(12)));
+        make.size.mas_equalTo(CGSizeMake([self.timeLabel singleLineWidth], fontSizeScale(12)));
     }];
     
     [self.likeButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(-fontSizeScale(5));
+        make.right.mas_equalTo(-fontSizeScale(10));
         make.centerY.mas_equalTo(self.timeLabel);
         make.size.mas_equalTo(CGSizeMake(fontSizeScale(44), fontSizeScale(24)));
     }];
     
     [self.commentButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(self.likeButton.mas_left).offset(-fontSizeScale(5));
+        make.right.mas_equalTo(self.likeButton.mas_left).offset(-fontSizeScale(10));
         make.size.mas_equalTo(self.likeButton);
         make.centerY.mas_equalTo(self.likeButton);
     }];
@@ -189,6 +189,7 @@
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         _titleLabel = [UILabel createLabelWithText:@"EP3：玩！暑假最后的狂欢！【预警】笑到劈叉！笑到流泪！笑出鹅叫！" font:NORMAL_FONT textColor:BLACK_TEXTCOLOR];
+        _titleLabel.numberOfLines = 0;
     }
     return _titleLabel;
 }
@@ -218,6 +219,7 @@
 - (UIButton *)commentButton {
     if (!_commentButton) {
         _commentButton = [UIButton createButtonWithTarget:self action:@selector(buttonClick:) title:@"8" textColor:GRAY_TEXTCOLOR imgStr:@""];
+        _commentButton.titleLabel.font = SMALL_FONT;
     }
     return _commentButton;
 }
@@ -225,6 +227,7 @@
 - (UIButton *)likeButton {
     if (!_likeButton) {
         _likeButton = [UIButton createButtonWithTarget:self action:@selector(buttonClick:) title:@"88" textColor:GRAY_TEXTCOLOR imgStr:@""];
+        _likeButton.titleLabel.font = SMALL_FONT;
     }
     return _likeButton;
 }

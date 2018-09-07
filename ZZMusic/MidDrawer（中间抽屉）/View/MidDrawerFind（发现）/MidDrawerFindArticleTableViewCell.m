@@ -70,7 +70,7 @@
 - (void)addConstraints {
     [self.avatarImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(fontSizeScale(20));
-        make.left.mas_equalTo(fontSizeScale(5));
+        make.left.mas_equalTo(fontSizeScale(10));
         make.size.mas_equalTo(CGSizeMake(fontSizeScale(30), fontSizeScale(30)));
     }];
     
@@ -80,25 +80,25 @@
     }];
     
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.avatarImgView.mas_right).offset(fontSizeScale(5));
+        make.left.mas_equalTo(self.avatarImgView.mas_right).offset(fontSizeScale(10));
         make.centerY.mas_equalTo(self.avatarImgView);
-        make.size.mas_equalTo(CGSizeMake([self.nameLabel singleLineSize].width, fontSizeScale(14)));
+        make.size.mas_equalTo(CGSizeMake([self.nameLabel singleLineWidth], fontSizeScale(14)));
     }];
     
     [self.typeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.nameLabel.mas_right).offset(fontSizeScale(5));
+        make.left.mas_equalTo(self.nameLabel.mas_right).offset(fontSizeScale(10));
         make.centerY.mas_equalTo(self.nameLabel);
-        make.size.mas_equalTo(CGSizeMake([self.typeLabel singleLineSize].width, fontSizeScale(12)));
+        make.size.mas_equalTo(CGSizeMake([self.typeLabel singleLineWidth], fontSizeScale(12)));
     }];
     
     [self.imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.typeLabel.mas_bottom).offset(fontSizeScale(5));
-        make.size.mas_equalTo(CGSizeMake(fontSizeScale(80), fontSizeScale(80)));
-        make.right.mas_equalTo(-fontSizeScale(5));
+        make.bottom.mas_equalTo(-fontSizeScale(44));
+        make.size.mas_equalTo(CGSizeMake(fontSizeScale(100), fontSizeScale(100)));
+        make.right.mas_equalTo(-fontSizeScale(10));
     }];
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.avatarImgView.mas_bottom).offset(fontSizeScale(15));
+        make.top.mas_equalTo(self.avatarImgView.mas_bottom).offset(fontSizeScale(20));
         make.leftMargin.mas_equalTo(self.avatarImgView);
         make.right.mas_equalTo(self.imgView.mas_left).offset(-fontSizeScale(30));
     }];
@@ -106,23 +106,23 @@
     [self.subTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leftMargin.mas_equalTo(self.titleLabel);
         make.right.mas_equalTo(self.imgView.mas_left).offset(-fontSizeScale(15));
-        make.top.mas_equalTo(self.titleLabel.mas_bottom).offset(fontSizeScale(5));
+        make.top.mas_equalTo(self.titleLabel.mas_bottom).offset(fontSizeScale(20));
     }];
     
     [self.recommendTypeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(-fontSizeScale(10));
-        make.left.mas_equalTo(fontSizeScale(5));
-        make.size.mas_equalTo(CGSizeMake([self.recommendTypeLabel singleLineSize].width, fontSizeScale(12)));
+        make.left.mas_equalTo(fontSizeScale(10));
+        make.size.mas_equalTo(CGSizeMake([self.recommendTypeLabel singleLineWidth], fontSizeScale(12)));
     }];
     
     [self.likeButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(-fontSizeScale(5));
         make.centerY.mas_equalTo(self.recommendTypeLabel);
-        make.size.mas_equalTo(CGSizeMake(fontSizeScale(24), fontSizeScale(24)));
+        make.size.mas_equalTo(CGSizeMake(fontSizeScale(44), fontSizeScale(24)));
     }];
     
     [self.commentButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(self.likeButton.mas_left).offset(-fontSizeScale(5));
+        make.right.mas_equalTo(self.likeButton.mas_left).offset(-fontSizeScale(10));
         make.size.mas_equalTo(self.likeButton);
         make.centerY.mas_equalTo(self.likeButton);
     }];
@@ -189,6 +189,7 @@
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         _titleLabel = [UILabel createLabelWithText:@"纳纳圆梦～请你们去首尔看MXM的演唱会！！" font:BIG_FONT textColor:BLACK_TEXTCOLOR];
+        _titleLabel.numberOfLines = 0;
     }
     return _titleLabel;
 }
@@ -196,13 +197,15 @@
 - (UILabel *)subTitleLabel {
     if (!_subTitleLabel) {
         _subTitleLabel = [UILabel createLabelWithText:@"福利又来了！这两个鲜肉boy，把粉丝比喻成钻石女孩！到底是谁这么温暖？是我们MXM！！听MXMX精选电台。" font:NORMAL_FONT textColor:GRAY_TEXTCOLOR];
+        _subTitleLabel.numberOfLines = 3;
     }
     return _subTitleLabel;
 }
 
 - (UIImageView *)imgView {
     if (!_imgView) {
-        _imgView = [UIImageView createImageViewWithImg:@"CD"];
+        _imgView = [UIImageView createImageViewWithImg:@""];
+        _imgView.backgroundColor = SECTION_BACKGROUNDCOLOR;
     }
     return _imgView;
 }
@@ -216,14 +219,16 @@
 
 - (UIButton *)commentButton {
     if (!_commentButton) {
-        _commentButton = [UIButton createButtonWithTarget:self action:@selector(buttonClick:) title:@"" textColor:GRAY_TEXTCOLOR imgStr:@""];
+        _commentButton = [UIButton createButtonWithTarget:self action:@selector(buttonClick:) title:@"8" textColor:GRAY_TEXTCOLOR imgStr:@""];
+        _commentButton.titleLabel.font = SMALL_FONT;
     }
     return _commentButton;
 }
 
 - (UIButton *)likeButton {
     if (!_likeButton) {
-        _likeButton = [UIButton createButtonWithTarget:self action:@selector(buttonClick:) title:@"" textColor:GRAY_TEXTCOLOR imgStr:@""];
+        _likeButton = [UIButton createButtonWithTarget:self action:@selector(buttonClick:) title:@"8" textColor:GRAY_TEXTCOLOR imgStr:@""];
+        _likeButton.titleLabel.font = SMALL_FONT;
     }
     return _likeButton;
 }

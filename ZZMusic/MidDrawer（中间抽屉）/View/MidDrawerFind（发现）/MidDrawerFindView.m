@@ -74,9 +74,9 @@
     MidDrawerBaseModel *model = self.dataArray[indexPath.row];
     
     if ([model.cellType isEqualToString:@"Video"]) {//分享视频
-        return FIND_BANNER_HEIGHT+fontSizeScale(105);
+        return FIND_BANNER_HEIGHT+fontSizeScale(140);
     } else if ([model.cellType isEqualToString:@"Article"]) {//发布文章
-        return FIND_BANNER_HEIGHT+fontSizeScale(115);
+        return FIND_BANNER_HEIGHT+fontSizeScale(40);
     } else if ([model.cellType isEqualToString:@"Newsletter"]) {//快讯
         return fontSizeScale(160);
     } else {//发现
@@ -102,7 +102,7 @@
     if (!_dataArray) {
         NSMutableArray *resultArray = [NSMutableArray arrayWithCapacity:0];
         
-        NSArray *tmpArray = @[@{@"cellType":@"Video"}, @{@"cellType":@"Article"}, @{@"cellType":@"Newsletter"}, @{@"cellType":@"Discover"}];
+        NSArray *tmpArray = @[@{@"cellType":@"Video"}, @{@"cellType":@"Article"}, @{@"cellType":@"Newsletter"}, @{@"cellType":@"Discover"}, @{@"cellType":@"Video"}, @{@"cellType":@"Article"}, @{@"cellType":@"Newsletter"}, @{@"cellType":@"Discover"}, @{@"cellType":@"Video"}, @{@"cellType":@"Article"}, @{@"cellType":@"Newsletter"}, @{@"cellType":@"Discover"}, @{@"cellType":@"Video"}, @{@"cellType":@"Article"}, @{@"cellType":@"Newsletter"}, @{@"cellType":@"Discover"}];
         for (NSDictionary *dict in tmpArray) {
             MidDrawerBaseModel *model = [[MidDrawerBaseModel alloc] init];
             [model setValuesForKeysWithDictionary:dict];
