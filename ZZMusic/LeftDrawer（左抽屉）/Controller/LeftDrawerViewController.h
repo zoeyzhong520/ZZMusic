@@ -8,9 +8,12 @@
 
 #import "BaseViewController.h"
 #import "LeftDrawerFooterView.h"
+#import "LeftDrawerView.h"
 
 @interface LeftDrawerViewController : BaseViewController
 
 @property (nonatomic, strong) LeftDrawerFooterView *footerView;
+
+@property (nonatomic, strong) LeftDrawerView *leftDrawerView;
 
 @end

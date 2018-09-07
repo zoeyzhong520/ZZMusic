@@ -18,5 +18,6 @@
 #import "ZZMusicScrollView.h"
 #import "ZZMusicSearchBar.h"
 #import "MidDrawerBaseModel.h"
+#import "BaseWebViewController.h"
 
 #endif /* ClassMacro_h */

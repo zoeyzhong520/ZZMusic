@@ -83,7 +83,7 @@
     MidDrawerViewController *midDrawerVC = [[MidDrawerViewController alloc] init];
     rootVC.leftDrawerView = leftDrawerVC;
     rootVC.midDrawerView = midDrawerVC;
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:rootVC];;
+    self.window.rootViewController = [[BaseNavigationController alloc] initWithRootViewController:rootVC];;
     [self.window makeKeyAndVisible];
 }
 

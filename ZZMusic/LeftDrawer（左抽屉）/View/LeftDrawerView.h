@@ -10,4 +10,6 @@
 
 @interface LeftDrawerView : UIView
 
+@property (nonatomic, copy) void(^clickBlock)(LeftDrawerViewClickType type);
+
 @end

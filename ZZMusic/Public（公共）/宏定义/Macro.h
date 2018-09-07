@@ -16,5 +16,6 @@
 #import "CategoryMacro.h"
 #import "ClassMacro.h"
 #import "FramesMacro.h"
+#import "EnumMacro.h"
 
 #endif /* Macro_h */

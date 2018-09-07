@@ -31,8 +31,6 @@
 }
 
 - (void)setPage {
-    self.view.backgroundColor = [UIColor whiteColor];
-    
     [self.view addSubview:self.navigationBar];
     
     [self.view addSubview:self.midDrawerView];

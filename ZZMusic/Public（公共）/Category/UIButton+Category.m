@@ -34,4 +34,11 @@
     self.imageEdgeInsets = UIEdgeInsetsMake(-margin, 0.0, 0.0, -self.titleLabel.frame.size.width);
 }
 
+- (void)setImageToRightWithSize:(CGSize)size {
+    CGFloat btnWidth = [self.titleLabel.text boundingRectWithSize:size options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:self.titleLabel.font} context:nil].size.width;
+    
+    //调节文本和图片的内边距
+    [self setEdgeInsetsWithTitleEdgeInsets:UIEdgeInsetsMake(0, -self.imageView.image.size.width-5, 0, self.imageView.image.size.width) imageEdgeInsets:UIEdgeInsetsMake(0, btnWidth+5, 0, -btnWidth)];
+}
+
 @end

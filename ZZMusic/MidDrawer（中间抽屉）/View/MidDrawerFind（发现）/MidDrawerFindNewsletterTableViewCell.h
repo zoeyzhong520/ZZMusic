@@ -15,4 +15,6 @@
 ///创建cell
 + (MidDrawerFindNewsletterTableViewCell *)createCellWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
 
+@property (nonatomic, retain) MidDrawerBaseModel *model;
+
 @end

@@ -16,7 +16,6 @@
     if (self) {
         self.minimumLineSpacing = fontSizeScale(5);
         self.sectionInset = UIEdgeInsetsMake(0, fontSizeScale(2.5), 0, fontSizeScale(2.5));
-        self.headerReferenceSize = CGSizeMake(SCREEN_WIDTH, fontSizeScale(30));
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     }
     return self;

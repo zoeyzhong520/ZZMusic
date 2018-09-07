@@ -27,4 +27,22 @@ typedef enum : NSUInteger {
 ///ShowViewControllerWithClassName
 - (void)showViewControllerWithClassName:(NSString *)className;
 
+///showWebViewControllerWithUrl
+- (void)showWebViewControllerWithUrl:(NSString *)url;
+
+///设置边缘手势
+- (void)addScreenEdgePanGestureRecognizerWithAction:(SEL)action;
+
+///移除边缘手势
+- (void)removeScreenEdgePanGestureRecognizer;
+
+///添加轻扫手势
+- (void)addSwipeGestureRecognizerWithAction:(SEL)action;
+
+///移除轻扫手势
+- (void)removeSwipeGestureRecognizer;
+
+///设置导航栏是否全透明
+- (void)setNavigationBarTransparent:(BOOL)isTransparent;
+
 @end

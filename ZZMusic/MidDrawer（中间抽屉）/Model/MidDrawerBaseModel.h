@@ -16,5 +16,7 @@
 @property (nonatomic, copy) NSString *sectionType;
 ///cell类别
 @property (nonatomic, copy) NSString *cellType;
+///快讯类Cell是否显示图片下方标题
+@property (nonatomic, assign) BOOL isNewsletterTitleVisible;
 
 @end

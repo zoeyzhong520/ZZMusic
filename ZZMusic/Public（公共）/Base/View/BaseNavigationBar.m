@@ -79,6 +79,18 @@
     self.rightBubbleButton.hidden = !isRightBubbleButtonVisible;
 }
 
+- (void)setLeftButtonImg:(NSString *)leftButtonImg {
+    [self.leftMenuButton setImage:[UIImage imageNamed:leftButtonImg ? leftButtonImg : @""] forState:UIControlStateNormal];
+}
+
+- (void)setIsTitleViewVisible:(BOOL)isTitleViewVisible {
+    self.titleView.hidden = !isTitleViewVisible;
+}
+
+- (void)setBackColor:(UIColor *)backColor {
+    self.backgroundColor = backColor;
+}
+
 #pragma mark - Lazy
 - (UIButton *)leftMenuButton {
     if (!_leftMenuButton) {

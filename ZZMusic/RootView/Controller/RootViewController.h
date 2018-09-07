@@ -9,11 +9,14 @@
 #import "BaseViewController.h"
 #import "LeftDrawerViewController.h"
 #import "MidDrawerViewController.h"
+#import "BaseNavigationController.h"
 
 @interface RootViewController : BaseViewController
 
 @property (nonatomic, strong) LeftDrawerViewController *leftDrawerView;
 
 @property (nonatomic, strong) MidDrawerViewController *midDrawerView;
+
+- (void)hideLeftDrawer:(UIGestureRecognizer *)gesture;
 
 @end

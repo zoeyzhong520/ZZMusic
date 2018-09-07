@@ -7,11 +7,8 @@
 //
 
 #import "LeftDrawerViewController.h"
-#import "LeftDrawerView.h"
 
 @interface LeftDrawerViewController ()<UINavigationControllerDelegate>
-
-@property (nonatomic, strong) LeftDrawerView *leftDrawerView;
 
 @end
 
@@ -25,8 +22,6 @@
 }
 
 - (void)setPage {
-    self.view.backgroundColor = [UIColor whiteColor];
-    
     [self.view addSubview:self.leftDrawerView];
     
     [self.view addSubview:self.footerView];

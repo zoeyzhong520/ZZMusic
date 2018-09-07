@@ -9,13 +9,14 @@
 #import "MidDrawerFindNewsletterTableViewCell.h"
 #import "MidDrawerFindNewsletterCollectionViewCell.h"
 #import "MidDrawerFindCollectionViewFlowLayout.h"
+#import "MidDrawerFindNewsletterSectionTitleView.h"
 
 @interface MidDrawerFindNewsletterTableViewCell ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 ///collectionView
 @property (nonatomic, strong) UICollectionView *collectionView;
-///sectionTitleLabel
-@property (nonatomic, strong) UILabel *sectionTitleLabel;
+///SectionTitleView
+@property (nonatomic, strong) MidDrawerFindNewsletterSectionTitleView *sectionTitleView;
 
 @end
 
@@ -30,11 +31,23 @@
 }
 
 - (void)createView {
+    [self.contentView addSubview:self.sectionTitleView];
+    
     [self.contentView addSubview:self.collectionView];
-    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self.contentView);
+    
+    [self addConstraints];
+}
+
+///添加约束
+- (void)addConstraints {
+    [self.sectionTitleView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.mas_equalTo(0);
+        make.height.mas_equalTo(fontSizeScale(30));
     }];
-    [self.collectionView reloadData];
+    
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsMake(fontSizeScale(30), fontSizeScale(10), fontSizeScale(10), 0));
+    }];
 }
 
 - (void)awakeFromNib {
@@ -71,23 +84,6 @@
     return CGSizeMake(fontSizeScale(130), self.bounds.size.height-fontSizeScale(40));
 }
 
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
-    
-    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-        UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"Header" forIndexPath:indexPath];
-        
-        //sectionTitleLabel
-        [headerView addSubview:self.sectionTitleLabel];
-        [self.sectionTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.left.mas_equalTo(fontSizeScale(5));
-            make.size.mas_equalTo(CGSizeMake([self.sectionTitleLabel singleLineWidth], fontSizeScale(14)));
-        }];
-        
-        return headerView;
-    }
-    return nil;
-}
-
 + (MidDrawerFindNewsletterTableViewCell *)createCellWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
     
     MidDrawerFindNewsletterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MidDrawerFindNewsletterTableViewCellID" forIndexPath:indexPath];
@@ -95,6 +91,11 @@
         NSLog(@"创建cell失败！");
     }
     return cell;
+}
+
+#pragma mark Setter
+- (void)setModel:(MidDrawerBaseModel *)model {
+    self.sectionTitleView.titleText = @"24小时快讯";
 }
 
 #pragma mark Lazy
@@ -107,18 +108,16 @@
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
-        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"Header"];
         [_collectionView registerClass:[MidDrawerFindNewsletterCollectionViewCell class] forCellWithReuseIdentifier:@"MidDrawerFindNewsletterCollectionViewCellID"];
     }
     return _collectionView;
 }
 
-- (UILabel *)sectionTitleLabel {
-    if (!_sectionTitleLabel) {
-        _sectionTitleLabel = [UILabel createLabelWithText:@"24小时快讯" font:NORMAL_FONT textColor:[UIColor whiteColor]];
-        _sectionTitleLabel.backgroundColor = [UIColor blackColor];
+- (MidDrawerFindNewsletterSectionTitleView *)sectionTitleView {
+    if (!_sectionTitleView) {
+        _sectionTitleView = [[MidDrawerFindNewsletterSectionTitleView alloc] initWithFrame:CGRectZero];
     }
-    return _sectionTitleLabel;
+    return _sectionTitleView;
 }
 
 @end

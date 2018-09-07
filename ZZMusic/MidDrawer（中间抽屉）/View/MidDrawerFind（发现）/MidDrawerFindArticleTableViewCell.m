@@ -120,12 +120,14 @@
         make.centerY.mas_equalTo(self.recommendTypeLabel);
         make.size.mas_equalTo(CGSizeMake(fontSizeScale(44), fontSizeScale(24)));
     }];
+    [self.likeButton setImageToRightWithSize:CGSizeMake(fontSizeScale(44), fontSizeScale(24))];
     
     [self.commentButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(self.likeButton.mas_left).offset(-fontSizeScale(10));
         make.size.mas_equalTo(self.likeButton);
         make.centerY.mas_equalTo(self.likeButton);
     }];
+    [self.commentButton setImageToRightWithSize:CGSizeMake(fontSizeScale(44), fontSizeScale(24))];
 }
 
 //点击事件
@@ -219,7 +221,7 @@
 
 - (UIButton *)commentButton {
     if (!_commentButton) {
-        _commentButton = [UIButton createButtonWithTarget:self action:@selector(buttonClick:) title:@"8" textColor:GRAY_TEXTCOLOR imgStr:@""];
+        _commentButton = [UIButton createButtonWithTarget:self action:@selector(buttonClick:) title:@"8" textColor:GRAY_TEXTCOLOR imgStr:@"评论"];
         _commentButton.titleLabel.font = SMALL_FONT;
     }
     return _commentButton;
@@ -227,7 +229,7 @@
 
 - (UIButton *)likeButton {
     if (!_likeButton) {
-        _likeButton = [UIButton createButtonWithTarget:self action:@selector(buttonClick:) title:@"8" textColor:GRAY_TEXTCOLOR imgStr:@""];
+        _likeButton = [UIButton createButtonWithTarget:self action:@selector(buttonClick:) title:@"8" textColor:GRAY_TEXTCOLOR imgStr:@"点赞"];
         _likeButton.titleLabel.font = SMALL_FONT;
     }
     return _likeButton;

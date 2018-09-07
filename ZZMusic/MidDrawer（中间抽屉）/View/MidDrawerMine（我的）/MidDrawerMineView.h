@@ -10,23 +10,6 @@
 
 #pragma mark 我的
 
-typedef enum : NSUInteger {
-    MidDrawerMineViewLogin = 0,
-    MidDrawerMineViewActivity,
-    MidDrawerMineViewVIP,
-    MidDrawerMineViewAllMusic,
-    MidDrawerMineViewDownload,
-    MidDrawerMineViewRecentlyPlayed,
-    MidDrawerMineViewLike,
-    MidDrawerMineViewPurchasedMusic,
-    MidDrawerMineViewRunningStation,
-    MidDrawerMineViewSelfBuildSongList,
-    MidDrawerMineViewCollectionSongList,
-    MidDrawerMineViewAdd,
-    MidDrawerMineViewManage,
-    MidDrawerMineViewCellClick
-} MidDrawerMineViewClickType;
-
 @interface MidDrawerMineView : UIView
 
 @property (nonatomic, copy) void(^clickBlock)(MidDrawerMineViewClickType type);

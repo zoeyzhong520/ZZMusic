@@ -59,9 +59,11 @@
         return cell;
     } else if ([model.cellType isEqualToString:@"Newsletter"]) {//快讯
         MidDrawerFindNewsletterTableViewCell *cell = [MidDrawerFindNewsletterTableViewCell createCellWithTableView:tableView indexPath:indexPath];
+        cell.model = model;
         return cell;
     } else {//发现
         MidDrawerFindNewsDiscoverTableViewCell *cell = [MidDrawerFindNewsDiscoverTableViewCell createCellWithTableView:tableView indexPath:indexPath];
+        cell.model = model;
         return cell;
     }
 }
@@ -102,7 +104,7 @@
     if (!_dataArray) {
         NSMutableArray *resultArray = [NSMutableArray arrayWithCapacity:0];
         
-        NSArray *tmpArray = @[@{@"cellType":@"Video"}, @{@"cellType":@"Article"}, @{@"cellType":@"Newsletter"}, @{@"cellType":@"Discover"}, @{@"cellType":@"Video"}, @{@"cellType":@"Article"}, @{@"cellType":@"Newsletter"}, @{@"cellType":@"Discover"}, @{@"cellType":@"Video"}, @{@"cellType":@"Article"}, @{@"cellType":@"Newsletter"}, @{@"cellType":@"Discover"}, @{@"cellType":@"Video"}, @{@"cellType":@"Article"}, @{@"cellType":@"Newsletter"}, @{@"cellType":@"Discover"}];
+        NSArray *tmpArray = @[@{@"cellType":@"Video"}, @{@"cellType":@"Article"}, @{@"cellType":@"Newsletter", @"isNewsletterTitleVisible":@(YES)}, @{@"cellType":@"Discover", @"isNewsletterTitleVisible":@(NO)}, @{@"cellType":@"Video"}, @{@"cellType":@"Article"}, @{@"cellType":@"Newsletter", @"isNewsletterTitleVisible":@(YES)}, @{@"cellType":@"Discover", @"isNewsletterTitleVisible":@(NO)}];
         for (NSDictionary *dict in tmpArray) {
             MidDrawerBaseModel *model = [[MidDrawerBaseModel alloc] init];
             [model setValuesForKeysWithDictionary:dict];

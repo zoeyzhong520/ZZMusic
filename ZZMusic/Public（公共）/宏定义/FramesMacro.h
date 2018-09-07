@@ -13,5 +13,6 @@
 
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
+#import "SVProgressHUD.h"
 
 #endif /* FramesMacro_h */

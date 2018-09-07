@@ -8,11 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum : NSUInteger {
-    Setting = 0,
-    Login = 1
-} LeftDrawerFooterClickType;
-
 @interface LeftDrawerFooterView : UIView
 
 @property (nonatomic, copy) void(^buttonClickBlock)(LeftDrawerFooterClickType clickType);

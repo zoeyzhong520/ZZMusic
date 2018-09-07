@@ -48,4 +48,45 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (void)showWebViewControllerWithUrl:(NSString *)url {
+    BaseWebViewController *webVC = [[BaseWebViewController alloc] init];
+    webVC.urlString = url;
+    [self.navigationController pushViewController:webVC animated:YES];
+}
+
+///设置边缘手势
+- (void)addScreenEdgePanGestureRecognizerWithAction:(SEL)action {
+    UIScreenEdgePanGestureRecognizer *leftGes = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:action];
+    leftGes.edges = UIRectEdgeLeft;
+    [self.view addGestureRecognizer:leftGes];
+}
+
+- (void)removeScreenEdgePanGestureRecognizer {
+    for (UIGestureRecognizer *gesture in self.view.gestureRecognizers) {
+        if ([gesture isKindOfClass:[UIScreenEdgePanGestureRecognizer class]]) {
+            [self.view removeGestureRecognizer:gesture];
+        }
+    }
+}
+
+///添加轻扫手势
+- (void)addSwipeGestureRecognizerWithAction:(SEL)action {
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:action];
+    swipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:swipe];
+}
+
+- (void)removeSwipeGestureRecognizer {
+    for (UIGestureRecognizer *gesture in self.view.gestureRecognizers) {
+        if ([gesture isKindOfClass:[UISwipeGestureRecognizer class]]) {
+            [self.view removeGestureRecognizer:gesture];
+        }
+    }
+}
+
+- (void)setNavigationBarTransparent:(BOOL)isTransparent {
+    [self.navigationController.navigationBar setBackgroundImage:isTransparent ? [UIImage new] : nil forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = isTransparent ? [UIImage new] : nil;
+}
+
 @end

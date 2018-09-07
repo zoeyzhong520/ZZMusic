@@ -25,13 +25,11 @@
 }
 
 - (void)setPage {
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = SECTION_BACKGROUNDCOLOR;
     
     [self addBarButtonItemWithPosition:Left title:@"取消" action:@selector(disMiss)];
     
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:0];
-    
-    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    [self setNavigationBarTransparent:YES];
     
     [self.view addSubview:self.loginView];
 }

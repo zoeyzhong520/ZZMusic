@@ -18,10 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self setPage];
+    [self setupPage];
 }
 
-- (void)setPage {
+- (void)setupPage {
     self.view.backgroundColor = [UIColor whiteColor];
 }
 

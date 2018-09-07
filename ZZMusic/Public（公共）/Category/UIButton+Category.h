@@ -19,4 +19,7 @@
 ///设置图片在上、文本在下
 - (void)setTopImageBottomTitleWithMargin:(CGFloat)margin;
 
+///设置图片在右，文字在左
+- (void)setImageToRightWithSize:(CGSize)size;
+
 @end

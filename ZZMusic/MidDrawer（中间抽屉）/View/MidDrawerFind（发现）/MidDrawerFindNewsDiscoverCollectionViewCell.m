@@ -51,7 +51,7 @@
 - (UIImageView *)imgView {
     if (!_imgView) {
         _imgView = [UIImageView createImageViewWithImg:nil];
-        _imgView.backgroundColor = [UIColor lightGrayColor];
+        _imgView.backgroundColor = LINE_COLOR;
     }
     return _imgView;
 }

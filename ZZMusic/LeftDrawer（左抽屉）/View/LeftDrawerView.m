@@ -33,6 +33,13 @@
     [self.tableView reloadData];
 }
 
+//设置block
+- (void)createBlock:(LeftDrawerViewClickType)type {
+    if (self.clickBlock) {
+        self.clickBlock(type);
+    }
+}
+
 - (void)configCellWithIndexPath:(NSIndexPath *)indexPath cell:(LeftDrawerTableViewCell *)cell {
     if (indexPath.section == 0) {
         if (indexPath.row == 0) { cell.subTitleText = @"默认皮肤"; }
@@ -66,6 +73,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    NSString *title = self.dataArray[indexPath.section][indexPath.row];
+    if ([title isEqualToString:@"个性装扮"]) {
+        [self createBlock:LeftDrawerViewPersonalityDress];
+    } else if ([title isEqualToString:@"消息中心"]) {
+        [self createBlock:LeftDrawerViewMessageCenter];
+    } else if ([title isEqualToString:@"免流量服务"]) {
+        [self createBlock:LeftDrawerViewFreeTrafficService];
+    } else if ([title isEqualToString:@"听歌偏好"]) {
+        [self createBlock:LeftDrawerViewSongPreference];
+    } else if ([title isEqualToString:@"微云音乐网盘"]) {
+        [self createBlock:LeftDrawerViewNetDisc];
+    } else if ([title isEqualToString:@"清理占用空间"]) {
+        [self createBlock:LeftDrawerViewCleanSpace];
+    } else if ([title isEqualToString:@"帮助与反馈"]) {
+        [self createBlock:LeftDrawerViewHelp];
+    } else if ([title isEqualToString:@"关于ZZ音乐"]) {
+        [self createBlock:LeftDrawerViewAbout];
+    }
 }
 
 #pragma mark Lazy
