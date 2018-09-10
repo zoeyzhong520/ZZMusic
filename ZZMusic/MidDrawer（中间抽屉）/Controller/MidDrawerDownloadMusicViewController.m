@@ -1,22 +1,28 @@
 //
-//  PersonalityDressViewController.m
+//  MidDrawerDownloadMusicViewController.m
 //  ZZMusic
 //
-//  Created by zhifu360 on 2018/9/7.
+//  Created by zhifu360 on 2018/9/10.
 //  Copyright © 2018年 zhognzhaojun. All rights reserved.
 //
 
-#import "PersonalityDressViewController.h"
+#import "MidDrawerDownloadMusicViewController.h"
 
-@interface PersonalityDressViewController ()
+@interface MidDrawerDownloadMusicViewController ()
 
 @end
 
-@implementation PersonalityDressViewController
+@implementation MidDrawerDownloadMusicViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self setPage];
+}
+
+- (void)setPage {
+    
 }
 
 - (void)didReceiveMemoryWarning {

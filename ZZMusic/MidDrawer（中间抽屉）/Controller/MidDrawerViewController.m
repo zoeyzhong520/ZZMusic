@@ -9,8 +9,9 @@
 #import "MidDrawerViewController.h"
 #import "MidDrawerView.h"
 #import "MidDrawerSearchHistoryView.h"
+#import "MidDrawerViewControllerViewModel.h"
 
-@interface MidDrawerViewController ()<UINavigationControllerDelegate, UISearchBarDelegate>
+@interface MidDrawerViewController ()<UISearchBarDelegate>
 
 @property (nonatomic, strong) MidDrawerView *midDrawerView;
 
@@ -54,11 +55,6 @@
 //点击事件
 - (void)tapMongolianView {
     if (self.clickMongolianView) { self.clickMongolianView(); }
-}
-
-///我的
-- (void)handleMineViewClickType:(MidDrawerMineViewClickType)type {
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -129,7 +125,9 @@
         _midDrawerView = [[MidDrawerView alloc] initWithFrame:CGRectMake(0, STATUS_BAR_HEIGHT+NAVIGATION_BAR_HEIGHT+SEARCHBAR_HEIGHT, self.view.bounds.size.width, CONTENT_HEIGHT-SEARCHBAR_HEIGHT)];
         WeakSelf;
         _midDrawerView.scrollViewDidEndDeceleratingBlock = ^(NSInteger currentIndex) { weakSelf.navigationBar.titleView.selectedIndex = currentIndex; };
-        _midDrawerView.mineView.clickBlock = ^(MidDrawerMineViewClickType type) { [weakSelf handleMineViewClickType:type]; };
+        _midDrawerView.mineView.clickBlock = ^(MidDrawerMineViewClickType type) {
+            [MidDrawerViewControllerViewModel handleMidDrawerMineViewClickBlockWithType:type vc:weakSelf];
+        };
     }
     return _midDrawerView;
 }

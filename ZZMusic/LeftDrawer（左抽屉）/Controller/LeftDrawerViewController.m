@@ -8,7 +8,7 @@
 
 #import "LeftDrawerViewController.h"
 
-@interface LeftDrawerViewController ()<UINavigationControllerDelegate>
+@interface LeftDrawerViewController ()
 
 @end
 

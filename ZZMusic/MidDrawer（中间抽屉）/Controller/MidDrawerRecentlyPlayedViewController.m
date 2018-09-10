@@ -1,35 +1,28 @@
 //
-//  BaseViewController.m
+//  MidDrawerRecentlyPlayedViewController.m
 //  ZZMusic
 //
-//  Created by 仲召俊 on 2018/8/26.
+//  Created by zhifu360 on 2018/9/10.
 //  Copyright © 2018年 zhognzhaojun. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "MidDrawerRecentlyPlayedViewController.h"
 
-@interface BaseViewController ()
+@interface MidDrawerRecentlyPlayedViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation MidDrawerRecentlyPlayedViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self setupPage];
+    [self setPage];
 }
 
-- (void)setupPage {
-    self.view.backgroundColor = [UIColor whiteColor];
-    ///去除导航栏下方黑线
-    self.navigationController.navigationBar.shadowImage = [UIImage new];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [SVProgressHUD dismiss];
+- (void)setPage {
+    self.title = @"最近播放";
 }
 
 - (void)didReceiveMemoryWarning {

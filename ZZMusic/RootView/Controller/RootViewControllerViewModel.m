@@ -32,7 +32,7 @@
     
     switch (clickType) {
         case LeftDrawerViewPersonalityDress:
-            [vc showViewControllerWithClassName:@"PersonalityDressViewController"];
+            [vc showWebViewControllerWithUrl:@""];
             break;
         case LeftDrawerViewMessageCenter:
             

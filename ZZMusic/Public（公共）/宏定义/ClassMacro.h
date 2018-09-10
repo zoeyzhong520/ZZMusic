@@ -19,5 +19,7 @@
 #import "ZZMusicSearchBar.h"
 #import "MidDrawerBaseModel.h"
 #import "BaseWebViewController.h"
+#import "ZZMusicTableShapeAlertView.h"
+#import "ZZMusicMenuBar.h"
 
 #endif /* ClassMacro_h */
