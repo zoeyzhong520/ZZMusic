@@ -15,4 +15,6 @@
 ///列数
 @property (nonatomic, assign) NSInteger columnCount;
 
+- (instancetype)initWithFrame:(CGRect)frame images:(NSArray *)images titles:(NSArray *)titles;
+
 @end
