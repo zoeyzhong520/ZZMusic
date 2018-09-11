@@ -10,8 +10,6 @@
 
 @interface ZZMusicCollectShapeAlertScrollView : UIView
 
-///行数
-@property (nonatomic, assign) NSInteger rowCount;
 ///列数
 @property (nonatomic, assign) NSInteger columnCount;
 

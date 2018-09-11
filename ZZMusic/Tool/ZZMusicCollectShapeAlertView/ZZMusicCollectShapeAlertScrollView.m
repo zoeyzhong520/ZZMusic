@@ -29,9 +29,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.rowCount = 6;
         self.columnCount = 6;
-        self.itemWidth = self.bounds.size.height/2;
+        self.itemWidth = self.bounds.size.width/11*2;
         self.itemHeight = self.bounds.size.height/2;
         self.images = images;
         self.titles = titles;
@@ -41,10 +40,14 @@
 }
 
 - (void)createView {
+    [self addSubview:self.scrollView];
+    
     for (int i = 0; i < self.images.count; i ++) {
         UIButton *button = [UIButton createButtonWithTarget:self action:@selector(buttonClick:) title:self.titles[i] textColor:BLACK_TEXTCOLOR imgStr:self.images[i]];
+        button.titleLabel.font = SMALL_FONT;
         button.tag = i;
-        button.frame = CGRectMake(_itemWidth*(i%_rowCount), _itemHeight*(i/_columnCount), _itemWidth, _itemHeight);
+        button.frame = CGRectMake(_itemWidth*(i%_columnCount), _itemHeight*(i/_columnCount), _itemWidth, _itemHeight);
+        [button setTopImageBottomTitleWithMargin:15];
         [self.scrollView addSubview:button];
     }
 }

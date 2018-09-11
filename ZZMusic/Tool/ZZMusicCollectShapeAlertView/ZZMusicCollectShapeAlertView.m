@@ -7,6 +7,7 @@
 //
 
 #import "ZZMusicCollectShapeAlertView.h"
+#import "ZZMusicCollectShapeAlertScrollView.h"
 
 @interface ZZMusicCollectShapeAlertView ()
 
@@ -23,7 +24,7 @@
 @property (nonatomic, strong) UILabel *subTitleLabel;
 
 ///scrollView
-@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) ZZMusicCollectShapeAlertScrollView *scrollView;
 
 ///volumeView
 @property (nonatomic, strong) UIView *volumeView;
@@ -58,6 +59,7 @@
     
     if (_contentView == nil) {
         _contentView = [UIView createViewWithBackgroundColor:[UIColor whiteColor]];
+        [_contentView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(contentViewTapClick)]];
         [self addSubview:_contentView];
         [_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.mas_equalTo(0);
@@ -148,6 +150,10 @@
     }
 }
 
+- (void)contentViewTapClick {
+    ///不做操作
+}
+
 //显示
 - (void)show {
     self.alpha = 0.0;
@@ -175,13 +181,6 @@
 - (UIView *)titleView {
     if (!_titleView) {
         _titleView = [UIView createViewWithBackgroundColor:[UIColor whiteColor]];
-        
-        UIView *line = [UIView createViewWithBackgroundColor:LINE_COLOR];
-        [_titleView addSubview:line];
-        [line mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.bottom.mas_equalTo(0);
-            make.height.mas_equalTo(0.5);
-        }];
     }
     return _titleView;
 }
@@ -200,14 +199,21 @@
     return _subTitleLabel;
 }
 
-- (UIScrollView *)scrollView {
+- (ZZMusicCollectShapeAlertScrollView *)scrollView {
     if (!_scrollView) {
-        _scrollView = [[UIScrollView alloc] init];
+        _scrollView = [[ZZMusicCollectShapeAlertScrollView alloc] initWithFrame:CGRectMake(0, fontSizeScale(60), self.bounds.size.width, FIND_BANNER_HEIGHT) images:@[@"加到歌单",@"单曲购买",@"删除",@"百变播放器",@"定时关闭",@"唱这首歌",@"查看歌手",@"查看专辑",@"播放视频",@"歌词海报",@"背景音乐"] titles:@[@"加到歌单",@"单曲购买",@"删除",@"百变播放器",@"定时关闭",@"唱这首歌",@"查看歌手",@"查看专辑",@"播放视频",@"歌词海报",@"背景音乐"]];
         
         UIView *line = [UIView createViewWithBackgroundColor:LINE_COLOR];
         [_scrollView addSubview:line];
         [line mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.bottom.mas_equalTo(0);
+            make.height.mas_equalTo(0.5);
+        }];
+        
+        UIView *topLine = [UIView createViewWithBackgroundColor:LINE_COLOR];
+        [_scrollView addSubview:topLine];
+        [topLine mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.top.mas_equalTo(0);
             make.height.mas_equalTo(0.5);
         }];
     }
