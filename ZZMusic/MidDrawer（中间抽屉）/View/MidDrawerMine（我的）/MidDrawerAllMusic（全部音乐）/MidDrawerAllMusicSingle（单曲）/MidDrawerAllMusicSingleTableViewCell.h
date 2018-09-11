@@ -13,4 +13,6 @@
 ///创建cell
 + (MidDrawerAllMusicSingleTableViewCell *)createCellWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
 
+@property (nonatomic, copy) dispatch_block_t clickBlock;
+
 @end

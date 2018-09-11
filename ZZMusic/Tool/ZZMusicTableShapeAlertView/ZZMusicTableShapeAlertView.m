@@ -40,7 +40,6 @@
     
     if (self.contentView == nil) {
         _contentView = [UIView createViewWithBackgroundColor:[UIColor whiteColor]];
-        _contentView.alpha = 0.9f;
         [self addSubview:_contentView];
         [_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.mas_equalTo(0);
@@ -65,7 +64,7 @@
 - (void)show {
     self.alpha = 0.0;
     _contentView.transform = CGAffineTransformIdentity;
-    [UIView animateWithDuration:ANIMATE_DURATION animations:^{
+    [UIView animateWithDuration:ANIMATE_DURATION delay:0.0 usingSpringWithDamping:0.8 initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseIn animations:^{
         self.alpha = 1.0;
         [ZZKEYWINDOW addSubview:self];
         self.contentView.transform = CGAffineTransformMakeTranslation(0, -fontSizeScale(50)*self.buttons.count);
@@ -76,7 +75,7 @@
 - (void)hide {
     self.alpha = 1.0;
     _contentView.transform = CGAffineTransformMakeTranslation(0, -fontSizeScale(50)*self.buttons.count);
-    [UIView animateWithDuration:ANIMATE_DURATION animations:^{
+    [UIView animateWithDuration:ANIMATE_DURATION delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         self.alpha = 0.0;
         self.contentView.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {

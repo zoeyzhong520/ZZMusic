@@ -72,7 +72,9 @@
 
 //点击事件
 - (void)buttonClick {
-    
+    if (self.clickBlock) {
+        self.clickBlock();
+    }
 }
 
 + (MidDrawerAllMusicSinglePlayAllTableViewCell *)createCellWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {

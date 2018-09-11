@@ -9,11 +9,12 @@
 #import "MidDrawerAllMusicSingleView.h"
 #import "MidDrawerAllMusicSingleTableViewCell.h"
 #import "MidDrawerAllMusicSinglePlayAllTableViewCell.h"
+#import "MidDrawerAllMusicSingleSearchBar.h"
 
 @interface MidDrawerAllMusicSingleView ()<UITableViewDelegate, UITableViewDataSource>
 
 ///searchBar
-@property (nonatomic, strong) UIView *searchBar;
+@property (nonatomic, strong) MidDrawerAllMusicSingleSearchBar *searchBar;
 ///tableView
 @property (nonatomic, strong) UITableView *tableView;
 ///数据源
@@ -44,7 +45,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return 30;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -52,9 +53,17 @@
     if (indexPath.row == 0) {
         MidDrawerAllMusicSinglePlayAllTableViewCell *cell = [MidDrawerAllMusicSinglePlayAllTableViewCell createCellWithTableView:tableView indexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        WeakSelf;
+        cell.clickBlock = ^{
+            [weakSelf setBatchOperationView];
+        };
         return cell;
     } else {
         MidDrawerAllMusicSingleTableViewCell *cell = [MidDrawerAllMusicSingleTableViewCell createCellWithTableView:tableView indexPath:indexPath];
+        WeakSelf;
+        cell.clickBlock = ^{
+            [weakSelf setAlertView];
+        };
         return cell;
     }
 }
@@ -67,11 +76,22 @@
     }
 }
 
+//设置批量操作View
+- (void)setBatchOperationView {
+    MidDrawerAllMusicBatchOperationView *batchOperationView = [[MidDrawerAllMusicBatchOperationView alloc] initWithFrame:CGRectZero];
+    [batchOperationView show];
+}
+
+//设置弹框
+- (void)setAlertView {
+    ZZMusicCollectShapeAlertView *alert = [[ZZMusicCollectShapeAlertView alloc] initWithFrame:CGRectZero];
+    [alert show];
+}
+
 #pragma mark Lazy
-- (UIView *)searchBar {
+- (MidDrawerAllMusicSingleSearchBar *)searchBar {
     if (!_searchBar) {
-        _searchBar = [UIView createViewWithBackgroundColor:SECTION_BACKGROUNDCOLOR];
-        _searchBar.frame = CGRectMake(0, 0, self.bounds.size.width, BUBBLE_SINGLEROW_HEIGHT);
+        _searchBar = [[MidDrawerAllMusicSingleSearchBar alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, SEARCHBAR_HEIGHT)];
     }
     return _searchBar;
 }

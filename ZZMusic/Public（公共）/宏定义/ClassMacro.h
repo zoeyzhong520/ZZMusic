@@ -20,6 +20,8 @@
 #import "MidDrawerBaseModel.h"
 #import "BaseWebViewController.h"
 #import "ZZMusicTableShapeAlertView.h"
+#import "ZZMusicCollectShapeAlertView.h"
 #import "ZZMusicMenuBar.h"
+#import "MidDrawerAllMusicBatchOperationView.h"
 
 #endif /* ClassMacro_h */

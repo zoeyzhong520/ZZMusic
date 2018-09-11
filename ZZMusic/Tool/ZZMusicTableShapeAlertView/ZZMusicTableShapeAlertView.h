@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#pragma mark 表格形状弹框
+#pragma mark 表格样式弹框
 
 @interface ZZMusicTableShapeAlertView : UIView
 
