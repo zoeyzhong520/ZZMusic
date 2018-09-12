@@ -201,7 +201,7 @@
 
 - (ZZMusicCollectShapeAlertScrollView *)scrollView {
     if (!_scrollView) {
-        _scrollView = [[ZZMusicCollectShapeAlertScrollView alloc] initWithFrame:CGRectMake(0, fontSizeScale(60), self.bounds.size.width, FIND_BANNER_HEIGHT) images:@[@"加到歌单",@"单曲购买",@"删除",@"百变播放器",@"定时关闭",@"唱这首歌",@"查看歌手",@"查看专辑",@"播放视频",@"歌词海报",@"背景音乐"] titles:@[@"加到歌单",@"单曲购买",@"删除",@"百变播放器",@"定时关闭",@"唱这首歌",@"查看歌手",@"查看专辑",@"播放视频",@"歌词海报",@"背景音乐"]];
+        _scrollView = [[ZZMusicCollectShapeAlertScrollView alloc] initWithFrame:CGRectMake(0, fontSizeScale(60), self.bounds.size.width, FIND_BANNER_HEIGHT) images:@[@"加到歌单",@"单曲购买",@"删除",@"百变播放器",@"定时关闭",@"唱这首歌",@"查看歌手",@"查看专辑",@"播放视频",@"歌词海报",@"背景音乐"] titles:@[@"加到歌单",@"单曲购买",@"删除黑色",@"百变播放器",@"定时关闭",@"唱这首歌",@"查看歌手",@"查看专辑",@"播放视频",@"歌词海报",@"背景音乐"]];
         
         UIView *line = [UIView createViewWithBackgroundColor:LINE_COLOR];
         [_scrollView addSubview:line];
@@ -239,8 +239,7 @@
         _volumeButton = [UIButton createButtonWithTarget:self action:@selector(buttonClick:) title:nil textColor:nil imgStr:nil];
         _volumeButton.tag = 0;
         
-        UIImageView *imgView = [UIImageView createImageViewWithImg:@""];
-        imgView.backgroundColor = SECTION_BACKGROUNDCOLOR;
+        UIImageView *imgView = [UIImageView createImageViewWithImg:@"静音"];
         [_volumeButton addSubview:imgView];
         [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.mas_equalTo(0);

@@ -124,6 +124,7 @@
 		36D6728E2147746100132688 /* MidDrawerAllMusicBatchOperationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6728D2147746100132688 /* MidDrawerAllMusicBatchOperationTableViewCell.m */; };
 		36D6729221479AAA00132688 /* ZZMusicCollectShapeAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6729121479AAA00132688 /* ZZMusicCollectShapeAlertView.m */; };
 		36D672952147BAF000132688 /* ZZMusicCollectShapeAlertScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D672942147BAF000132688 /* ZZMusicCollectShapeAlertScrollView.m */; };
+		36D672D22149192600132688 /* MidDrawerAllMusicSingerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D672D12149192600132688 /* MidDrawerAllMusicSingerTableViewCell.m */; };
 		D8ADA7F5213282D7003050F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA7F4213282D7003050F5 /* AppDelegate.m */; };
 		D8ADA7FB213282D7003050F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7F9213282D7003050F5 /* Main.storyboard */; };
 		D8ADA7FD213282D8003050F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7FC213282D8003050F5 /* Assets.xcassets */; };
@@ -411,6 +412,8 @@
 		36D6729121479AAA00132688 /* ZZMusicCollectShapeAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZMusicCollectShapeAlertView.m; sourceTree = "<group>"; };
 		36D672932147BAF000132688 /* ZZMusicCollectShapeAlertScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZMusicCollectShapeAlertScrollView.h; sourceTree = "<group>"; };
 		36D672942147BAF000132688 /* ZZMusicCollectShapeAlertScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZMusicCollectShapeAlertScrollView.m; sourceTree = "<group>"; };
+		36D672D02149192600132688 /* MidDrawerAllMusicSingerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerAllMusicSingerTableViewCell.h; sourceTree = "<group>"; };
+		36D672D12149192600132688 /* MidDrawerAllMusicSingerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerAllMusicSingerTableViewCell.m; sourceTree = "<group>"; };
 		D8ADA7F0213282D7003050F5 /* ZZMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8ADA7F3213282D7003050F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8ADA7F4213282D7003050F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -904,12 +907,11 @@
 		36D6726E21464D5200132688 /* MidDrawerAllMusic（全部音乐） */ = {
 			isa = PBXGroup;
 			children = (
+				36D672CF214916C400132688 /* MidDrawerAllMusicSinger（歌手） */,
 				36D6728521475A2B00132688 /* MidDrawerAllMusicBatchOperation（批量操作） */,
 				36D672812146777C00132688 /* MidDrawerAllMusicSingle（单曲） */,
 				36D6726F21464D5F00132688 /* MidDrawerAllMusicView.h */,
 				36D6727021464D5F00132688 /* MidDrawerAllMusicView.m */,
-				36D6727521464E9900132688 /* MidDrawerAllMusicSingerView.h */,
-				36D6727621464E9900132688 /* MidDrawerAllMusicSingerView.m */,
 				36D6727821464ED100132688 /* MidDrawerAllMusicAlbumView.h */,
 				36D6727921464ED100132688 /* MidDrawerAllMusicAlbumView.m */,
 			);
@@ -953,6 +955,17 @@
 				36D672942147BAF000132688 /* ZZMusicCollectShapeAlertScrollView.m */,
 			);
 			path = ZZMusicCollectShapeAlertView;
+			sourceTree = "<group>";
+		};
+		36D672CF214916C400132688 /* MidDrawerAllMusicSinger（歌手） */ = {
+			isa = PBXGroup;
+			children = (
+				36D6727521464E9900132688 /* MidDrawerAllMusicSingerView.h */,
+				36D6727621464E9900132688 /* MidDrawerAllMusicSingerView.m */,
+				36D672D02149192600132688 /* MidDrawerAllMusicSingerTableViewCell.h */,
+				36D672D12149192600132688 /* MidDrawerAllMusicSingerTableViewCell.m */,
+			);
+			path = "MidDrawerAllMusicSinger（歌手）";
 			sourceTree = "<group>";
 		};
 		D8ADA7E7213282D7003050F5 = {
@@ -1410,6 +1423,7 @@
 				36D67284214750E700132688 /* MidDrawerAllMusicSingleSearchBar.m in Sources */,
 				36D671BA213D117400132688 /* SDWebImageDownloaderOperation.m in Sources */,
 				D8FF1F752142B55F007136BF /* AboutTableHeaderView.m in Sources */,
+				36D672D22149192600132688 /* MidDrawerAllMusicSingerTableViewCell.m in Sources */,
 				36D671B9213D117400132688 /* SDWebImageDownloader.m in Sources */,
 				D8ADA803213282D8003050F5 /* main.m in Sources */,
 				366EB2C021339F2F007F4EE6 /* MASViewConstraint.m in Sources */,

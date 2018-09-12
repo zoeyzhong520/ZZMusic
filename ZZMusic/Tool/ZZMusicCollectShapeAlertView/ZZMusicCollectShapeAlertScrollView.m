@@ -30,7 +30,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.columnCount = 6;
-        self.itemWidth = self.bounds.size.width/11*2;
+        self.itemWidth = self.bounds.size.width/9*2;
         self.itemHeight = self.bounds.size.height/2;
         self.images = images;
         self.titles = titles;
