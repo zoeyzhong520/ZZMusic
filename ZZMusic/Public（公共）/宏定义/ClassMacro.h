@@ -23,5 +23,6 @@
 #import "ZZMusicCollectShapeAlertView.h"
 #import "ZZMusicMenuBar.h"
 #import "MidDrawerAllMusicBatchOperationView.h"
+#import "ZZMusicSegmentedControlTitleView.h"
 
 #endif /* ClassMacro_h */

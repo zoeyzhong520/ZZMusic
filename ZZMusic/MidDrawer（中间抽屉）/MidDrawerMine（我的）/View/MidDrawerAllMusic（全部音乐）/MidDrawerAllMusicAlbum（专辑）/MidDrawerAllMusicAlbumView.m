@@ -1,15 +1,15 @@
 //
-//  MidDrawerAllMusicSinger.m
+//  MidDrawerAllMusicAlbum.m
 //  ZZMusic
 //
 //  Created by zhifu360 on 2018/9/10.
 //  Copyright © 2018年 zhognzhaojun. All rights reserved.
 //
 
-#import "MidDrawerAllMusicSingerView.h"
-#import "MidDrawerAllMusicSingerTableViewCell.h"
+#import "MidDrawerAllMusicAlbumView.h"
+#import "MidDrawerAllMusicAlbumTableViewCell.h"
 
-@interface MidDrawerAllMusicSingerView ()<UITableViewDelegate, UITableViewDataSource>
+@interface MidDrawerAllMusicAlbumView ()<UITableViewDelegate, UITableViewDataSource>
 
 ///tableView
 @property (nonatomic, strong) UITableView *tableView;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation MidDrawerAllMusicSingerView
+@implementation MidDrawerAllMusicAlbumView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -34,6 +34,13 @@
     [self.tableView reloadData];
 }
 
+//设置Block
+- (void)createBlock {
+    if (self.clickBlock) {
+        self.clickBlock();
+    }
+}
+
 #pragma mark UITableViewDelegate, UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -44,13 +51,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MidDrawerAllMusicSingerTableViewCell *cell = [MidDrawerAllMusicSingerTableViewCell createCellWithTableView:tableView indexPath:indexPath];
+    MidDrawerAllMusicAlbumTableViewCell *cell = [MidDrawerAllMusicAlbumTableViewCell createCellWithTableView:tableView indexPath:indexPath];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+    [self createBlock];
 }
 
 #pragma mark Lazy
@@ -60,7 +67,8 @@
         _tableView.rowHeight = fontSizeScale(50);
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        [_tableView registerClass:[MidDrawerAllMusicSingerTableViewCell class] forCellReuseIdentifier:@"MidDrawerAllMusicSingerTableViewCellID"];
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [_tableView registerClass:[MidDrawerAllMusicAlbumTableViewCell class] forCellReuseIdentifier:@"MidDrawerAllMusicAlbumTableViewCellID"];
     }
     return _tableView;
 }

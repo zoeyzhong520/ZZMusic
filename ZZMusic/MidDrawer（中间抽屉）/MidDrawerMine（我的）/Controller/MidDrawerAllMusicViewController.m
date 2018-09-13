@@ -8,6 +8,7 @@
 
 #import "MidDrawerAllMusicViewController.h"
 #import "MidDrawerAllMusicView.h"
+#import "MidDrawerAllMusicViewControllerViewModel.h"
 
 @interface MidDrawerAllMusicViewController ()
 
@@ -66,6 +67,10 @@
 - (MidDrawerAllMusicView *)allMusicView {
     if (!_allMusicView) {
         _allMusicView = [[MidDrawerAllMusicView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.menuBar.frame), self.view.bounds.size.width, CONTENT_HEIGHT-BUBBLE_SINGLEROW_HEIGHT)];
+        WeakSelf;
+        _allMusicView.clickBlock = ^(MidDrawerAllMusicViewClickType type) {
+            [MidDrawerAllMusicViewControllerViewModel handleMidDrawerAllMusicViewBlockWithType:type vc:weakSelf];
+        };
     }
     return _allMusicView;
 }

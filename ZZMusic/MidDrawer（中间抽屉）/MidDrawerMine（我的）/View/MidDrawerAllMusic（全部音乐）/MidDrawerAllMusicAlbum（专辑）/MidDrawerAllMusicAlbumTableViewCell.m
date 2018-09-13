@@ -1,14 +1,14 @@
 //
-//  MidDrawerAllMusicSingerTableViewCell.m
+//  MidDrawerAllMusicAlbumTableViewCell.m
 //  ZZMusic
 //
-//  Created by zhifu360 on 2018/9/12.
+//  Created by zhifu360 on 2018/9/13.
 //  Copyright © 2018年 zhognzhaojun. All rights reserved.
 //
 
-#import "MidDrawerAllMusicSingerTableViewCell.h"
+#import "MidDrawerAllMusicAlbumTableViewCell.h"
 
-@interface MidDrawerAllMusicSingerTableViewCell ()
+@interface MidDrawerAllMusicAlbumTableViewCell ()
 
 ///imgView
 @property (nonatomic, strong) UIImageView *imgView;
@@ -23,7 +23,7 @@
 
 @end
 
-@implementation MidDrawerAllMusicSingerTableViewCell
+@implementation MidDrawerAllMusicAlbumTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -49,9 +49,9 @@
 
 - (void)addConstraints {
     [self.imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(fontSizeScale(10));
-        make.centerY.mas_equalTo(0);
-        make.size.mas_equalTo(CGSizeMake(fontSizeScale(30), fontSizeScale(30)));
+        make.top.left.mas_equalTo(0);
+        make.bottom.mas_equalTo(-fontSizeScale(0.5));
+        make.width.mas_equalTo(self.bounds.size.height);
     }];
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -79,11 +79,11 @@
     }];
 }
 
-+ (MidDrawerAllMusicSingerTableViewCell *)createCellWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
++ (MidDrawerAllMusicAlbumTableViewCell *)createCellWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
     
-    MidDrawerAllMusicSingerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MidDrawerAllMusicSingerTableViewCellID" forIndexPath:indexPath];
+    MidDrawerAllMusicAlbumTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MidDrawerAllMusicAlbumTableViewCellID" forIndexPath:indexPath];
     if (!cell) {
-        cell = [[MidDrawerAllMusicSingerTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MidDrawerAllMusicSingerTableViewCellID"];
+        cell = [[MidDrawerAllMusicAlbumTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MidDrawerAllMusicAlbumTableViewCellID"];
     }
     return cell;
 }
@@ -95,7 +95,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
@@ -103,21 +103,21 @@
 - (UIImageView *)imgView {
     if (!_imgView) {
         _imgView = [UIImageView createImageViewWithImg:@""];
-        _imgView.backgroundColor = SECTION_BACKGROUNDCOLOR;
+        [_imgView sd_setImageWithURL:[NSURL URLWithString:AVATAR_PATH] placeholderImage:PLACEHOLDER_IMAGE];
     }
     return _imgView;
 }
 
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
-        _titleLabel = [UILabel createLabelWithText:@"Ashes Remain" font:NORMAL_FONT textColor:BLACK_TEXTCOLOR];
+        _titleLabel = [UILabel createLabelWithText:@"Roman" font:NORMAL_FONT textColor:BLACK_TEXTCOLOR];
     }
     return _titleLabel;
 }
 
 - (UILabel *)subTitleLabel {
     if (!_subTitleLabel) {
-        _subTitleLabel = [UILabel createLabelWithText:@"1首歌曲" font:SMALL_FONT textColor:GRAY_TEXTCOLOR];
+        _subTitleLabel = [UILabel createLabelWithText:@"Sound Horizon" font:SMALL_FONT textColor:GRAY_TEXTCOLOR];
     }
     return _subTitleLabel;
 }

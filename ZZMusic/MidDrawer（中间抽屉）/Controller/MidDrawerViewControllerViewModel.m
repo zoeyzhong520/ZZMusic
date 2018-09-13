@@ -10,7 +10,7 @@
 
 @implementation MidDrawerViewControllerViewModel
 
-+ (void)handleMidDrawerMineViewClickBlockWithType:(MidDrawerMineViewClickType)type vc:(MidDrawerViewController *)vc {
++ (void)handleMidDrawerMineViewClickBlockWithType:(MidDrawerMineViewClickType)type vc:(UIViewController *)vc {
     
     switch (type) {
         case MidDrawerMineViewLogin:
@@ -47,6 +47,59 @@
             
             break;
         case MidDrawerMineViewCellClick:
+            
+            break;
+        default:
+            break;
+    }
+}
+
++ (void)handleMidDrawerMusicHallViewClickBlockWithType:(MidDrawerMusicHallViewClickType)type vc:(UIViewController *)vc {
+    
+    switch (type) {
+        case MidDrawerMusicHallViewSinger:
+            [vc showViewControllerWithClassName:@"MidDrawerSingerViewController"];
+            break;
+        case MidDrawerMusicHallViewRanking:
+            [vc showViewControllerWithClassName:@"MidDrawerRankingViewController"];
+            break;
+        case MidDrawerMusicHallViewCategorySongList:
+            [vc showWebViewControllerWithUrl:@""];
+            break;
+        case MidDrawerMusicHallViewRadio:
+            
+            break;
+        case MidDrawerMusicHallViewVideo:
+            [vc showWebViewControllerWithUrl:@""];
+            break;
+        case MidDrawerMusicHallViewPersonalityRadio:
+            
+            break;
+        case MidDrawerMusicHallViewNewSongNewAlbum:
+            
+            break;
+        case MidDrawerMusicHallViewDigitalAlbum:
+            [vc showWebViewControllerWithUrl:@""];
+            break;
+        case MidDrawerMusicHallViewRecommengSongList:
+            
+            break;
+        case MidDrawerMusicHallViewNewestAlbum:
+            
+            break;
+        case MidDrawerMusicHallViewExclusiveContent:
+            
+            break;
+        case MidDrawerMusicHallViewFeaturedRadio:
+            
+            break;
+        case MidDrawerMusicHallViewMV:
+            
+            break;
+        case MidDrawerMusicHallViewColumn:
+            
+            break;
+        case MidDrawerMusicHallViewMusician:
             
             break;
         default:

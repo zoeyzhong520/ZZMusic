@@ -125,6 +125,15 @@
 		36D6729221479AAA00132688 /* ZZMusicCollectShapeAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6729121479AAA00132688 /* ZZMusicCollectShapeAlertView.m */; };
 		36D672952147BAF000132688 /* ZZMusicCollectShapeAlertScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D672942147BAF000132688 /* ZZMusicCollectShapeAlertScrollView.m */; };
 		36D672D22149192600132688 /* MidDrawerAllMusicSingerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D672D12149192600132688 /* MidDrawerAllMusicSingerTableViewCell.m */; };
+		36D672E4214A13C800132688 /* MidDrawerAllMusicAlbumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D672E3214A13C800132688 /* MidDrawerAllMusicAlbumTableViewCell.m */; };
+		36D672E7214A17E000132688 /* MidDrawerAllMusicViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D672E6214A17E000132688 /* MidDrawerAllMusicViewControllerViewModel.m */; };
+		36D672EA214A189C00132688 /* MidDrawerAllMusicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D672E9214A189C00132688 /* MidDrawerAllMusicDetailViewController.m */; };
+		36D672ED214A2ECA00132688 /* MidDrawerAllMusicDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D672EC214A2ECA00132688 /* MidDrawerAllMusicDetailView.m */; };
+		36D67307214A412D00132688 /* MidDrawerSingerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67306214A412D00132688 /* MidDrawerSingerViewController.m */; };
+		36D6730A214A415900132688 /* MidDrawerRankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67309214A415900132688 /* MidDrawerRankingViewController.m */; };
+		36D67316214A51E800132688 /* ZZMusicSegmentedControlTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67315214A51E800132688 /* ZZMusicSegmentedControlTitleView.m */; };
+		36D6731A214A59C900132688 /* MidDrawerSingerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67319214A59C900132688 /* MidDrawerSingerView.m */; };
+		36D6731D214A5A2000132688 /* MidDrawerSingerTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6731C214A5A2000132688 /* MidDrawerSingerTableHeaderView.m */; };
 		D8ADA7F5213282D7003050F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA7F4213282D7003050F5 /* AppDelegate.m */; };
 		D8ADA7FB213282D7003050F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7F9213282D7003050F5 /* Main.storyboard */; };
 		D8ADA7FD213282D8003050F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7FC213282D8003050F5 /* Assets.xcassets */; };
@@ -414,6 +423,24 @@
 		36D672942147BAF000132688 /* ZZMusicCollectShapeAlertScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZMusicCollectShapeAlertScrollView.m; sourceTree = "<group>"; };
 		36D672D02149192600132688 /* MidDrawerAllMusicSingerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerAllMusicSingerTableViewCell.h; sourceTree = "<group>"; };
 		36D672D12149192600132688 /* MidDrawerAllMusicSingerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerAllMusicSingerTableViewCell.m; sourceTree = "<group>"; };
+		36D672E2214A13C800132688 /* MidDrawerAllMusicAlbumTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerAllMusicAlbumTableViewCell.h; sourceTree = "<group>"; };
+		36D672E3214A13C800132688 /* MidDrawerAllMusicAlbumTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerAllMusicAlbumTableViewCell.m; sourceTree = "<group>"; };
+		36D672E5214A17E000132688 /* MidDrawerAllMusicViewControllerViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerAllMusicViewControllerViewModel.h; sourceTree = "<group>"; };
+		36D672E6214A17E000132688 /* MidDrawerAllMusicViewControllerViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerAllMusicViewControllerViewModel.m; sourceTree = "<group>"; };
+		36D672E8214A189C00132688 /* MidDrawerAllMusicDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerAllMusicDetailViewController.h; sourceTree = "<group>"; };
+		36D672E9214A189C00132688 /* MidDrawerAllMusicDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerAllMusicDetailViewController.m; sourceTree = "<group>"; };
+		36D672EB214A2ECA00132688 /* MidDrawerAllMusicDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerAllMusicDetailView.h; sourceTree = "<group>"; };
+		36D672EC214A2ECA00132688 /* MidDrawerAllMusicDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerAllMusicDetailView.m; sourceTree = "<group>"; };
+		36D67305214A412D00132688 /* MidDrawerSingerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerSingerViewController.h; sourceTree = "<group>"; };
+		36D67306214A412D00132688 /* MidDrawerSingerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerSingerViewController.m; sourceTree = "<group>"; };
+		36D67308214A415900132688 /* MidDrawerRankingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerRankingViewController.h; sourceTree = "<group>"; };
+		36D67309214A415900132688 /* MidDrawerRankingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerRankingViewController.m; sourceTree = "<group>"; };
+		36D67314214A51E800132688 /* ZZMusicSegmentedControlTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZMusicSegmentedControlTitleView.h; sourceTree = "<group>"; };
+		36D67315214A51E800132688 /* ZZMusicSegmentedControlTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZMusicSegmentedControlTitleView.m; sourceTree = "<group>"; };
+		36D67318214A59C900132688 /* MidDrawerSingerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerSingerView.h; sourceTree = "<group>"; };
+		36D67319214A59C900132688 /* MidDrawerSingerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerSingerView.m; sourceTree = "<group>"; };
+		36D6731B214A5A2000132688 /* MidDrawerSingerTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerSingerTableHeaderView.h; sourceTree = "<group>"; };
+		36D6731C214A5A2000132688 /* MidDrawerSingerTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerSingerTableHeaderView.m; sourceTree = "<group>"; };
 		D8ADA7F0213282D7003050F5 /* ZZMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8ADA7F3213282D7003050F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8ADA7F4213282D7003050F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -503,6 +530,7 @@
 		36014CE22133E4A700C09286 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				36D67317214A569B00132688 /* ZZMusicSegmentedControlTitleView */,
 				36D6726A214622C500132688 /* ZZMusicMenuBar */,
 				36D6728F21479A9A00132688 /* ZZMusicCollectShapeAlertView */,
 				36D672662146140400132688 /* ZZMusicTableShapeAlertView */,
@@ -718,24 +746,6 @@
 			path = ZZMusicSearchBar;
 			sourceTree = "<group>";
 		};
-		36D671072139498400132688 /* MidDrawerMine（我的） */ = {
-			isa = PBXGroup;
-			children = (
-				36D6726E21464D5200132688 /* MidDrawerAllMusic（全部音乐） */,
-				36014D112136930B00C09286 /* MidDrawerMineView.h */,
-				36014D122136930B00C09286 /* MidDrawerMineView.m */,
-				36D670FB2138E23800132688 /* MidDrawerMineTableHeaderView.h */,
-				36D670FC2138E23800132688 /* MidDrawerMineTableHeaderView.m */,
-				36D670FE2138E41E00132688 /* MidDrawerMineTableHeaderLoginOptionView.h */,
-				36D670FF2138E41E00132688 /* MidDrawerMineTableHeaderLoginOptionView.m */,
-				36D671012139314400132688 /* MidDrawerMineTableSectionHeaderView.h */,
-				36D671022139314400132688 /* MidDrawerMineTableSectionHeaderView.m */,
-				36D6710421393BF600132688 /* MidDrawerMineTableViewCell.h */,
-				36D6710521393BF600132688 /* MidDrawerMineTableViewCell.m */,
-			);
-			path = "MidDrawerMine（我的）";
-			sourceTree = "<group>";
-		};
 		36D67108213949CC00132688 /* MidDrawerSearch（搜索） */ = {
 			isa = PBXGroup;
 			children = (
@@ -745,31 +755,6 @@
 				36D5F9C92137EFA3002BB7AD /* MidDrawerSearchResultView.m */,
 			);
 			path = "MidDrawerSearch（搜索）";
-			sourceTree = "<group>";
-		};
-		36D67167213CE0D400132688 /* MidDrawerMusicHall（音乐馆） */ = {
-			isa = PBXGroup;
-			children = (
-				36014D142136936D00C09286 /* MidDrawerMusicHallView.h */,
-				36014D152136936D00C09286 /* MidDrawerMusicHallView.m */,
-				36D67168213CE40A00132688 /* MidDrawerMusicHallAdCarouselView.h */,
-				36D67169213CE40A00132688 /* MidDrawerMusicHallAdCarouselView.m */,
-				36D6716B213D030500132688 /* MidDrawerMusicHallCollectionViewMusicCell.h */,
-				36D6716C213D030500132688 /* MidDrawerMusicHallCollectionViewMusicCell.m */,
-				36D671CB213D1A8700132688 /* MidDrawerMusicHallHeaderView.h */,
-				36D671CC213D1A8700132688 /* MidDrawerMusicHallHeaderView.m */,
-				D8E6ABCD213D8AB300B4AF9C /* MidDrawerMusicHallSectionHeaderView.h */,
-				D8E6ABCE213D8AB300B4AF9C /* MidDrawerMusicHallSectionHeaderView.m */,
-				36D671D2213E256300132688 /* MidDrawerMusicHallCollectionViewVideoCell.h */,
-				36D671D3213E256300132688 /* MidDrawerMusicHallCollectionViewVideoCell.m */,
-				36D671D5213E25A500132688 /* MidDrawerMusicHallCollectionViewLiveBroadCastCell.h */,
-				36D671D6213E25A500132688 /* MidDrawerMusicHallCollectionViewLiveBroadCastCell.m */,
-				36D671D8213E25F900132688 /* MidDrawerMusicHallCollectionViewRoundCell.h */,
-				36D671D9213E25F900132688 /* MidDrawerMusicHallCollectionViewRoundCell.m */,
-				36D671DB213E27DC00132688 /* MidDrawerMusicHallCollectionViewColumnCell.h */,
-				36D671DC213E27DC00132688 /* MidDrawerMusicHallCollectionViewColumnCell.m */,
-			);
-			path = "MidDrawerMusicHall（音乐馆）";
 			sourceTree = "<group>";
 		};
 		36D6716E213D117400132688 /* SDWebImage */ = {
@@ -838,37 +823,6 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		36D671F4213F8CBE00132688 /* MidDrawerFind（发现） */ = {
-			isa = PBXGroup;
-			children = (
-				36014D172136938F00C09286 /* MidDrawerFindView.h */,
-				36014D182136938F00C09286 /* MidDrawerFindView.m */,
-				36D671F5213FA3AB00132688 /* MidDrawerFindAdCarouselView.h */,
-				36D671F6213FA3AB00132688 /* MidDrawerFindAdCarouselView.m */,
-				36D671F8213FA8F300132688 /* MidDrawerFindHeaderView.h */,
-				36D671F9213FA8F300132688 /* MidDrawerFindHeaderView.m */,
-				36D671FB2140C49B00132688 /* MidDrawerFindHeaderCollectionViewCell.h */,
-				36D671FC2140C49B00132688 /* MidDrawerFindHeaderCollectionViewCell.m */,
-				36D671FE2140D71500132688 /* MidDrawerFindVideoTableViewCell.h */,
-				36D671FF2140D71500132688 /* MidDrawerFindVideoTableViewCell.m */,
-				36D672012140D75500132688 /* MidDrawerFindArticleTableViewCell.h */,
-				36D672022140D75500132688 /* MidDrawerFindArticleTableViewCell.m */,
-				36D672042140D78800132688 /* MidDrawerFindNewsletterTableViewCell.h */,
-				36D672052140D78800132688 /* MidDrawerFindNewsletterTableViewCell.m */,
-				36D6721721410DA000132688 /* MidDrawerFindNewsletterCollectionViewCell.h */,
-				36D6721821410DA000132688 /* MidDrawerFindNewsletterCollectionViewCell.m */,
-				36D6721A21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.h */,
-				36D6721B21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.m */,
-				36D6721D21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.h */,
-				36D6721E21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.m */,
-				36D6722021420FB800132688 /* MidDrawerFindCollectionViewFlowLayout.h */,
-				36D6722121420FB800132688 /* MidDrawerFindCollectionViewFlowLayout.m */,
-				36D6722521424EE200132688 /* MidDrawerFindNewsletterSectionTitleView.h */,
-				36D6722621424EE200132688 /* MidDrawerFindNewsletterSectionTitleView.m */,
-			);
-			path = "MidDrawerFind（发现）";
-			sourceTree = "<group>";
-		};
 		36D6724A21427D6000132688 /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -907,13 +861,14 @@
 		36D6726E21464D5200132688 /* MidDrawerAllMusic（全部音乐） */ = {
 			isa = PBXGroup;
 			children = (
+				36D672E1214A134F00132688 /* MidDrawerAllMusicAlbum（专辑） */,
 				36D672CF214916C400132688 /* MidDrawerAllMusicSinger（歌手） */,
 				36D6728521475A2B00132688 /* MidDrawerAllMusicBatchOperation（批量操作） */,
 				36D672812146777C00132688 /* MidDrawerAllMusicSingle（单曲） */,
 				36D6726F21464D5F00132688 /* MidDrawerAllMusicView.h */,
 				36D6727021464D5F00132688 /* MidDrawerAllMusicView.m */,
-				36D6727821464ED100132688 /* MidDrawerAllMusicAlbumView.h */,
-				36D6727921464ED100132688 /* MidDrawerAllMusicAlbumView.m */,
+				36D672EB214A2ECA00132688 /* MidDrawerAllMusicDetailView.h */,
+				36D672EC214A2ECA00132688 /* MidDrawerAllMusicDetailView.m */,
 			);
 			path = "MidDrawerAllMusic（全部音乐）";
 			sourceTree = "<group>";
@@ -966,6 +921,190 @@
 				36D672D12149192600132688 /* MidDrawerAllMusicSingerTableViewCell.m */,
 			);
 			path = "MidDrawerAllMusicSinger（歌手）";
+			sourceTree = "<group>";
+		};
+		36D672E1214A134F00132688 /* MidDrawerAllMusicAlbum（专辑） */ = {
+			isa = PBXGroup;
+			children = (
+				36D6727821464ED100132688 /* MidDrawerAllMusicAlbumView.h */,
+				36D6727921464ED100132688 /* MidDrawerAllMusicAlbumView.m */,
+				36D672E2214A13C800132688 /* MidDrawerAllMusicAlbumTableViewCell.h */,
+				36D672E3214A13C800132688 /* MidDrawerAllMusicAlbumTableViewCell.m */,
+			);
+			path = "MidDrawerAllMusicAlbum（专辑）";
+			sourceTree = "<group>";
+		};
+		36D67302214A3F2200132688 /* MidDrawerMusicHall（音乐馆） */ = {
+			isa = PBXGroup;
+			children = (
+				36D67311214A41F800132688 /* Controller */,
+				36D67312214A41F800132688 /* Model */,
+				36D67313214A41F800132688 /* View */,
+			);
+			path = "MidDrawerMusicHall（音乐馆）";
+			sourceTree = "<group>";
+		};
+		36D67303214A3F2200132688 /* MidDrawerFind（发现） */ = {
+			isa = PBXGroup;
+			children = (
+				36D6730C214A41E800132688 /* Controller */,
+				36D6730D214A41E900132688 /* Model */,
+				36D6730B214A41E800132688 /* View */,
+			);
+			path = "MidDrawerFind（发现）";
+			sourceTree = "<group>";
+		};
+		36D67304214A3F2300132688 /* MidDrawerMine（我的） */ = {
+			isa = PBXGroup;
+			children = (
+				36D67310214A41F100132688 /* Controller */,
+				36D6730E214A41F000132688 /* Model */,
+				36D6730F214A41F000132688 /* View */,
+			);
+			path = "MidDrawerMine（我的）";
+			sourceTree = "<group>";
+		};
+		36D6730B214A41E800132688 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36014D172136938F00C09286 /* MidDrawerFindView.h */,
+				36014D182136938F00C09286 /* MidDrawerFindView.m */,
+				36D671F5213FA3AB00132688 /* MidDrawerFindAdCarouselView.h */,
+				36D671F6213FA3AB00132688 /* MidDrawerFindAdCarouselView.m */,
+				36D671F8213FA8F300132688 /* MidDrawerFindHeaderView.h */,
+				36D671F9213FA8F300132688 /* MidDrawerFindHeaderView.m */,
+				36D671FB2140C49B00132688 /* MidDrawerFindHeaderCollectionViewCell.h */,
+				36D671FC2140C49B00132688 /* MidDrawerFindHeaderCollectionViewCell.m */,
+				36D671FE2140D71500132688 /* MidDrawerFindVideoTableViewCell.h */,
+				36D671FF2140D71500132688 /* MidDrawerFindVideoTableViewCell.m */,
+				36D672012140D75500132688 /* MidDrawerFindArticleTableViewCell.h */,
+				36D672022140D75500132688 /* MidDrawerFindArticleTableViewCell.m */,
+				36D672042140D78800132688 /* MidDrawerFindNewsletterTableViewCell.h */,
+				36D672052140D78800132688 /* MidDrawerFindNewsletterTableViewCell.m */,
+				36D6721721410DA000132688 /* MidDrawerFindNewsletterCollectionViewCell.h */,
+				36D6721821410DA000132688 /* MidDrawerFindNewsletterCollectionViewCell.m */,
+				36D6721A21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.h */,
+				36D6721B21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.m */,
+				36D6721D21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.h */,
+				36D6721E21412ED400132688 /* MidDrawerFindNewsDiscoverCollectionViewCell.m */,
+				36D6722021420FB800132688 /* MidDrawerFindCollectionViewFlowLayout.h */,
+				36D6722121420FB800132688 /* MidDrawerFindCollectionViewFlowLayout.m */,
+				36D6722521424EE200132688 /* MidDrawerFindNewsletterSectionTitleView.h */,
+				36D6722621424EE200132688 /* MidDrawerFindNewsletterSectionTitleView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36D6730C214A41E800132688 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		36D6730D214A41E900132688 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36D6730E214A41F000132688 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36D6730F214A41F000132688 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36D6726E21464D5200132688 /* MidDrawerAllMusic（全部音乐） */,
+				36014D112136930B00C09286 /* MidDrawerMineView.h */,
+				36014D122136930B00C09286 /* MidDrawerMineView.m */,
+				36D670FB2138E23800132688 /* MidDrawerMineTableHeaderView.h */,
+				36D670FC2138E23800132688 /* MidDrawerMineTableHeaderView.m */,
+				36D670FE2138E41E00132688 /* MidDrawerMineTableHeaderLoginOptionView.h */,
+				36D670FF2138E41E00132688 /* MidDrawerMineTableHeaderLoginOptionView.m */,
+				36D671012139314400132688 /* MidDrawerMineTableSectionHeaderView.h */,
+				36D671022139314400132688 /* MidDrawerMineTableSectionHeaderView.m */,
+				36D6710421393BF600132688 /* MidDrawerMineTableViewCell.h */,
+				36D6710521393BF600132688 /* MidDrawerMineTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36D67310214A41F100132688 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				36D6725D21460EEC00132688 /* MidDrawerAllMusicViewController.h */,
+				36D6725E21460EEC00132688 /* MidDrawerAllMusicViewController.m */,
+				36D6726021460F2100132688 /* MidDrawerDownloadMusicViewController.h */,
+				36D6726121460F2100132688 /* MidDrawerDownloadMusicViewController.m */,
+				36D6726321460F6900132688 /* MidDrawerRecentlyPlayedViewController.h */,
+				36D6726421460F6900132688 /* MidDrawerRecentlyPlayedViewController.m */,
+				36D672E5214A17E000132688 /* MidDrawerAllMusicViewControllerViewModel.h */,
+				36D672E6214A17E000132688 /* MidDrawerAllMusicViewControllerViewModel.m */,
+				36D672E8214A189C00132688 /* MidDrawerAllMusicDetailViewController.h */,
+				36D672E9214A189C00132688 /* MidDrawerAllMusicDetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		36D67311214A41F800132688 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				36D67305214A412D00132688 /* MidDrawerSingerViewController.h */,
+				36D67306214A412D00132688 /* MidDrawerSingerViewController.m */,
+				36D67308214A415900132688 /* MidDrawerRankingViewController.h */,
+				36D67309214A415900132688 /* MidDrawerRankingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		36D67312214A41F800132688 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36D67313214A41F800132688 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36014D142136936D00C09286 /* MidDrawerMusicHallView.h */,
+				36014D152136936D00C09286 /* MidDrawerMusicHallView.m */,
+				36D67168213CE40A00132688 /* MidDrawerMusicHallAdCarouselView.h */,
+				36D67169213CE40A00132688 /* MidDrawerMusicHallAdCarouselView.m */,
+				36D6716B213D030500132688 /* MidDrawerMusicHallCollectionViewMusicCell.h */,
+				36D6716C213D030500132688 /* MidDrawerMusicHallCollectionViewMusicCell.m */,
+				36D671CB213D1A8700132688 /* MidDrawerMusicHallHeaderView.h */,
+				36D671CC213D1A8700132688 /* MidDrawerMusicHallHeaderView.m */,
+				D8E6ABCD213D8AB300B4AF9C /* MidDrawerMusicHallSectionHeaderView.h */,
+				D8E6ABCE213D8AB300B4AF9C /* MidDrawerMusicHallSectionHeaderView.m */,
+				36D671D2213E256300132688 /* MidDrawerMusicHallCollectionViewVideoCell.h */,
+				36D671D3213E256300132688 /* MidDrawerMusicHallCollectionViewVideoCell.m */,
+				36D671D5213E25A500132688 /* MidDrawerMusicHallCollectionViewLiveBroadCastCell.h */,
+				36D671D6213E25A500132688 /* MidDrawerMusicHallCollectionViewLiveBroadCastCell.m */,
+				36D671D8213E25F900132688 /* MidDrawerMusicHallCollectionViewRoundCell.h */,
+				36D671D9213E25F900132688 /* MidDrawerMusicHallCollectionViewRoundCell.m */,
+				36D671DB213E27DC00132688 /* MidDrawerMusicHallCollectionViewColumnCell.h */,
+				36D671DC213E27DC00132688 /* MidDrawerMusicHallCollectionViewColumnCell.m */,
+				36D67318214A59C900132688 /* MidDrawerSingerView.h */,
+				36D67319214A59C900132688 /* MidDrawerSingerView.m */,
+				36D6731B214A5A2000132688 /* MidDrawerSingerTableHeaderView.h */,
+				36D6731C214A5A2000132688 /* MidDrawerSingerTableHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36D67317214A569B00132688 /* ZZMusicSegmentedControlTitleView */ = {
+			isa = PBXGroup;
+			children = (
+				36D67314214A51E800132688 /* ZZMusicSegmentedControlTitleView.h */,
+				36D67315214A51E800132688 /* ZZMusicSegmentedControlTitleView.m */,
+			);
+			path = ZZMusicSegmentedControlTitleView;
 			sourceTree = "<group>";
 		};
 		D8ADA7E7213282D7003050F5 = {
@@ -1073,6 +1212,9 @@
 		D8ADA82D2132ADBB003050F5 /* MidDrawer（中间抽屉） */ = {
 			isa = PBXGroup;
 			children = (
+				36D67304214A3F2300132688 /* MidDrawerMine（我的） */,
+				36D67303214A3F2200132688 /* MidDrawerFind（发现） */,
+				36D67302214A3F2200132688 /* MidDrawerMusicHall（音乐馆） */,
 				D8ADA82E2132ADBB003050F5 /* Controller */,
 				D8ADA82F2132ADBB003050F5 /* Model */,
 				D8ADA8302132ADBB003050F5 /* View */,
@@ -1087,12 +1229,6 @@
 				D8ADA83F2132D140003050F5 /* MidDrawerViewController.m */,
 				36D6725A21460C3E00132688 /* MidDrawerViewControllerViewModel.h */,
 				36D6725B21460C3E00132688 /* MidDrawerViewControllerViewModel.m */,
-				36D6725D21460EEC00132688 /* MidDrawerAllMusicViewController.h */,
-				36D6725E21460EEC00132688 /* MidDrawerAllMusicViewController.m */,
-				36D6726021460F2100132688 /* MidDrawerDownloadMusicViewController.h */,
-				36D6726121460F2100132688 /* MidDrawerDownloadMusicViewController.m */,
-				36D6726321460F6900132688 /* MidDrawerRecentlyPlayedViewController.h */,
-				36D6726421460F6900132688 /* MidDrawerRecentlyPlayedViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1109,10 +1245,7 @@
 		D8ADA8302132ADBB003050F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				36D671F4213F8CBE00132688 /* MidDrawerFind（发现） */,
-				36D67167213CE0D400132688 /* MidDrawerMusicHall（音乐馆） */,
 				36D67108213949CC00132688 /* MidDrawerSearch（搜索） */,
-				36D671072139498400132688 /* MidDrawerMine（我的） */,
 				D8ADA8472132D17D003050F5 /* MidDrawerView.h */,
 				D8ADA8482132D17D003050F5 /* MidDrawerView.m */,
 				366EB2C62133C826007F4EE6 /* MidDrawerBubbleView.h */,
@@ -1351,12 +1484,14 @@
 				36D6725821427D6000132688 /* SVProgressHUD.m in Sources */,
 				36D671B5213D117400132688 /* SDWebImageCoder.m in Sources */,
 				36D6724621426F1400132688 /* AboutViewController.m in Sources */,
+				36D672EA214A189C00132688 /* MidDrawerAllMusicDetailViewController.m in Sources */,
 				36D672952147BAF000132688 /* ZZMusicCollectShapeAlertScrollView.m in Sources */,
 				36D671C5213D117400132688 /* UIImage+MultiFormat.m in Sources */,
 				366EB2C121339F2F007F4EE6 /* NSArray+MASAdditions.m in Sources */,
 				36014CF121352CEC00C09286 /* LeftDrawerFooterView.m in Sources */,
 				D8ADA83A2132D0E4003050F5 /* BaseViewController.m in Sources */,
 				36D6728821475A3500132688 /* MidDrawerAllMusicBatchOperationView.m in Sources */,
+				36D672E7214A17E000132688 /* MidDrawerAllMusicViewControllerViewModel.m in Sources */,
 				36014CFB21354BDF00C09286 /* SettingView.m in Sources */,
 				36D671B0213D117400132688 /* NSData+ImageContentType.m in Sources */,
 				36D671CD213D1A8700132688 /* MidDrawerMusicHallHeaderView.m in Sources */,
@@ -1371,6 +1506,7 @@
 				36D6724921427A6100132688 /* BaseWebViewController.m in Sources */,
 				36D671002138E41E00132688 /* MidDrawerMineTableHeaderLoginOptionView.m in Sources */,
 				36D6722A2142666500132688 /* RootViewControllerViewModel.m in Sources */,
+				36D672ED214A2ECA00132688 /* MidDrawerAllMusicDetailView.m in Sources */,
 				366EB2BC21339F2F007F4EE6 /* MASConstraint.m in Sources */,
 				36D671B7213D117400132688 /* SDWebImageCodersManager.m in Sources */,
 				366EB299213398DD007F4EE6 /* BaseNavigationBar.m in Sources */,
@@ -1396,6 +1532,7 @@
 				36014D0B21366AB500C09286 /* LoginView.m in Sources */,
 				36D6716A213CE40A00132688 /* MidDrawerMusicHallAdCarouselView.m in Sources */,
 				366EB2CB2133C9B8007F4EE6 /* UIView+Category.m in Sources */,
+				36D6731D214A5A2000132688 /* MidDrawerSingerTableHeaderView.m in Sources */,
 				36D671C0213D117400132688 /* SDWebImageTransition.m in Sources */,
 				36D672032140D75500132688 /* MidDrawerFindArticleTableViewCell.m in Sources */,
 				36D6721921410DA000132688 /* MidDrawerFindNewsletterCollectionViewCell.m in Sources */,
@@ -1404,6 +1541,7 @@
 				36D6723A21426EE400132688 /* SongPreferenceViewController.m in Sources */,
 				36D671B1213D117400132688 /* NSImage+WebCache.m in Sources */,
 				36D6727721464E9900132688 /* MidDrawerAllMusicSingerView.m in Sources */,
+				36D672E4214A13C800132688 /* MidDrawerAllMusicAlbumTableViewCell.m in Sources */,
 				36D6725521427D6000132688 /* SVIndefiniteAnimatedView.m in Sources */,
 				36D671BE213D117400132688 /* SDWebImageManager.m in Sources */,
 				36014CE62133E4C200C09286 /* BubbleLayer.m in Sources */,
@@ -1434,6 +1572,7 @@
 				36D6728021465F8700132688 /* MidDrawerAllMusicSingleTableViewCell.m in Sources */,
 				D8ADA85F2132D372003050F5 /* RootViewController.m in Sources */,
 				36D671FA213FA8F300132688 /* MidDrawerFindHeaderView.m in Sources */,
+				36D67307214A412D00132688 /* MidDrawerSingerViewController.m in Sources */,
 				36D671C4213D117400132688 /* UIImage+GIF.m in Sources */,
 				36D671C9213D117400132688 /* UIView+WebCache.m in Sources */,
 				36014CF821354BCE00C09286 /* SettingViewController.m in Sources */,
@@ -1447,6 +1586,7 @@
 				36D6724021426EFE00132688 /* CleanSpaceViewController.m in Sources */,
 				D8F76D732134455200D85B41 /* UILabel+Category.m in Sources */,
 				36D671DD213E27DC00132688 /* MidDrawerMusicHallCollectionViewColumnCell.m in Sources */,
+				36D6731A214A59C900132688 /* MidDrawerSingerView.m in Sources */,
 				366EB29D21339B15007F4EE6 /* UIButton+Category.m in Sources */,
 				36D6729221479AAA00132688 /* ZZMusicCollectShapeAlertView.m in Sources */,
 				36D671032139314400132688 /* MidDrawerMineTableSectionHeaderView.m in Sources */,
@@ -1455,6 +1595,7 @@
 				D8FF1F7B2142BAC4007136BF /* AboutTableViewCell.m in Sources */,
 				36D6721C21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.m in Sources */,
 				D8F76D70213444C000D85B41 /* MidDrawerBubbleTableViewCell.m in Sources */,
+				36D6730A214A415900132688 /* MidDrawerRankingViewController.m in Sources */,
 				36D6725C21460C3E00132688 /* MidDrawerViewControllerViewModel.m in Sources */,
 				36014D192136938F00C09286 /* MidDrawerFindView.m in Sources */,
 				366EB2C421339F2F007F4EE6 /* ViewController+MASAdditions.m in Sources */,
@@ -1474,6 +1615,7 @@
 				36D6726D214622CC00132688 /* ZZMusicMenuBar.m in Sources */,
 				D8ADA83D2132D12E003050F5 /* LeftDrawerViewController.m in Sources */,
 				36014D162136936D00C09286 /* MidDrawerMusicHallView.m in Sources */,
+				36D67316214A51E800132688 /* ZZMusicSegmentedControlTitleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

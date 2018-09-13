@@ -110,6 +110,7 @@
         UIButton *button = [UIButton createButtonWithTarget:self action:@selector(buttonClick:) title:names[i] textColor:BLACK_TEXTCOLOR imgStr:images[i]];
         button.titleLabel.font = NORMAL_FONT;
         button.frame = CGRectMake(W*i, 0, W, H);
+        button.tag = i;
         [button setTopImageBottomTitleWithMargin:15];
         [self.operationView addSubview:button];
     }
@@ -210,7 +211,48 @@
 
 //点击事件
 - (void)buttonClick:(UIButton *)button {
-    
+    switch (button.tag) {
+        case 0:
+            [self createBlock:MidDrawerMusicHallViewSinger];
+            break;
+        case 1:
+            [self createBlock:MidDrawerMusicHallViewRanking];
+            break;
+        case 2:
+            [self createBlock:MidDrawerMusicHallViewCategorySongList];
+            break;
+        case 3:
+            [self createBlock:MidDrawerMusicHallViewRadio];
+            break;
+        case 4:
+            [self createBlock:MidDrawerMusicHallViewVideo];
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)tapClick:(UITapGestureRecognizer *)tapGes {
+    switch (tapGes.view.tag) {
+        case 0:
+            [self createBlock:MidDrawerMusicHallViewPersonalityRadio];
+            break;
+        case 1:
+            [self createBlock:MidDrawerMusicHallViewNewSongNewAlbum];
+            break;
+        case 2:
+            [self createBlock:MidDrawerMusicHallViewDigitalAlbum];
+            break;
+        default:
+            break;
+    }
+}
+
+//设置Block
+- (void)createBlock:(MidDrawerMusicHallViewClickType)type {
+    if (self.clickBlock) {
+        self.clickBlock(type);
+    }
 }
 
 #pragma mark Lazy
@@ -235,6 +277,8 @@
 - (UIView *)personalityRadioView {
     if (!_personalityRadioView) {
         _personalityRadioView = [UIView createViewWithBackgroundColor:LINE_COLOR];
+        [_personalityRadioView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick:)]];
+        _personalityRadioView.tag = 0;
     }
     return _personalityRadioView;
 }
@@ -265,6 +309,8 @@
 - (UIView *)songAlbumView {
     if (!_songAlbumView) {
         _songAlbumView = [UIView createViewWithBackgroundColor:SECTION_BACKGROUNDCOLOR];
+        [_songAlbumView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick:)]];
+        _songAlbumView.tag = 1;
     }
     return _songAlbumView;
 }
@@ -300,6 +346,8 @@
 - (UIView *)digitalAlbumView {
     if (!_digitalAlbumView) {
         _digitalAlbumView = [UIView createViewWithBackgroundColor:SECTION_BACKGROUNDCOLOR];
+        [_digitalAlbumView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick:)]];
+        _digitalAlbumView.tag = 2;
     }
     return _digitalAlbumView;
 }

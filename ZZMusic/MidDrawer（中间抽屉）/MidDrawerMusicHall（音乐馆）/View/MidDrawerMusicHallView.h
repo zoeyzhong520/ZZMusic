@@ -12,4 +12,6 @@
 
 @interface MidDrawerMusicHallView : UIView
 
+@property (nonatomic, copy) void(^clickBlock)(MidDrawerMusicHallViewClickType type);
+
 @end

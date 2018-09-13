@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MidDrawerViewController.h"
 
 @interface MidDrawerViewControllerViewModel : NSObject
 
-+ (void)handleMidDrawerMineViewClickBlockWithType:(MidDrawerMineViewClickType)type vc:(MidDrawerViewController *)vc;
++ (void)handleMidDrawerMineViewClickBlockWithType:(MidDrawerMineViewClickType)type vc:(UIViewController *)vc;
+
++ (void)handleMidDrawerMusicHallViewClickBlockWithType:(MidDrawerMusicHallViewClickType)type vc:(UIViewController *)vc;
 
 @end

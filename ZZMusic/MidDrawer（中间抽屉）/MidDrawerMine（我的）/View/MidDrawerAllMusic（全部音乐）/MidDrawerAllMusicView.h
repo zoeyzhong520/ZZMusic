@@ -15,4 +15,6 @@
 ///设置scrollView的contentOffset
 @property (nonatomic, assign) NSInteger currentIndex;
 
+@property (nonatomic, copy) void(^clickBlock)(MidDrawerAllMusicViewClickType type);
+
 @end

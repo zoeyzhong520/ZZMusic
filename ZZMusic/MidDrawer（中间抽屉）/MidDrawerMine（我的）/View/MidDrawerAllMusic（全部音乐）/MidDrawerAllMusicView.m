@@ -43,6 +43,13 @@
     [self.scrollView addSubview:self.albumView];
 }
 
+//设置Block
+- (void)createBlock:(MidDrawerAllMusicViewClickType)type {
+    if (self.clickBlock) {
+        self.clickBlock(type);
+    }
+}
+
 #pragma mark Setter
 - (void)setCurrentIndex:(NSInteger)currentIndex {
     [self.scrollView setContentOffset:CGPointMake(currentIndex*SCREEN_WIDTH, 0) animated:NO];
@@ -72,6 +79,10 @@
 - (MidDrawerAllMusicSingerView *)singerView {
     if (!_singerView) {
         _singerView = [[MidDrawerAllMusicSingerView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, self.bounds.size.height)];
+        WeakSelf;
+        _singerView.clickBlock = ^{
+            [weakSelf createBlock:MidDrawerAllMusicViewSinger];
+        };
     }
     return _singerView;
 }
@@ -79,6 +90,10 @@
 - (MidDrawerAllMusicAlbumView *)albumView {
     if (!_albumView) {
         _albumView = [[MidDrawerAllMusicAlbumView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH*2, 0, SCREEN_WIDTH, self.bounds.size.height)];
+        WeakSelf;
+        _albumView.clickBlock = ^{
+            [weakSelf createBlock:MidDrawerAllMusicViewAlbum];
+        };
     }
     return _albumView;
 }

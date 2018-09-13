@@ -41,6 +41,13 @@
     [self.collectionView reloadData];
 }
 
+//设置Block
+- (void)createBlock:(MidDrawerMusicHallViewClickType)type {
+    if (self.clickBlock) {
+        self.clickBlock(type);
+    }
+}
+
 #pragma mark UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return self.dataArray.count;
@@ -95,7 +102,23 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"indexPath.row = %ld", indexPath.row);
+    MidDrawerBaseModel *model = self.dataArray[indexPath.section];
+    
+    if ([model.sectionType isEqualToString:@"SongList"]) {//为你推荐歌单
+        [self createBlock:MidDrawerMusicHallViewRecommengSongList];
+    } else if ([model.sectionType isEqualToString:@"Album"]) {//最新专辑
+        [self createBlock:MidDrawerMusicHallViewNewestAlbum];
+    } else if ([model.sectionType isEqualToString:@"Musician"]) {//乐人
+        [self createBlock:MidDrawerMusicHallViewMusician];
+    } else if ([model.sectionType isEqualToString:@"Content"]) {//独家内容
+        [self createBlock:MidDrawerMusicHallViewExclusiveContent];
+    } else if ([model.sectionType isEqualToString:@"Radio"]) {//精选电台
+        [self createBlock:MidDrawerMusicHallViewFeaturedRadio];
+    } else if ([model.sectionType isEqualToString:@"MV"]) {//最新MV
+        [self createBlock:MidDrawerMusicHallViewMV];
+    } else {//专栏
+        [self createBlock:MidDrawerMusicHallViewColumn];
+    }
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -160,6 +183,10 @@
 - (MidDrawerMusicHallHeaderView *)headerView {
     if (!_headerView) {
         _headerView = [[MidDrawerMusicHallHeaderView alloc] initWithFrame:CGRectMake(0, -(MUSICHALL_BANNER_HEIGHT*2+fontSizeScale(110)), self.bounds.size.width, MUSICHALL_BANNER_HEIGHT*2+fontSizeScale(110))];
+        WeakSelf;
+        _headerView.clickBlock = ^(MidDrawerMusicHallViewClickType type) {
+            [weakSelf createBlock:type];
+        };
     }
     return _headerView;
 }

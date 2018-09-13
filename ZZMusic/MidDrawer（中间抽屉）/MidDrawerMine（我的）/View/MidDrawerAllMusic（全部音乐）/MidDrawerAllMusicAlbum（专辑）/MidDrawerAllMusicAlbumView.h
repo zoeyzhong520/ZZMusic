@@ -12,4 +12,6 @@
 
 @interface MidDrawerAllMusicAlbumView : UIView
 
+@property (nonatomic, copy) dispatch_block_t clickBlock;
+
 @end

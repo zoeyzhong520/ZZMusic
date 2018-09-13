@@ -43,4 +43,27 @@ typedef enum : NSUInteger {
     MidDrawerMineViewCellClick
 } MidDrawerMineViewClickType;
 
+typedef enum : NSUInteger {
+    MidDrawerAllMusicViewSinger = 0,
+    MidDrawerAllMusicViewAlbum
+} MidDrawerAllMusicViewClickType;
+
+typedef enum : NSUInteger {
+    MidDrawerMusicHallViewSinger = 0,
+    MidDrawerMusicHallViewRanking,
+    MidDrawerMusicHallViewCategorySongList,
+    MidDrawerMusicHallViewRadio,
+    MidDrawerMusicHallViewVideo,
+    MidDrawerMusicHallViewPersonalityRadio,
+    MidDrawerMusicHallViewDigitalAlbum,
+    MidDrawerMusicHallViewNewSongNewAlbum,
+    MidDrawerMusicHallViewRecommengSongList,
+    MidDrawerMusicHallViewNewestAlbum,
+    MidDrawerMusicHallViewExclusiveContent,
+    MidDrawerMusicHallViewFeaturedRadio,
+    MidDrawerMusicHallViewMV,
+    MidDrawerMusicHallViewColumn,
+    MidDrawerMusicHallViewMusician
+} MidDrawerMusicHallViewClickType;
+
 #endif /* EnumMacro_h */

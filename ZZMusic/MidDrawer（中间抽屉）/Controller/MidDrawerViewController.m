@@ -128,6 +128,9 @@
         _midDrawerView.mineView.clickBlock = ^(MidDrawerMineViewClickType type) {
             [MidDrawerViewControllerViewModel handleMidDrawerMineViewClickBlockWithType:type vc:weakSelf];
         };
+        _midDrawerView.musicHallView.clickBlock = ^(MidDrawerMusicHallViewClickType type) {
+            [MidDrawerViewControllerViewModel handleMidDrawerMusicHallViewClickBlockWithType:type vc:weakSelf];
+        };
     }
     return _midDrawerView;
 }
