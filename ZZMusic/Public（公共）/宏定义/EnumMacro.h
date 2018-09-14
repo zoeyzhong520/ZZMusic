@@ -66,4 +66,8 @@ typedef enum : NSUInteger {
     MidDrawerMusicHallViewMusician
 } MidDrawerMusicHallViewClickType;
 
+typedef enum : NSUInteger {
+    MidDrawerSingerViewSinger = 0
+} MidDrawerSingerViewClickType;
+
 #endif /* EnumMacro_h */

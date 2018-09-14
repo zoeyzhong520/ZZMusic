@@ -134,6 +134,14 @@
 		36D67316214A51E800132688 /* ZZMusicSegmentedControlTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67315214A51E800132688 /* ZZMusicSegmentedControlTitleView.m */; };
 		36D6731A214A59C900132688 /* MidDrawerSingerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67319214A59C900132688 /* MidDrawerSingerView.m */; };
 		36D6731D214A5A2000132688 /* MidDrawerSingerTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6731C214A5A2000132688 /* MidDrawerSingerTableHeaderView.m */; };
+		36D67320214B5ACB00132688 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6731F214B5ACB00132688 /* NSString+Category.m */; };
+		36D67323214B844200132688 /* NSArray+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67322214B844200132688 /* NSArray+Category.m */; };
+		36D67326214B950D00132688 /* MidDrawerSingerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67325214B950D00132688 /* MidDrawerSingerTableViewCell.m */; };
+		36D67329214BA23600132688 /* MidDrawerSingerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67328214BA23600132688 /* MidDrawerSingerDetailViewController.m */; };
+		36D6732C214BA31D00132688 /* MidDrawerSingerViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6732B214BA31D00132688 /* MidDrawerSingerViewControllerViewModel.m */; };
+		36D67330214BAA2B00132688 /* ZZMusicStretchHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6732F214BAA2B00132688 /* ZZMusicStretchHeaderView.m */; };
+		36D67333214BACAF00132688 /* MidDrawerSingerDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67332214BACAF00132688 /* MidDrawerSingerDetailView.m */; };
+		36D67336214BAD3C00132688 /* MidDrawerSingerDetailTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67335214BAD3C00132688 /* MidDrawerSingerDetailTableHeaderView.m */; };
 		D8ADA7F5213282D7003050F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA7F4213282D7003050F5 /* AppDelegate.m */; };
 		D8ADA7FB213282D7003050F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7F9213282D7003050F5 /* Main.storyboard */; };
 		D8ADA7FD213282D8003050F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7FC213282D8003050F5 /* Assets.xcassets */; };
@@ -441,6 +449,22 @@
 		36D67319214A59C900132688 /* MidDrawerSingerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerSingerView.m; sourceTree = "<group>"; };
 		36D6731B214A5A2000132688 /* MidDrawerSingerTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerSingerTableHeaderView.h; sourceTree = "<group>"; };
 		36D6731C214A5A2000132688 /* MidDrawerSingerTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerSingerTableHeaderView.m; sourceTree = "<group>"; };
+		36D6731E214B5ACB00132688 /* NSString+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		36D6731F214B5ACB00132688 /* NSString+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		36D67321214B844200132688 /* NSArray+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Category.h"; sourceTree = "<group>"; };
+		36D67322214B844200132688 /* NSArray+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Category.m"; sourceTree = "<group>"; };
+		36D67324214B950D00132688 /* MidDrawerSingerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerSingerTableViewCell.h; sourceTree = "<group>"; };
+		36D67325214B950D00132688 /* MidDrawerSingerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerSingerTableViewCell.m; sourceTree = "<group>"; };
+		36D67327214BA23600132688 /* MidDrawerSingerDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerSingerDetailViewController.h; sourceTree = "<group>"; };
+		36D67328214BA23600132688 /* MidDrawerSingerDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerSingerDetailViewController.m; sourceTree = "<group>"; };
+		36D6732A214BA31D00132688 /* MidDrawerSingerViewControllerViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerSingerViewControllerViewModel.h; sourceTree = "<group>"; };
+		36D6732B214BA31D00132688 /* MidDrawerSingerViewControllerViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerSingerViewControllerViewModel.m; sourceTree = "<group>"; };
+		36D6732E214BAA2B00132688 /* ZZMusicStretchHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZMusicStretchHeaderView.h; sourceTree = "<group>"; };
+		36D6732F214BAA2B00132688 /* ZZMusicStretchHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZMusicStretchHeaderView.m; sourceTree = "<group>"; };
+		36D67331214BACAF00132688 /* MidDrawerSingerDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerSingerDetailView.h; sourceTree = "<group>"; };
+		36D67332214BACAF00132688 /* MidDrawerSingerDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerSingerDetailView.m; sourceTree = "<group>"; };
+		36D67334214BAD3C00132688 /* MidDrawerSingerDetailTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerSingerDetailTableHeaderView.h; sourceTree = "<group>"; };
+		36D67335214BAD3C00132688 /* MidDrawerSingerDetailTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerSingerDetailTableHeaderView.m; sourceTree = "<group>"; };
 		D8ADA7F0213282D7003050F5 /* ZZMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8ADA7F3213282D7003050F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8ADA7F4213282D7003050F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -530,6 +554,7 @@
 		36014CE22133E4A700C09286 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				36D6732D214BAA1E00132688 /* ZZMusicStretchHeaderView */,
 				36D67317214A569B00132688 /* ZZMusicSegmentedControlTitleView */,
 				36D6726A214622C500132688 /* ZZMusicMenuBar */,
 				36D6728F21479A9A00132688 /* ZZMusicCollectShapeAlertView */,
@@ -1058,6 +1083,10 @@
 				36D67306214A412D00132688 /* MidDrawerSingerViewController.m */,
 				36D67308214A415900132688 /* MidDrawerRankingViewController.h */,
 				36D67309214A415900132688 /* MidDrawerRankingViewController.m */,
+				36D67327214BA23600132688 /* MidDrawerSingerDetailViewController.h */,
+				36D67328214BA23600132688 /* MidDrawerSingerDetailViewController.m */,
+				36D6732A214BA31D00132688 /* MidDrawerSingerViewControllerViewModel.h */,
+				36D6732B214BA31D00132688 /* MidDrawerSingerViewControllerViewModel.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1094,6 +1123,12 @@
 				36D67319214A59C900132688 /* MidDrawerSingerView.m */,
 				36D6731B214A5A2000132688 /* MidDrawerSingerTableHeaderView.h */,
 				36D6731C214A5A2000132688 /* MidDrawerSingerTableHeaderView.m */,
+				36D67324214B950D00132688 /* MidDrawerSingerTableViewCell.h */,
+				36D67325214B950D00132688 /* MidDrawerSingerTableViewCell.m */,
+				36D67331214BACAF00132688 /* MidDrawerSingerDetailView.h */,
+				36D67332214BACAF00132688 /* MidDrawerSingerDetailView.m */,
+				36D67334214BAD3C00132688 /* MidDrawerSingerDetailTableHeaderView.h */,
+				36D67335214BAD3C00132688 /* MidDrawerSingerDetailTableHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1105,6 +1140,15 @@
 				36D67315214A51E800132688 /* ZZMusicSegmentedControlTitleView.m */,
 			);
 			path = ZZMusicSegmentedControlTitleView;
+			sourceTree = "<group>";
+		};
+		36D6732D214BAA1E00132688 /* ZZMusicStretchHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				36D6732E214BAA2B00132688 /* ZZMusicStretchHeaderView.h */,
+				36D6732F214BAA2B00132688 /* ZZMusicStretchHeaderView.m */,
+			);
+			path = ZZMusicStretchHeaderView;
 			sourceTree = "<group>";
 		};
 		D8ADA7E7213282D7003050F5 = {
@@ -1336,6 +1380,10 @@
 				36014CE82134DE3500C09286 /* UIImageView+Category.m */,
 				36D5F9C22137E995002BB7AD /* UIImage+Category.h */,
 				36D5F9C32137E995002BB7AD /* UIImage+Category.m */,
+				36D6731E214B5ACB00132688 /* NSString+Category.h */,
+				36D6731F214B5ACB00132688 /* NSString+Category.m */,
+				36D67321214B844200132688 /* NSArray+Category.h */,
+				36D67322214B844200132688 /* NSArray+Category.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1482,6 +1530,7 @@
 				36D6728B2147677E00132688 /* MidDrawerAllMusicBatchOperationBottomMenu.m in Sources */,
 				36D672692146141000132688 /* ZZMusicTableShapeAlertView.m in Sources */,
 				36D6725821427D6000132688 /* SVProgressHUD.m in Sources */,
+				36D67333214BACAF00132688 /* MidDrawerSingerDetailView.m in Sources */,
 				36D671B5213D117400132688 /* SDWebImageCoder.m in Sources */,
 				36D6724621426F1400132688 /* AboutViewController.m in Sources */,
 				36D672EA214A189C00132688 /* MidDrawerAllMusicDetailViewController.m in Sources */,
@@ -1512,6 +1561,7 @@
 				366EB299213398DD007F4EE6 /* BaseNavigationBar.m in Sources */,
 				36D6722221420FB800132688 /* MidDrawerFindCollectionViewFlowLayout.m in Sources */,
 				36D671B4213D117400132688 /* SDImageCacheConfig.m in Sources */,
+				36D67336214BAD3C00132688 /* MidDrawerSingerDetailTableHeaderView.m in Sources */,
 				36D6716D213D030500132688 /* MidDrawerMusicHallCollectionViewMusicCell.m in Sources */,
 				D8ADA8622132D38A003050F5 /* RootView.m in Sources */,
 				36D671C3213D117400132688 /* UIImage+ForceDecode.m in Sources */,
@@ -1532,6 +1582,7 @@
 				36014D0B21366AB500C09286 /* LoginView.m in Sources */,
 				36D6716A213CE40A00132688 /* MidDrawerMusicHallAdCarouselView.m in Sources */,
 				366EB2CB2133C9B8007F4EE6 /* UIView+Category.m in Sources */,
+				36D6732C214BA31D00132688 /* MidDrawerSingerViewControllerViewModel.m in Sources */,
 				36D6731D214A5A2000132688 /* MidDrawerSingerTableHeaderView.m in Sources */,
 				36D671C0213D117400132688 /* SDWebImageTransition.m in Sources */,
 				36D672032140D75500132688 /* MidDrawerFindArticleTableViewCell.m in Sources */,
@@ -1544,6 +1595,7 @@
 				36D672E4214A13C800132688 /* MidDrawerAllMusicAlbumTableViewCell.m in Sources */,
 				36D6725521427D6000132688 /* SVIndefiniteAnimatedView.m in Sources */,
 				36D671BE213D117400132688 /* SDWebImageManager.m in Sources */,
+				36D67330214BAA2B00132688 /* ZZMusicStretchHeaderView.m in Sources */,
 				36014CE62133E4C200C09286 /* BubbleLayer.m in Sources */,
 				36014D202136A0E100C09286 /* BaseNavigationTitleView.m in Sources */,
 				366EB2C82133C826007F4EE6 /* MidDrawerBubbleView.m in Sources */,
@@ -1556,6 +1608,7 @@
 				36014CE92134DE3500C09286 /* UIImageView+Category.m in Sources */,
 				36D6725F21460EEC00132688 /* MidDrawerAllMusicViewController.m in Sources */,
 				36D671B6213D117400132688 /* SDWebImageCoderHelper.m in Sources */,
+				36D67323214B844200132688 /* NSArray+Category.m in Sources */,
 				36D671B8213D117400132688 /* SDWebImageCompat.m in Sources */,
 				36D672002140D71500132688 /* MidDrawerFindVideoTableViewCell.m in Sources */,
 				36D67284214750E700132688 /* MidDrawerAllMusicSingleSearchBar.m in Sources */,
@@ -1576,6 +1629,7 @@
 				36D671C4213D117400132688 /* UIImage+GIF.m in Sources */,
 				36D671C9213D117400132688 /* UIView+WebCache.m in Sources */,
 				36014CF821354BCE00C09286 /* SettingViewController.m in Sources */,
+				36D67329214BA23600132688 /* MidDrawerSingerDetailViewController.m in Sources */,
 				366EB2C321339F2F007F4EE6 /* View+MASAdditions.m in Sources */,
 				D8ADA8652132D3A3003050F5 /* RootBaseModel.m in Sources */,
 				36D671DA213E25F900132688 /* MidDrawerMusicHallCollectionViewRoundCell.m in Sources */,
@@ -1584,6 +1638,7 @@
 				36D671C2213D117400132688 /* UIButton+WebCache.m in Sources */,
 				36D6722E21426C1000132688 /* BaseNavigationController.m in Sources */,
 				36D6724021426EFE00132688 /* CleanSpaceViewController.m in Sources */,
+				36D67320214B5ACB00132688 /* NSString+Category.m in Sources */,
 				D8F76D732134455200D85B41 /* UILabel+Category.m in Sources */,
 				36D671DD213E27DC00132688 /* MidDrawerMusicHallCollectionViewColumnCell.m in Sources */,
 				36D6731A214A59C900132688 /* MidDrawerSingerView.m in Sources */,
@@ -1596,6 +1651,7 @@
 				36D6721C21412E6400132688 /* MidDrawerFindNewsDiscoverTableViewCell.m in Sources */,
 				D8F76D70213444C000D85B41 /* MidDrawerBubbleTableViewCell.m in Sources */,
 				36D6730A214A415900132688 /* MidDrawerRankingViewController.m in Sources */,
+				36D67326214B950D00132688 /* MidDrawerSingerTableViewCell.m in Sources */,
 				36D6725C21460C3E00132688 /* MidDrawerViewControllerViewModel.m in Sources */,
 				36014D192136938F00C09286 /* MidDrawerFindView.m in Sources */,
 				366EB2C421339F2F007F4EE6 /* ViewController+MASAdditions.m in Sources */,

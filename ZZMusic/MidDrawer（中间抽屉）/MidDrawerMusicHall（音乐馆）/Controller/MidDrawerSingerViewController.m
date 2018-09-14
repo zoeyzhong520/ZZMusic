@@ -8,6 +8,7 @@
 
 #import "MidDrawerSingerViewController.h"
 #import "MidDrawerSingerView.h"
+#import "MidDrawerSingerViewControllerViewModel.h"
 
 @interface MidDrawerSingerViewController ()
 
@@ -59,6 +60,10 @@
 - (MidDrawerSingerView *)singerView {
     if (!_singerView) {
         _singerView = [[MidDrawerSingerView alloc] initWithFrame:self.view.bounds];
+        WeakSelf;
+        _singerView.clickBlock = ^(MidDrawerSingerViewClickType type) {
+            [MidDrawerSingerViewControllerViewModel handleMidDrawerSingerViewClickBlockWithType:type vc:weakSelf];
+        };
     }
     return _singerView;
 }

@@ -12,4 +12,6 @@
 
 @interface MidDrawerSingerView : UIView
 
+@property (nonatomic, copy) void(^clickBlock)(MidDrawerSingerViewClickType type);
+
 @end
