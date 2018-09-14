@@ -47,4 +47,7 @@
 ///搜索栏高度
 #define SEARCHBAR_HEIGHT 56
 
+///歌手详情HeaderView高度
+#define SINGERDETAIL_HEADERVIEW_HEIGHT 240
+
 #endif /* SizeMacro_h */

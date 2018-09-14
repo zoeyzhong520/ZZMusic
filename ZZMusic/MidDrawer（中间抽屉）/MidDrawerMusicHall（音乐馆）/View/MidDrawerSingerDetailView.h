@@ -8,8 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MidDrawerSingerDetailViewDelegate <NSObject>
+
+@optional
+
+- (void)MidDrawerSingerDetailViewScrollViewDidScroll:(UIScrollView *)scrollView;
+
+@end
+
 #pragma mark 歌手-详情View
 
 @interface MidDrawerSingerDetailView : UIView
+
+///代理
+@property (nonatomic, weak) id<MidDrawerSingerDetailViewDelegate>delegate;
 
 @end
