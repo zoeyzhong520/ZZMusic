@@ -20,6 +20,8 @@
 @property (nonatomic, strong) UIView *bottomLine;
 ///btnW
 @property (nonatomic, assign) CGFloat btnW;
+///buttons
+@property (nonatomic, strong) NSMutableArray *buttons;
 
 @end
 
@@ -45,6 +47,8 @@
         button.tag = i;
         button.frame = CGRectMake(_btnW*i, 0, _btnW, btnH);
         [self addSubview:button];
+        
+        [self.buttons addObject:button];
         
         if (i == 0) {
             _selectedBtn = button;
@@ -89,6 +93,22 @@
     }
 }
 
+#pragma mark Setter
+- (void)setSelectedIndex:(NSInteger)selectedIndex {
+    for (int i = 0; i < _buttons.count; i ++) {
+        UIButton *button = (UIButton *)_buttons[i];
+        [button setTitleColor:button.tag == selectedIndex ? MAIN_COLOR : BLACK_TEXTCOLOR forState:UIControlStateNormal];
+        if (button.tag == selectedIndex) {
+            _selectedBtn = button;
+        }
+    };
+    
+    [UIView animateWithDuration:ANIMATE_DURATION animations:^{
+        CGFloat tx = self.btnW*selectedIndex;
+        self.indicatorLine.transform = CGAffineTransformMakeTranslation(tx, 0);
+    }];
+}
+
 #pragma mark Lazy
 - (UIView *)indicatorLine {
     if (!_indicatorLine) {
@@ -102,6 +122,13 @@
         _bottomLine = [UIView createViewWithBackgroundColor:LINE_COLOR];
     }
     return _bottomLine;
+}
+
+- (NSMutableArray *)buttons {
+    if (!_buttons) {
+        _buttons = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _buttons;
 }
 
 @end

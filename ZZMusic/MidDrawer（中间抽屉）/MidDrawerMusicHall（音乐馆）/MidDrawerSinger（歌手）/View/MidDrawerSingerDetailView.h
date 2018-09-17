@@ -11,8 +11,9 @@
 @protocol MidDrawerSingerDetailViewDelegate <NSObject>
 
 @optional
+- (void)scrollViewDidEndDeceleratingWithIndex:(NSInteger)index;
 
-- (void)MidDrawerSingerDetailViewScrollViewDidScroll:(UIScrollView *)scrollView;
+- (void)scrollViewDidScrollWithOffsetY:(CGFloat)offSetY;
 
 @end
 
@@ -22,5 +23,7 @@
 
 ///代理
 @property (nonatomic, weak) id<MidDrawerSingerDetailViewDelegate>delegate;
+///当前滑动到的index
+@property (nonatomic, assign) NSInteger currentIndex;
 
 @end

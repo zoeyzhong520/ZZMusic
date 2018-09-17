@@ -140,7 +140,13 @@
         
         WeakSelf;
         _loginOptionView.clickBlock = ^(LoginOptionViewClickType type) {
-            [weakSelf createBlock:type == LoginOptionViewActivity ? MidDrawerMineTableHeaderViewActivity : MidDrawerMineTableHeaderViewVIP];
+            if (type == LoginOptionViewLogin) {
+                [weakSelf createBlock:MidDrawerMineTableHeaderViewLogin];
+            } else if (type == LoginOptionViewActivity) {
+                [weakSelf createBlock:MidDrawerMineTableHeaderViewActivity];
+            } else if (type == LoginOptionViewVIP) {
+                [weakSelf createBlock:MidDrawerMineTableHeaderViewVIP];
+            }
         };
     }
     return _loginOptionView;

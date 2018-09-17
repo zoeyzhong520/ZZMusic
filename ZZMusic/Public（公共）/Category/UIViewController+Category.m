@@ -89,4 +89,10 @@
     self.navigationController.navigationBar.shadowImage = isTransparent ? [UIImage new] : nil;
 }
 
+- (void)setnavigationBarTintColorWithColor:(UIColor *)color {
+    if (color) {
+        self.navigationController.navigationBar.tintColor = color;
+    }
+}
+
 @end

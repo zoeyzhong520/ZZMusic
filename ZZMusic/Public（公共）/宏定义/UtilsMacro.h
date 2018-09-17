@@ -102,6 +102,8 @@
 #define BANNER_IMAGEPATH_SIXTH @"http://imgsrc.baidu.com/imgad/pic/item/4a36acaf2edda3cc0b837b0d0ae93901213f92bc.jpg"
 ///头像地址
 #define AVATAR_PATH @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536214465177&di=8ebe2317e01aa7f74081cf8174490ec1&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20180726%2Ffad321a0c441487aae8c6a65df639f72.jpeg"
+///singer头像地址
+#define SINGERSTRETCHAVATAR_PATH @"http://img1.3lian.com/2015/a1/63/d/121.jpg"
 
 ///Banner占位图
 #define PLACEHOLDER_IMAGE [UIImage imageNamed:@"placeholder"]

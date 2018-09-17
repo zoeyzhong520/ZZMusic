@@ -32,7 +32,7 @@
 - (void)createView {
     NSAssert(self.titles.count > 0, @"titles为空！");
     
-    CGFloat W = self.bounds.size.width / 3;
+    CGFloat W = self.bounds.size.width / _titles.count;
     CGFloat H = self.bounds.size.height;
     
     for (int i = 0; i < self.titles.count; i ++) {

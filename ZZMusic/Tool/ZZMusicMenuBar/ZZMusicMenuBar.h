@@ -16,4 +16,7 @@
 
 @property (nonatomic, copy) void(^clickBlock)(NSInteger index);
 
+///当前选择的index
+@property (nonatomic, assign) NSInteger selectedIndex;
+
 @end

@@ -36,18 +36,18 @@
 
 ///广告栏高度
 ///音乐馆
-#define MUSICHALL_BANNER_HEIGHT 140
+#define MUSICHALL_BANNER_HEIGHT fontSizeScale(140)
 ///发现
-#define FIND_BANNER_HEIGHT 180
+#define FIND_BANNER_HEIGHT fontSizeScale(180)
 
 ///气泡视图宽度
-#define BUBBLE_WIDTH 130
-#define BUBBLE_SINGLEROW_HEIGHT 40
+#define BUBBLE_WIDTH fontSizeScale(130)
+#define BUBBLE_SINGLEROW_HEIGHT fontSizeScale(40)
 
 ///搜索栏高度
-#define SEARCHBAR_HEIGHT 56
+#define SEARCHBAR_HEIGHT fontSizeScale(56)
 
 ///歌手详情HeaderView高度
-#define SINGERDETAIL_HEADERVIEW_HEIGHT 240
+#define SINGERDETAIL_HEADERVIEW_HEIGHT fontSizeScale(240)
 
 #endif /* SizeMacro_h */

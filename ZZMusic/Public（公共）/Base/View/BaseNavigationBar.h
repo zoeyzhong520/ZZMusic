@@ -15,6 +15,8 @@
 @property (nonatomic, copy) dispatch_block_t leftButtonClickBlock;
 ///左侧按钮图片
 @property (nonatomic, copy) NSString *leftButtonImg;
+///右侧按钮图片
+@property (nonatomic, copy) NSString *rightButtonImg;
 ///右侧气泡视图按钮
 @property (nonatomic, copy) dispatch_block_t rightButtonClickBlock;
 ///titleView

@@ -14,10 +14,10 @@
     
     switch (type) {
         case MidDrawerMineViewLogin:
-            
+            [vc presentLoginViewController];
             break;
         case MidDrawerMineViewActivity:
-            
+            [vc showWebViewControllerWithUrl:@""];
             break;
         case MidDrawerMineViewVIP:
             [vc showWebViewControllerWithUrl:@""];

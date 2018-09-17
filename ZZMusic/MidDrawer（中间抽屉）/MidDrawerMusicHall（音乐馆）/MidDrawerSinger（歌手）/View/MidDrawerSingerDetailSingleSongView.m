@@ -1,24 +1,21 @@
 //
-//  MidDrawerSingerDetailView.m
+//  MidDrawerSingerDetailSingleSongView.m
 //  ZZMusic
 //
-//  Created by zhifu360 on 2018/9/14.
+//  Created by zhifu360 on 2018/9/17.
 //  Copyright © 2018年 zhognzhaojun. All rights reserved.
 //
 
-#import "MidDrawerSingerDetailView.h"
-#import "MidDrawerSingerDetailTableHeaderView.h"
+#import "MidDrawerSingerDetailSingleSongView.h"
 
-@interface MidDrawerSingerDetailView ()<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
+@interface MidDrawerSingerDetailSingleSongView ()<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
 ///tableView
 @property (nonatomic, strong) UITableView *tableView;
-///tableHeaderView
-@property (nonatomic, strong) MidDrawerSingerDetailTableHeaderView *tableHeaderView;
 
 @end
 
-@implementation MidDrawerSingerDetailView
+@implementation MidDrawerSingerDetailSingleSongView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -31,20 +28,20 @@
 
 - (void)createView {
     [self addSubview:self.tableView];
-    self.tableView.tableHeaderView = self.tableHeaderView;
     [self.tableView reloadData];
 }
 
-//设置Delegate
-- (void)createDelegate:(UIScrollView *)scrollView {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(MidDrawerSingerDetailViewScrollViewDidScroll:)]) {
-        [self.delegate MidDrawerSingerDetailViewScrollViewDidScroll:scrollView];
+//设置Block
+- (void)createBlock:(CGFloat)offSetY {
+    if (self.scrollBlock) {
+        self.scrollBlock(offSetY);
     }
 }
 
 #pragma mark UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    [self createDelegate:scrollView];
+    CGFloat offSetY = scrollView.contentOffset.y;
+    [self createBlock:offSetY];
 }
 
 #pragma mark UITableViewDelegate, UITableViewDataSource
@@ -69,20 +66,12 @@
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:self.bounds style:UITableViewStylePlain];
-        _tableView.rowHeight = fontSizeScale(60);
-        _tableView.backgroundColor = [UIColor clearColor];
+        _tableView.rowHeight = fontSizeScale(50);
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
     }
     return _tableView;
-}
-
-- (MidDrawerSingerDetailTableHeaderView *)tableHeaderView {
-    if (!_tableHeaderView) {
-        _tableHeaderView = [[MidDrawerSingerDetailTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, SINGERDETAIL_HEADERVIEW_HEIGHT)];
-    }
-    return _tableHeaderView;
 }
 
 @end

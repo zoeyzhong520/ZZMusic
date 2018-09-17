@@ -45,4 +45,7 @@ typedef enum : NSUInteger {
 ///设置导航栏是否全透明
 - (void)setNavigationBarTransparent:(BOOL)isTransparent;
 
+///设置导航栏TintColor
+- (void)setnavigationBarTintColorWithColor:(UIColor *)color;
+
 @end

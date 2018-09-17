@@ -83,6 +83,10 @@
     [self.leftMenuButton setImage:[UIImage imageNamed:leftButtonImg ? leftButtonImg : @""] forState:UIControlStateNormal];
 }
 
+- (void)setRightButtonImg:(NSString *)rightButtonImg {
+    [self.rightBubbleButton setImage:[UIImage imageNamed:rightButtonImg ? rightButtonImg : @""] forState:UIControlStateNormal];
+}
+
 - (void)setIsTitleViewVisible:(BOOL)isTitleViewVisible {
     self.titleView.hidden = !isTitleViewVisible;
 }
