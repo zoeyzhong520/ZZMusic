@@ -32,16 +32,15 @@
 }
 
 //设置Block
-- (void)createBlock:(CGFloat)offSetY {
+- (void)createBlock:(UIScrollView *)scrollView {
     if (self.scrollBlock) {
-        self.scrollBlock(offSetY);
+        self.scrollBlock(scrollView);
     }
 }
 
 #pragma mark UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGFloat offSetY = scrollView.contentOffset.y;
-    [self createBlock:offSetY];
+    [self createBlock:scrollView];
 }
 
 #pragma mark UITableViewDelegate, UITableViewDataSource
@@ -54,7 +53,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [UITableViewCell new];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellID"];
+    }
+    cell.backgroundColor = [UIColor purpleColor];
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

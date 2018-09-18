@@ -54,9 +54,9 @@
     }
 }
 
-- (void)createDelegateWithOffSetY:(CGFloat)offSetY {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(scrollViewDidScrollWithOffsetY:)]) {
-        [self.delegate scrollViewDidScrollWithOffsetY:offSetY];
+- (void)createDelegateWithScrollView:(UIScrollView *)scrollView {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(didScrollWithScrollView:)]) {
+        [self.delegate didScrollWithScrollView:scrollView];
     }
 }
 
@@ -88,10 +88,10 @@
 
 - (MidDrawerSingerDetailSingleSongView *)singleSongView {
     if (!_singleSongView) {
-        _singleSongView = [[MidDrawerSingerDetailSingleSongView alloc] initWithFrame:CGRectMake(0, BUBBLE_SINGLEROW_HEIGHT, self.bounds.size.width, self.bounds.size.height-BUBBLE_SINGLEROW_HEIGHT)];
+        _singleSongView = [[MidDrawerSingerDetailSingleSongView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
         WeakSelf;
-        _singleSongView.scrollBlock = ^(CGFloat offSetY) {
-            [weakSelf createDelegateWithOffSetY:offSetY];
+        _singleSongView.scrollBlock = ^(UIScrollView *scrollView) {
+            [weakSelf createDelegateWithScrollView:scrollView];
         };
     }
     return _singleSongView;
@@ -99,21 +99,21 @@
 
 - (MidDrawerSingerDetailAlbumView *)albumView {
     if (!_albumView) {
-        _albumView = [[MidDrawerSingerDetailAlbumView alloc] initWithFrame:CGRectMake(self.bounds.size.width, BUBBLE_SINGLEROW_HEIGHT, self.bounds.size.width, self.bounds.size.height-BUBBLE_SINGLEROW_HEIGHT)];
+        _albumView = [[MidDrawerSingerDetailAlbumView alloc] initWithFrame:CGRectMake(self.bounds.size.width, 0, self.bounds.size.width, self.bounds.size.height)];
     }
     return _albumView;
 }
 
 - (MidDrawerSingerDetailMVView *)mvView {
     if (!_mvView) {
-        _mvView = [[MidDrawerSingerDetailMVView alloc] initWithFrame:CGRectMake(self.bounds.size.width*2, BUBBLE_SINGLEROW_HEIGHT, self.bounds.size.width, self.bounds.size.height-BUBBLE_SINGLEROW_HEIGHT)];
+        _mvView = [[MidDrawerSingerDetailMVView alloc] initWithFrame:CGRectMake(self.bounds.size.width*2, 0, self.bounds.size.width, self.bounds.size.height)];
     }
     return _mvView;
 }
 
 - (MidDrawerSingerDetailIntroductionView *)introductionView {
     if (!_introductionView) {
-        _introductionView = [[MidDrawerSingerDetailIntroductionView alloc] initWithFrame:CGRectMake(self.bounds.size.width*3, BUBBLE_SINGLEROW_HEIGHT, self.bounds.size.width, self.bounds.size.height-BUBBLE_SINGLEROW_HEIGHT)];
+        _introductionView = [[MidDrawerSingerDetailIntroductionView alloc] initWithFrame:CGRectMake(self.bounds.size.width*3, 0, self.bounds.size.width, self.bounds.size.height)];
     }
     return _introductionView;
 }

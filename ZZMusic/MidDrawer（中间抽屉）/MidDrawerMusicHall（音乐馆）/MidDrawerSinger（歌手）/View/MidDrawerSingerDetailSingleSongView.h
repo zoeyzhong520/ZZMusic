@@ -12,6 +12,6 @@
 
 @interface MidDrawerSingerDetailSingleSongView : UIView
 
-@property (nonatomic, copy) void(^scrollBlock)(CGFloat offSetY);
+@property (nonatomic, copy) void(^scrollBlock)(UIScrollView *scrollView);
 
 @end

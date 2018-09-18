@@ -13,7 +13,7 @@
 @optional
 - (void)scrollViewDidEndDeceleratingWithIndex:(NSInteger)index;
 
-- (void)scrollViewDidScrollWithOffsetY:(CGFloat)offSetY;
+- (void)didScrollWithScrollView:(UIScrollView *)scrollView;
 
 @end
 
