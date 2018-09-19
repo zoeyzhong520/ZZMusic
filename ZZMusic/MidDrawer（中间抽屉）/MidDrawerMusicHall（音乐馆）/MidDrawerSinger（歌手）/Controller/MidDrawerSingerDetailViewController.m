@@ -13,10 +13,12 @@
 
 ///singerDetailView
 @property (nonatomic, strong) MidDrawerSingerDetailView *singerDetailView;
-///stretchHeaderView
-@property (nonatomic, strong) ZZMusicStretchHeaderView *strecthHeaderView;
-///strecthImgView
-@property (nonatomic, strong) UIImageView *stretchImgView;
+
+///avatarImgView
+@property (nonatomic, strong) UIImageView *avatarImgView;
+///strecthHeaderView
+@property (nonatomic, strong) ZZMusicStretchHeaderView *stretchHeaderView;
+
 ///menuBar
 @property (nonatomic, strong) ZZMusicMenuBar *menuBar;
 
@@ -32,8 +34,7 @@
 }
 
 - (void)setPage {
-    [self.view addSubview:self.stretchImgView];
-    self.strecthHeaderView = [[ZZMusicStretchHeaderView alloc] initWithStretchView:self.stretchImgView];
+    [self.view addSubview:self.avatarImgView];
     
     [self.view addSubview:self.singerDetailView];
     [self.singerDetailView addSubview:self.menuBar];
@@ -41,12 +42,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [self setNavigationBarTransparent:YES];
-    [self setnavigationBarTintColorWithColor:[UIColor whiteColor]];
+    [self setNavigationBarTintColorWithColor:[UIColor whiteColor]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [self setNavigationBarTransparent:NO];
-    [self setnavigationBarTintColorWithColor:BLACK_TEXTCOLOR];
+    [self setNavigationBarTintColorWithColor:BLACK_TEXTCOLOR];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,51 +57,47 @@
 
 #pragma mark MidDrawerSingerDetailViewDelegate
 - (void)scrollViewDidEndDeceleratingWithIndex:(NSInteger)index {
-    _menuBar.selectedIndex = index;
+    self.menuBar.selectedIndex = index;
 }
 
 - (void)didScrollWithScrollView:(UIScrollView *)scrollView {
-    [_strecthHeaderView scrollViewDidScrollWithScrollView:scrollView];
+    [self.stretchHeaderView scrollViewDidScrollWithScrollView:scrollView];
     
-    if (scrollView.contentOffset.y > SINGERDETAIL_HEADERVIEW_HEIGHT-STATUS_BAR_HEIGHT-NAVIGATION_BAR_HEIGHT) {
-        [self setnavigationBarTintColorWithColor:BLACK_TEXTCOLOR];
+    if (scrollView.contentOffset.y >= SINGERDETAIL_HEADERVIEW_HEIGHT-STATUS_BAR_HEIGHT-NAVIGATION_BAR_HEIGHT) {
+        self.menuBar.frame = CGRectMake(0, STATUS_BAR_HEIGHT+NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, BUBBLE_SINGLEROW_HEIGHT);
+        [self.view addSubview:self.menuBar];
         
-        self.menuBar.frame = CGRectMake(0, STATUS_BAR_HEIGHT+NAVIGATION_BAR_HEIGHT, self.view.bounds.size.width, BUBBLE_SINGLEROW_HEIGHT);
-        [self.view addSubview:_menuBar];
-        
-        _singerDetailView.frame = CGRectMake(0, CGRectGetMaxY(_menuBar.frame), self.view.bounds.size.width, CONTENT_HEIGHT-BUBBLE_SINGLEROW_HEIGHT);
+        self.singerDetailView.frame = CGRectMake(0, CGRectGetMaxY(self.menuBar.frame), SCREEN_WIDTH, CONTENT_HEIGHT-BUBBLE_SINGLEROW_HEIGHT);
     } else {
-        [self setnavigationBarTintColorWithColor:[UIColor whiteColor]];
+        self.singerDetailView.frame = CGRectMake(0, CGRectGetMaxY(self.avatarImgView.frame), SCREEN_WIDTH, SCREEN_HEIGHT-SINGERDETAIL_HEADERVIEW_HEIGHT);
         
-        _singerDetailView.frame = CGRectMake(0, CGRectGetMaxY(self.stretchImgView.frame), self.view.bounds.size.width, self.view.bounds.size.height-SINGERDETAIL_HEADERVIEW_HEIGHT);
-        
-        self.menuBar.frame = CGRectMake(0, 0, self.view.bounds.size.width, BUBBLE_SINGLEROW_HEIGHT);
-        [_singerDetailView addSubview:_menuBar];
+        self.menuBar.frame = CGRectMake(0, 0, SCREEN_WIDTH, BUBBLE_SINGLEROW_HEIGHT);
+        [self.singerDetailView addSubview:self.menuBar];
     }
 }
 
 #pragma mark Lazy
 - (MidDrawerSingerDetailView *)singerDetailView {
     if (!_singerDetailView) {
-        _singerDetailView = [[MidDrawerSingerDetailView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.stretchImgView.frame), self.view.bounds.size.width, self.view.bounds.size.height-SINGERDETAIL_HEADERVIEW_HEIGHT)];
+        _singerDetailView = [[MidDrawerSingerDetailView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.avatarImgView.frame), self.view.bounds.size.width, SCREEN_HEIGHT-SINGERDETAIL_HEADERVIEW_HEIGHT-BUBBLE_SINGLEROW_HEIGHT)];
         _singerDetailView.delegate = self;
     }
     return _singerDetailView;
 }
 
-- (UIImageView *)stretchImgView {
-    if (!_stretchImgView) {
-        _stretchImgView = [UIImageView createImageViewWithImg:@""];
-        [_stretchImgView sd_setImageWithURL:[NSURL URLWithString:SINGERSTRETCHAVATAR_PATH] placeholderImage:PLACEHOLDER_IMAGE];
-        _stretchImgView.frame = CGRectMake(0, 0, self.view.bounds.size.width, SINGERDETAIL_HEADERVIEW_HEIGHT);
+- (UIImageView *)avatarImgView {
+    if (!_avatarImgView) {
+        _avatarImgView = [UIImageView createImageViewWithImg:@""];
+        _avatarImgView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SINGERDETAIL_HEADERVIEW_HEIGHT);
+        [_avatarImgView sd_setImageWithURL:[NSURL URLWithString:SINGERSTRETCHAVATAR_PATH] placeholderImage:PLACEHOLDER_IMAGE];
+        self.stretchHeaderView = [[ZZMusicStretchHeaderView alloc] initWithStretchView:_avatarImgView];
     }
-    return _stretchImgView;
+    return _avatarImgView;
 }
 
 - (ZZMusicMenuBar *)menuBar {
     if (!_menuBar) {
-        _menuBar = [[ZZMusicMenuBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, BUBBLE_SINGLEROW_HEIGHT) titles:@[@"单曲",@"专辑",@"MV",@"详情"]];
-        _menuBar.backgroundColor = [UIColor orangeColor];
+        _menuBar = [[ZZMusicMenuBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, BUBBLE_SINGLEROW_HEIGHT) titles:@[@"单曲",@"专辑",@"MV",@"详情"]];
         WeakSelf;
         _menuBar.clickBlock = ^(NSInteger index) {
             weakSelf.singerDetailView.currentIndex = index;

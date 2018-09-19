@@ -11,6 +11,7 @@
 #import "MidDrawerSingerDetailAlbumView.h"
 #import "MidDrawerSingerDetailMVView.h"
 #import "MidDrawerSingerDetailIntroductionView.h"
+#import "MidDrawerSingerDetailTableHeaderView.h"
 
 @interface MidDrawerSingerDetailView ()<UIScrollViewDelegate>
 
@@ -74,7 +75,7 @@
 #pragma mark Lazy
 - (UIScrollView *)scrollView {
     if (!_scrollView) {
-        _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
         _scrollView.pagingEnabled = YES;
         _scrollView.contentSize = CGSizeMake(self.bounds.size.width*4, 0);
         _scrollView.contentOffset = CGPointMake(0, 0);

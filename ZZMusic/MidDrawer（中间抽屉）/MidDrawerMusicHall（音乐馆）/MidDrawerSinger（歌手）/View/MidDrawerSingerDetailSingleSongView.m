@@ -57,7 +57,6 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellID"];
     }
-    cell.backgroundColor = [UIColor purpleColor];
     return cell;
 }
 

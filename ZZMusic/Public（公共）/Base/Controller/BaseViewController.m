@@ -25,6 +25,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     ///去除导航栏下方黑线
     self.navigationController.navigationBar.shadowImage = [UIImage new];
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

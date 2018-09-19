@@ -24,6 +24,8 @@
 @property (nonatomic, strong) UILabel *titleLabel;
 ///subTitleLabel 副标题
 @property (nonatomic, strong) UILabel *subTitleLabel;
+///avatarImgView
+@property (nonatomic, strong) UIImageView *avatarImgView;
 
 @end
 
@@ -41,6 +43,8 @@
 }
 
 - (void)createView {
+    [self addSubview:self.avatarImgView];
+    
     [self addSubview:self.nameLabel];
     
     [self addSubview:self.fanLabel];
@@ -57,6 +61,10 @@
 
 //添加约束
 - (void)addConstraints {
+    [self.avatarImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self);
+    }];
+    
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.left.right.mas_equalTo(0);
         make.top.mas_equalTo(fontSizeScale(120));
@@ -147,6 +155,14 @@
         _subTitleLabel = [UILabel createLabelWithText:@"09.30 洛阳新区体育场" font:SMALL_FONT textColor:[UIColor whiteColor]];
     }
     return _subTitleLabel;
+}
+
+- (UIImageView *)avatarImgView {
+    if (!_avatarImgView) {
+        _avatarImgView = [UIImageView createImageViewWithImg:@""];
+        [_avatarImgView sd_setImageWithURL:[NSURL URLWithString:SINGERSTRETCHAVATAR_PATH] placeholderImage:PLACEHOLDER_IMAGE];
+    }
+    return _avatarImgView;
 }
 
 @end
