@@ -60,6 +60,9 @@
 #define iPhone7 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
 #define iPhone7P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
 #define iPhoneX (IS_IPHONE && SCREEN_MAX_LENGTH == 812.0)
+#define iPhoneXS (IS_IPHONE && SCREEN_MAX_LENGTH == 812.0)
+#define iPhoneXSMax (IS_IPHONE && SCREEN_MAX_LENGTH == 896.0)
+#define iPhoneXR (IS_IPHONE && SCREEN_MAX_LENGTH == 896.0)
 
 ///自适应字体大小
 #define fontSizeScale(size) [(AppDelegate *)[UIApplication sharedApplication].delegate fontSizeScale:size]
@@ -102,8 +105,8 @@
 #define BANNER_IMAGEPATH_SIXTH @"http://imgsrc.baidu.com/imgad/pic/item/4a36acaf2edda3cc0b837b0d0ae93901213f92bc.jpg"
 ///头像地址
 #define AVATAR_PATH @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536214465177&di=8ebe2317e01aa7f74081cf8174490ec1&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20180726%2Ffad321a0c441487aae8c6a65df639f72.jpeg"
-///singer头像地址
-#define SINGERSTRETCHAVATAR_PATH @"http://img1.3lian.com/2015/a1/63/d/121.jpg"
+///歌手头像地址
+#define SINGER_AVATAR_PATH @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537425382259&di=fc5703a128a668a686d08d915729eba8&imgtype=jpg&src=http%3A%2F%2Fimg1.imgtn.bdimg.com%2Fit%2Fu%3D3303253646%2C3041339827%26fm%3D214%26gp%3D0.jpg"
 
 ///Banner占位图
 #define PLACEHOLDER_IMAGE [UIImage imageNamed:@"placeholder"]

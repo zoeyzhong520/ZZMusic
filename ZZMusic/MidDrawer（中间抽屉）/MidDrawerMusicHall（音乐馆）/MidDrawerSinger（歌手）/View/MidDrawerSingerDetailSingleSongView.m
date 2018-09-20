@@ -38,6 +38,11 @@
     }
 }
 
+#pragma mark Setter
+- (void)setShouldScrollToTop:(BOOL)shouldScrollToTop {
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+}
+
 #pragma mark UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [self createBlock:scrollView];
@@ -57,6 +62,9 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellID"];
     }
+    cell.textLabel.font = NORMAL_FONT;
+    cell.textLabel.textColor = BLACK_TEXTCOLOR;
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row];
     return cell;
 }
 

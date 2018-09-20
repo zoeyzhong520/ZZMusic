@@ -23,9 +23,9 @@
 		36014D192136938F00C09286 /* MidDrawerFindView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014D182136938F00C09286 /* MidDrawerFindView.m */; };
 		36014D1D2136977100C09286 /* ZZMusicScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014D1C2136977100C09286 /* ZZMusicScrollView.m */; };
 		36014D202136A0E100C09286 /* BaseNavigationTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36014D1F2136A0E100C09286 /* BaseNavigationTitleView.m */; };
+		3662438021538BB700686428 /* MidDrawerSingerDetailIntroductionRecentDevelopmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3662437F21538BB700686428 /* MidDrawerSingerDetailIntroductionRecentDevelopmentTableViewCell.m */; };
 		366EB299213398DD007F4EE6 /* BaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 366EB298213398DD007F4EE6 /* BaseNavigationBar.m */; };
 		366EB29D21339B15007F4EE6 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 366EB29C21339B15007F4EE6 /* UIButton+Category.m */; };
-		366EB2BA21339F2F007F4EE6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 366EB2A021339F2E007F4EE6 /* Info.plist */; };
 		366EB2BB21339F2F007F4EE6 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 366EB2A221339F2E007F4EE6 /* MASCompositeConstraint.m */; };
 		366EB2BC21339F2F007F4EE6 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 366EB2A521339F2E007F4EE6 /* MASConstraint.m */; };
 		366EB2BD21339F2F007F4EE6 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 366EB2A721339F2E007F4EE6 /* MASConstraintMaker.m */; };
@@ -148,6 +148,8 @@
 		36D67353214F8CEA00132688 /* MidDrawerSingerDetailIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67352214F8CEA00132688 /* MidDrawerSingerDetailIntroductionView.m */; };
 		36D6735A214F8E6A00132688 /* MidDrawerSingerBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67359214F8E6A00132688 /* MidDrawerSingerBaseModel.m */; };
 		36D6735D214F8E9800132688 /* MidDrawerMusicHallBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D6735C214F8E9800132688 /* MidDrawerMusicHallBaseModel.m */; };
+		36F3D16421536F78006F4D27 /* MidDrawerSingerDetailMVCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3D16321536F78006F4D27 /* MidDrawerSingerDetailMVCollectionViewCell.m */; };
+		36F3D1672153833D006F4D27 /* MidDrawerSingerDetailIntroductionTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3D1662153833D006F4D27 /* MidDrawerSingerDetailIntroductionTableHeaderView.m */; };
 		D8ADA7F5213282D7003050F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA7F4213282D7003050F5 /* AppDelegate.m */; };
 		D8ADA7FB213282D7003050F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7F9213282D7003050F5 /* Main.storyboard */; };
 		D8ADA7FD213282D8003050F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8ADA7FC213282D8003050F5 /* Assets.xcassets */; };
@@ -225,12 +227,13 @@
 		36014D1C2136977100C09286 /* ZZMusicScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZMusicScrollView.m; sourceTree = "<group>"; };
 		36014D1E2136A0E100C09286 /* BaseNavigationTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationTitleView.h; sourceTree = "<group>"; };
 		36014D1F2136A0E100C09286 /* BaseNavigationTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationTitleView.m; sourceTree = "<group>"; };
+		3662437E21538BB700686428 /* MidDrawerSingerDetailIntroductionRecentDevelopmentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerSingerDetailIntroductionRecentDevelopmentTableViewCell.h; sourceTree = "<group>"; };
+		3662437F21538BB700686428 /* MidDrawerSingerDetailIntroductionRecentDevelopmentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerSingerDetailIntroductionRecentDevelopmentTableViewCell.m; sourceTree = "<group>"; };
 		366EB297213398DD007F4EE6 /* BaseNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationBar.h; sourceTree = "<group>"; };
 		366EB298213398DD007F4EE6 /* BaseNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationBar.m; sourceTree = "<group>"; };
 		366EB29A21339977007F4EE6 /* ClassMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassMacro.h; sourceTree = "<group>"; };
 		366EB29B21339B15007F4EE6 /* UIButton+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Category.h"; sourceTree = "<group>"; };
 		366EB29C21339B15007F4EE6 /* UIButton+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Category.m"; sourceTree = "<group>"; };
-		366EB2A021339F2E007F4EE6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		366EB2A121339F2E007F4EE6 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		366EB2A221339F2E007F4EE6 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		366EB2A321339F2E007F4EE6 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -483,6 +486,16 @@
 		36D67359214F8E6A00132688 /* MidDrawerSingerBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerSingerBaseModel.m; sourceTree = "<group>"; };
 		36D6735B214F8E9800132688 /* MidDrawerMusicHallBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerMusicHallBaseModel.h; sourceTree = "<group>"; };
 		36D6735C214F8E9800132688 /* MidDrawerMusicHallBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerMusicHallBaseModel.m; sourceTree = "<group>"; };
+		36F3D15C21534CBB006F4D27 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		36F3D15D21534CBB006F4D27 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		36F3D15E21534CC0006F4D27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		36F3D15F21534CC0006F4D27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		36F3D16021534CCD006F4D27 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		36F3D16121534CCD006F4D27 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		36F3D16221536F78006F4D27 /* MidDrawerSingerDetailMVCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerSingerDetailMVCollectionViewCell.h; sourceTree = "<group>"; };
+		36F3D16321536F78006F4D27 /* MidDrawerSingerDetailMVCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerSingerDetailMVCollectionViewCell.m; sourceTree = "<group>"; };
+		36F3D1652153833D006F4D27 /* MidDrawerSingerDetailIntroductionTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidDrawerSingerDetailIntroductionTableHeaderView.h; sourceTree = "<group>"; };
+		36F3D1662153833D006F4D27 /* MidDrawerSingerDetailIntroductionTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidDrawerSingerDetailIntroductionTableHeaderView.m; sourceTree = "<group>"; };
 		D8ADA7F0213282D7003050F5 /* ZZMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8ADA7F3213282D7003050F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8ADA7F4213282D7003050F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -750,7 +763,6 @@
 		366EB29F21339F2E007F4EE6 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
-				366EB2A021339F2E007F4EE6 /* Info.plist */,
 				366EB2A121339F2E007F4EE6 /* MASCompositeConstraint.h */,
 				366EB2A221339F2E007F4EE6 /* MASCompositeConstraint.m */,
 				366EB2A321339F2E007F4EE6 /* MASConstraint+Private.h */,
@@ -1209,6 +1221,12 @@
 				36D6734F214F8C9B00132688 /* MidDrawerSingerDetailMVView.m */,
 				36D67351214F8CEA00132688 /* MidDrawerSingerDetailIntroductionView.h */,
 				36D67352214F8CEA00132688 /* MidDrawerSingerDetailIntroductionView.m */,
+				36F3D16221536F78006F4D27 /* MidDrawerSingerDetailMVCollectionViewCell.h */,
+				36F3D16321536F78006F4D27 /* MidDrawerSingerDetailMVCollectionViewCell.m */,
+				36F3D1652153833D006F4D27 /* MidDrawerSingerDetailIntroductionTableHeaderView.h */,
+				36F3D1662153833D006F4D27 /* MidDrawerSingerDetailIntroductionTableHeaderView.m */,
+				3662437E21538BB700686428 /* MidDrawerSingerDetailIntroductionRecentDevelopmentTableViewCell.h */,
+				3662437F21538BB700686428 /* MidDrawerSingerDetailIntroductionRecentDevelopmentTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1553,7 +1571,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D6725721427D6000132688 /* SVProgressHUD.bundle in Resources */,
-				366EB2BA21339F2F007F4EE6 /* Info.plist in Resources */,
 				D8ADA800213282D8003050F5 /* LaunchScreen.storyboard in Resources */,
 				D8ADA7FD213282D8003050F5 /* Assets.xcassets in Resources */,
 				D8ADA7FB213282D7003050F5 /* Main.storyboard in Resources */,
@@ -1673,6 +1690,7 @@
 				36D671B6213D117400132688 /* SDWebImageCoderHelper.m in Sources */,
 				36D67323214B844200132688 /* NSArray+Category.m in Sources */,
 				36D671B8213D117400132688 /* SDWebImageCompat.m in Sources */,
+				36F3D1672153833D006F4D27 /* MidDrawerSingerDetailIntroductionTableHeaderView.m in Sources */,
 				36D672002140D71500132688 /* MidDrawerFindVideoTableViewCell.m in Sources */,
 				36D67284214750E700132688 /* MidDrawerAllMusicSingleSearchBar.m in Sources */,
 				36D671BA213D117400132688 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -1691,6 +1709,7 @@
 				36D67307214A412D00132688 /* MidDrawerSingerViewController.m in Sources */,
 				36D6734D214F8C7E00132688 /* MidDrawerSingerDetailAlbumView.m in Sources */,
 				36D671C4213D117400132688 /* UIImage+GIF.m in Sources */,
+				3662438021538BB700686428 /* MidDrawerSingerDetailIntroductionRecentDevelopmentTableViewCell.m in Sources */,
 				36D6735A214F8E6A00132688 /* MidDrawerSingerBaseModel.m in Sources */,
 				36D671C9213D117400132688 /* UIView+WebCache.m in Sources */,
 				36014CF821354BCE00C09286 /* SettingViewController.m in Sources */,
@@ -1719,6 +1738,7 @@
 				36D67326214B950D00132688 /* MidDrawerSingerTableViewCell.m in Sources */,
 				36D6725C21460C3E00132688 /* MidDrawerViewControllerViewModel.m in Sources */,
 				36014D192136938F00C09286 /* MidDrawerFindView.m in Sources */,
+				36F3D16421536F78006F4D27 /* MidDrawerSingerDetailMVCollectionViewCell.m in Sources */,
 				36D67350214F8C9B00132688 /* MidDrawerSingerDetailMVView.m in Sources */,
 				366EB2C421339F2F007F4EE6 /* ViewController+MASAdditions.m in Sources */,
 				36D671B3213D117400132688 /* SDImageCache.m in Sources */,
@@ -1780,6 +1800,9 @@
 			children = (
 				D8ADA7FA213282D7003050F5 /* Base */,
 				D8FF1F6E2142AFA9007136BF /* zh-Hans */,
+				36F3D15C21534CBB006F4D27 /* zh-Hant */,
+				36F3D15E21534CC0006F4D27 /* en */,
+				36F3D16021534CCD006F4D27 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1789,6 +1812,9 @@
 			children = (
 				D8ADA7FF213282D8003050F5 /* Base */,
 				D8FF1F6F2142AFAA007136BF /* zh-Hans */,
+				36F3D15D21534CBB006F4D27 /* zh-Hant */,
+				36F3D15F21534CC0006F4D27 /* en */,
+				36F3D16121534CCD006F4D27 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

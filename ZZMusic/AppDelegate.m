@@ -58,7 +58,7 @@
 
 #pragma mark - fontSizeScale
 - (void)fontSizeScale {
-    if (iPhone7P) {
+    if (iPhone7P || iPhoneXSMax) {
         self.fontSize = 1.1;
     } else if (iPhone7 || iPhoneX) {
         self.fontSize = 1.0;

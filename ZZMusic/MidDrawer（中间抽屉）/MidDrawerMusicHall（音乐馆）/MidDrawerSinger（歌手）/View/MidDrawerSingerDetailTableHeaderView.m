@@ -83,15 +83,15 @@
     }];
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(fontSizeScale(10));
+        make.centerX.mas_equalTo(0);
         make.top.mas_equalTo(self.buttonsView.mas_bottom).offset(fontSizeScale(20));
-        make.size.mas_equalTo(CGSizeMake([self.titleLabel singleLineWidth], fontSizeScale(14)));
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH-fontSizeScale(20), fontSizeScale(14)));
     }];
     
     [self.subTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.leftMargin.mas_equalTo(self.titleLabel);
+        make.centerX.mas_equalTo(0);
         make.top.mas_equalTo(self.titleLabel.mas_bottom).offset(fontSizeScale(5));
-        make.size.mas_equalTo(CGSizeMake([self.subTitleLabel singleLineWidth], fontSizeScale(12)));
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH-fontSizeScale(20), fontSizeScale(12)));
     }];
 }
 
@@ -160,7 +160,7 @@
 - (UIImageView *)avatarImgView {
     if (!_avatarImgView) {
         _avatarImgView = [UIImageView createImageViewWithImg:@""];
-        [_avatarImgView sd_setImageWithURL:[NSURL URLWithString:SINGERSTRETCHAVATAR_PATH] placeholderImage:PLACEHOLDER_IMAGE];
+        [_avatarImgView sd_setImageWithURL:[NSURL URLWithString:SINGER_AVATAR_PATH] placeholderImage:PLACEHOLDER_IMAGE];
     }
     return _avatarImgView;
 }

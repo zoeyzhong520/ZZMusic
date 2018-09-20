@@ -13,5 +13,7 @@
 @interface MidDrawerSingerDetailSingleSongView : UIView
 
 @property (nonatomic, copy) void(^scrollBlock)(UIScrollView *scrollView);
+///设置滚动到顶部
+@property (nonatomic, assign) BOOL shouldScrollToTop;
 
 @end

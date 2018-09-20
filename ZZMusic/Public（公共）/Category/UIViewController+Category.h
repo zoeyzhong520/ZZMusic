@@ -48,4 +48,7 @@ typedef enum : NSUInteger {
 ///设置导航栏TintColor
 - (void)setNavigationBarTintColorWithColor:(UIColor *)color;
 
+///设置导航栏背景色
+- (void)setNavigationBarBackgroundColorWithColor:(UIColor *)color;
+
 @end

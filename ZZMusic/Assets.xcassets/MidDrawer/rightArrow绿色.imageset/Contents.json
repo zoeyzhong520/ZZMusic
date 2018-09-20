@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "arrow白色@1x.png",
+      "filename" : "rightArrow绿色@1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "arrow白色@2x.png",
+      "filename" : "rightArrow绿色@2x.png",
       "scale" : "2x"
     },
     {

@@ -32,6 +32,7 @@
     }
 }
 
+///pop方法
 - (void)pop {
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -92,6 +93,12 @@
 - (void)setNavigationBarTintColorWithColor:(UIColor *)color {
     if (color) {
         self.navigationController.navigationBar.tintColor = color;
+    }
+}
+
+- (void)setNavigationBarBackgroundColorWithColor:(UIColor *)color {
+    if (color) {
+        self.navigationController.navigationBar.barTintColor = color;
     }
 }
 
