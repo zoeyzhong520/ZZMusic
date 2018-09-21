@@ -25,5 +25,6 @@
 #import "MidDrawerAllMusicBatchOperationView.h"
 #import "ZZMusicSegmentedControlTitleView.h"
 #import "ZZMusicStretchHeaderView.h"
+#import "ZZMusicStripView.h"
 
 #endif /* ClassMacro_h */

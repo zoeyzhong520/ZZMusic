@@ -27,6 +27,15 @@
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    [self setMusicStrip];
+}
+
+//设置音乐条
+- (void)setMusicStrip {
+    ZZMusicStripView *musicStrip = [ZZMusicStripView new];
+    musicStrip.backgroundColor = SECTION_BACKGROUNDCOLOR;
+    [musicStrip show];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
